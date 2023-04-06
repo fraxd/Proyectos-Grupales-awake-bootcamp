@@ -1,0 +1,21 @@
+.header {
+    text-align: center;
+}
+
+section {
+    text-align: center;
+}
+
+
+
+
+
+/* Dispositivos pequeños (teléfonos, 600px y menos) */
+@media only screen and (max-width: 600px) {}
+
+/* Dispositivos medios (tablets horizontales, 768px y más) */
+@media only screen and (min-width: 768px) {}
+
+/* Dispositivos extra largos (grandes laptops and equipos
+escritorio, 1200px y arriba) */
+@media only screen and (min-width: 1200px) {}
