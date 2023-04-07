@@ -10,6 +10,8 @@
     <meta name="author" content="">
 
     <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet""
+       >
 
 </head>
 
@@ -23,12 +25,20 @@
             <h1>Las Mejores Noticias</h1>
             <h2>Filtramos las noticias fomes, solo lo mejor.</h2>
             <nav>
-                <a href="#"><b>Inicio</b></a> |
-                <a href="noticias/politica.html"><b>Política</b></a> |
-                <a href="noticias/internacional.html"><b>Internacional</b></a> |
-                <a href="noticias/economia.html"><b>Economía</b></a> |
-                <a href="noticias/deportes.html"><b>Deportes</b></a> |
-                <a href="noticias/mercados.html"><b>Mercados Financieros</b></a>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </label>
+                </a>
+                <ul>
+                    <li><a href="#"><b>Inicio</b></a></li>
+                    <li><a href="noticias/politica.html"><b>Política</b></a></li>
+                    <li><a href="noticias/internacional.html"><b>Internacional</b></a></li>
+                    <li><a href="noticias/economia.html"><b>Economía</b></a></li>
+                    <li><a href="noticias/deportes.html"><b>Deportes</b></a></li>
+                    <li><a href="noticias/mercados.html"><b>Mercados Financieros</b></a></li>
+                </ul>
+
             </nav>
         </div>
     </header>
@@ -85,7 +95,7 @@
                 <article class="card">
                     <a href="noticias/economia.html"><img
                             src="https://media.cnnchile.com/sites/2/2022/12/A_UNO_1384153-740x430.jpg"
-                            alt="Banco Central" class="img-card"></a>
+                            alt="Banco Central" width="80px" class="img-card"></a>
                     <h2><A href="">Banco Central mantiene la tasa de interés en 11,25%</A></h2>
                     <p>
                         <small>02/04/2023 11:00 -- </small>
@@ -114,7 +124,8 @@
             </div>
         </section>
     </main>
-
+<br>
+<br>
     <footer>
         <div>
             <p> PencaLabs © 2023. Algunos de los derechos reservados.</p>
