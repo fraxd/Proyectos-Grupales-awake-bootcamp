@@ -8,80 +8,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="stylesheet" href="../../CSS/styles.4.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../stylesheet.css">
 </head>
 
 <body>
-
     <header>
-        <center class="container">
-            <!-- Tal vez se pueda mejorar un poco el header-->
-            <a href="index.html"><img src="../../assets/logo-sin-text.png" width="150" alt=""></a>
+        <div class="header col-12">
+            <a href="../../index.html"><img src="../../assets/logo-sin-text.png" width="150" alt=""></a>
 
             <h1>Las Mejores Noticias</h1>
             <h2>Filtramos las noticias fomes, solo lo mejor.</h2>
             <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </label>
                 <ul>
-                    <a href="../../index.html"><b>Inicio</b></a> |
-                    <a href="../politica.html"><b>Política</b></a> |
-                    <a href="../internacional.html"><b>Internacional</b></a> |
-                    <a href="../economia.html"><b>Economía</b></a> |
-                    <a href="../deportes.html"><b>Deportes</b></a> |
-                    <a href="../mercados.html"><b>Mercados Financieros</b></a>
+                    <li><a href="../../index.html"><b>Inicio</b></a></li>
+                    <li><a href="../politica.html"><b>Política</b></a></li>
+                    <li><a href="../internacional.html"><b>Internacional</b></a></li>
+                    <li><a href="../economia.html"><b>Economía</b></a></li>
+                    <li><a href="../deportes.html"><b>Deportes</b></a></li>
+                    <li><a href="../mercados.html"><b>Mercados Financieros</b></a></li>
                 </ul>
+
             </nav>
 
-        </center>
+        </div>
     </header>
     <main>
-        <section><!-- NOTICIA PRINCIPAL CENTRADA-->
-            <center>
-                <!-- Se usa una tabla para asi tener la foto en la misma fila que el texto sin usar CSS-->
-                <table>
-                    <tr>
-                        <td><a href="noticias/deportes.html"><img
-                                    src="../../assets/chicoterry.png"
-                                    alt="Imagen de la noticia principal" width="250"></a>
-                            <figcaption>Foto de archivo.</figcaption>
-                        </td>
-                        <td>
-                            <h2> el Flagelo de la droga: Chico Terry Anuncia su retiro</h2>
-                            <p>
-                                <small>01/01/2023 01:00 -- </small>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam omnis tempora
-                                praesentium vitae
-                                ut illum, adipisci ad aliquam impedit totam quod unde ullam explicabo pariatur voluptate
-                                commodi
-                                dignissimos facere. Earum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. In
-                                reprehenderit laborum sapiente error libero quibusdam voluptate praesentium esse sunt et
-                                tenetur ea
-                                id, molestias hic at modi consequatur placeat expedita?
-                            </p>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem recusandae dolor
-                                tempore
-                                itaque sapiente sed optio qui officiis, quo velit non fuga ipsam beatae, tempora
-                                quisquam, quia
-                                iusto blanditiis deleniti?
-                            </p>
-                        </td>
-                    </tr>
-                </table>
-            </center>
+        <section>
+            <article>
+                <div>
+                    <a href="noticias/deportes.html"><img src="../../assets/chicoterry.png"
+                            alt="Imagen de la noticia principal" width="250"></a>
+                    <figcaption>Foto de archivo.</figcaption>
+                </div>
+                <div>
+                    <h2> el Flagelo de la droga: Chico Terry Anuncia su retiro</h2>
+                    <p>
+                        <small>01/01/2023 01:00 -- </small>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam omnis tempora
+                        praesentium vitae
+                        ut illum, adipisci ad aliquam impedit totam quod unde ullam explicabo pariatur voluptate
+                        commodi
+                        dignissimos facere. Earum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. In
+                        reprehenderit laborum sapiente error libero quibusdam voluptate praesentium esse sunt et
+                        tenetur ea
+                        id, molestias hic at modi consequatur placeat expedita?
+                    </p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem recusandae dolor
+                        tempore
+                        itaque sapiente sed optio qui officiis, quo velit non fuga ipsam beatae, tempora
+                        quisquam, quia
+                        iusto blanditiis deleniti?
+                    </p>
+                </div>
+            </article>
         </section>
 
     </main>
 
     <footer>
-        <center>
+        <div>
             <p> PencaLabs © 2023. Algunos de los derechos reservados.</p>
             <nav>
-                <ul>
-                    <a href="../../tyc.html"><b>Terminos y condiciones</b></a> |
-                    <a href="../../privacidad.html"><b>Politica de Privacidad</b></a> |
-                    <a href="https://github.com/fraxd/Proyectos-Grupales-awake-bootcamp"><b>Github</b></a> |
-                </ul>
+                <a href="../tyc.html"><b>Terminos y condiciones</b></a> |
+                <a href="../privacidad.html"><b>Politica de Privacidad</b></a> |
+                <a href="https://github.com/fraxd/Proyectos-Grupales-awake-bootcamp"><b>Github</b></a> |
             </nav>
 
-        </center>
+        </div>
     </footer>
 
 </body>

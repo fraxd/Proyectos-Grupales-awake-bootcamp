@@ -8,117 +8,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="stylesheet" href="../CSS/styles.4.css">
+    <link rel="stylesheet" href="../stylesheet.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
 </head>
 
 <body>
 
     <header>
-        <center class="container">
-            <!-- Tal vez se pueda mejorar un poco el header-->
+        <div class="header col-12">
             <a href="../index.html"><img src="../assets/logo-sin-text.png" width="150" alt=""></a>
 
             <h1>Las Mejores Noticias</h1>
             <h2>Filtramos las noticias fomes, solo lo mejor.</h2>
             <nav>
-                <a href="../index.html"><b>Inicio</b></a> |
-                <a href="politica.html"><b>Política</b></a> |
-                <a href="Internacional.html"><b>Internacional</b></a> |
-                <a href="Economia.html"><b>Economía</b></a> |
-                <a href="Deportes.html"><b>Deportes</b></a> |
-                <a href="mercados.html"><b>Mercados Financieros</b></a>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </label>
+                <ul>
+                    <li><a href="../index.html"><b>Inicio</b></a></li>
+                    <li><a href="politica.html"><b>Política</b></a></li>
+                    <li><a href="internacional.html"><b>Internacional</b></a></li>
+                    <li><a href="economia.html"><b>Economía</b></a></li>
+                    <li><a href="deportes.html"><b>Deportes</b></a></li>
+                    <li><a href="mercados.html"><b>Mercados Financieros</b></a></li>
+                </ul>
+
             </nav>
 
-        </center>
+        </div>
     </header>
     <main>
-        <section><!-- NOTICIA PRINCIPAL CENTRADA-->
-            <center>
-                <!-- Se usa una tabla para asi tener la foto en la misma fila que el texto sin usar CSS-->
-                <table>
-                    <tr>
-                        <td><a href="noticias/Deportes"><img src="../assets/chicoterry.png"
-                                    alt="Imagen de la noticia principal" width="150" height="100"></a>
+        <section class="grid">
+            <article class="box">
+                <div>
+                    <a href="noticias/Deportes"><img src="../assets/chicoterry.png" alt="Imagen de la noticia principal"
+                            width="150" height="100"></a>
+                </div>
+                <div>
+                    <h2><A href="Deportes/chicoterry.html">el Flagelo de la droga: Chico Terry Anuncia su
+                            retiro</A></h2>
+                    <p>
+                        <small>03/04/2023 23:00 -- </small>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam omnis tempora
+                        praesentium vitae
 
-                        </td>
-                        <td>
-                            <h2><A href="Deportes/chicoterry.html">el Flagelo de la droga: Chico Terry Anuncia su
-                                    retiro</A></h2>
-                            <p>
-                                <small>03/04/2023 23:00 -- </small>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam omnis tempora
-                                praesentium vitae
+                    </p>
+                </div>
+            </article>
+            <article class="box">
+                <div>
+                    <a href="Deportes/Paraolimpico.html"><img
+                            src="https://www.rehagirona.com/wp-content/uploads/2021/07/atletismo_paralimpico_des.jpg"
+                            alt="Imagen de la noticia principal" width="150" height="100"></a>
+                </div>
+                <div>
+                    <h2><A href="Deportes/Paraolimpico.html">Nuevo circuito Paraolímpico de luche</A></h2>
+                    <p>
+                        <small>03/04/2023 23:00 -- </small>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam omnis tempora
+                        praesentium vitae
 
-                            </p>
+                    </p>
+                </div>
+            </article>
+            <article class="box">
+                <div>
+                    <a href="Deportes/trendingdoping.html"><img
+                            src="https://paralimpica.intercap.cl/wp-content/uploads/2017/10/Doping-600x432.png"
+                            alt="Imagen de la noticia principal" width="150" height="100"></a>
 
-                        </td>
-                    </tr>
-                </table>
-                <table>
-                    <tr>
-                        <td>
-                            <h2><A href="Deportes/Paraolimpico.html">Nuevo circuito Paraolímpico de luche</A></h2>
-                            <p>
-                                <small>03/04/2023 23:00 -- </small>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam omnis tempora
-                                praesentium vitae
+                </div>
+                <div>
+                    <h2><a href="Deportes/trendingdoping.html">Trending doping, la moda de esteroides en el
+                            deporte juvenil</a></h2>
+                    <p>
+                        <small>03/04/2023 23:00 -- </small>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam omnis tempora
+                        praesentium vitae
 
-                            </p>
-                        </td>
-                        <td>
-                            <a href="Deportes/Paraolimpico.html"><img
-                                    src="https://www.rehagirona.com/wp-content/uploads/2021/07/atletismo_paralimpico_des.jpg"
-                                    alt="Imagen de la noticia principal" width="150" height="100"></a>
+                    </p>
+                </div>
+            </article>
 
-                        </td>
-                    </tr>
-                </table>
-                <table>
-                    <tr>
-                        <td><a href="Deportes/trendingdoping.html"><img
-                                    src="https://paralimpica.intercap.cl/wp-content/uploads/2017/10/Doping-600x432.png"
-                                    alt="Imagen de la noticia principal" width="150" height="100"></a>
+            <article class="box">
+                <div>
+                    <a href="Deportes/volleyball.html"><img src="https://i.ytimg.com/vi/BDacfQVg6-Q/sddefault.jpg"
+                            alt="Imagen de la noticia principal" width="150" height="100"></a>
+                </div>
+                <div>
+                    <h2><a href="Deportes/volleyball.html">Se imaginarán nuevas canchas imaginarias para
+                        volleyball imaginario</a></h2>
+                    <p>
+                        <small>03/04/2023 23:00 -- </small>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam omnis tempora
+                        praesentium vitae
 
-                        </td>
-                        <td>
-                            <h2><a href="Deportes/trendingdoping.html">Trending doping, la moda de esteroides en el
-                                    deporte juvenil</a></h2>
-                            <p>
-                                <small>03/04/2023 23:00 -- </small>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam omnis tempora
-                                praesentium vitae
-
-                            </p>
-
-                        </td>
-                    </tr>
-                </table>
-                <table>
-                    <tr>
-                        <td>
-                            <h2><a href="Deportes/volleyball.html">Se imaginarán nuevas canchas imaginarias para
-                                    volleyball imaginario</a></h2>
-                            <p>
-                                <small>03/04/2023 23:00 -- </small>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam omnis tempora
-                                praesentium vitae
-
-                            </p>
-                        </td>
-                        <td>
-                            <a href="Deportes/volleyball.html"><img
-                                    src="https://i.ytimg.com/vi/BDacfQVg6-Q/sddefault.jpg"
-                                    alt="Imagen de la noticia principal" width="150" height="100"></a>
-
-                        </td>
-                    </tr>
-                </table>
-            </center>
+                    </p>
+                </div>
+            </article>
         </section>
 
     </main>
 
     <footer>
-        <center>
+        <div>
             <p> PencaLabs © 2023. Algunos de los derechos reservados.</p>
             <nav>
                 <a href="../tyc.html"><b>Terminos y condiciones</b></a> |
@@ -126,7 +122,7 @@
                 <a href="https://github.com/fraxd/Proyectos-Grupales-awake-bootcamp"><b>Github</b></a> |
             </nav>
 
-        </center>
+        </div>
     </footer>
 
 </body>
