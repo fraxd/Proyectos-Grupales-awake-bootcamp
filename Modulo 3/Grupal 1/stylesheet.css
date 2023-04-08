@@ -143,10 +143,6 @@ li a.active, li a:hover{
         left:0;
     }
 }
-
-
-
-
 /* Dispositivos pequeños (teléfonos, 600px y menos) */
 @media only screen and (max-width: 600px) {}
 
@@ -200,4 +196,10 @@ escritorio, 1200px y arriba) */
 }
 .article a img{
     width: 20em;
+}
+h1  {
+    text-align: center;
+}
+main span    {
+    justify-content: center;
 }
