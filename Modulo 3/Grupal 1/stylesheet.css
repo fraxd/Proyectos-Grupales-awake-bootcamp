@@ -48,7 +48,10 @@ section {
     list-style: none;
     box-sizing: border-box;
 }
-
+.principal{
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
 header nav{
     background: #2fcdcd;
     height: 60px;
@@ -148,18 +151,39 @@ li a.active, li a:hover{
 @media only screen and (max-width: 600px) {}
 
 /* Dispositivos medios (tablets horizontales, 768px y más) */
-@media only screen and (min-width: 768px) {}
-
-/* Dispositivos extra largos (grandes laptops and equipos
-escritorio, 1200px y arriba) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
     .card {
         margin-top: 1rem;
     }
 
     .FlexContainer {
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        overflow: auto;
+        flex-direction: row;
+    }
+
+    .FlexContainer div {
+        width: 250px;
+        height: 400px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/* Dispositivos extra largos (grandes laptops and equipos
+escritorio, 1200px y arriba) */
+@media only screen and (min-width: 1300px) {
+    .card {
+        margin-top: 1rem;
+    }
+
+    .FlexContainer {
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         align-content: center;

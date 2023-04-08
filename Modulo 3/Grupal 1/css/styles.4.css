@@ -1,4 +1,4 @@
-section>article>div>a>img {
+div>article>div>a>img {
     float: left;
     margin-right: 7px;
 }
