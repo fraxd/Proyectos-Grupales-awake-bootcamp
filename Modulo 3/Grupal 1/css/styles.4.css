@@ -16,6 +16,12 @@ a:hover {
     color: rgb(128, 125, 125);
 }
 
+footer{
+    bottom: 0%;
+    position: absolute;
+    width: 100%;
+}
+
 .box {
     padding: 5px;
     margin: 5px;
