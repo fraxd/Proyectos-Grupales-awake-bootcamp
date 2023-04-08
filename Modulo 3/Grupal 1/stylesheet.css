@@ -103,12 +103,22 @@ li a.active, li a:hover{
     }
 }
 
+
+
+
 @media (max-width: 645px){
     header>div>h1{
-        display: none;
+        margin-top: 13px;
+        font-size: 20px;
+        position: absolute;
+        margin-left: 170px;
+        
     }
     header>div>h2{
-        display: none;
+        font-size: 10px;
+        position: absolute;
+        margin-left: 170px;
+        margin-top: 40px;
     }
     header>div>a{
         float: left;
