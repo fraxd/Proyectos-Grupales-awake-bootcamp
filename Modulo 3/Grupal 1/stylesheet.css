@@ -48,10 +48,7 @@ section {
     list-style: none;
     box-sizing: border-box;
 }
-.principal{
-    margin-left: 4rem;
-    margin-right: 4rem;
-}
+
 header nav{
     background: #2fcdcd;
     height: 60px;
@@ -154,14 +151,24 @@ li a.active, li a:hover{
     }
 }
 /* Dispositivos pequeños (teléfonos, 600px y menos) */
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+    .logo{
+        width: 120px;
+    }
+}
 
 /* Dispositivos medios (tablets horizontales, 768px y más) */
 @media only screen and (min-width: 768px) {
     .card {
         margin-top: 1rem;
     }
-
+    .logo{
+        width: 150px;
+    }
+    .principal{
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
     .FlexContainer {
         display: flex;
         flex-wrap: wrap;
