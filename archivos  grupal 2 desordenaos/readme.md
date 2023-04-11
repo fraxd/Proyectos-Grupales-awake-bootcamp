@@ -1,6 +1,6 @@
 # Team 2
-04/04/2023
-## Modulo 2 - Proyecto Grupal 1
+
+## Modulo 3 - Proyecto Grupal 2
 
 ### Integrantes:
 
