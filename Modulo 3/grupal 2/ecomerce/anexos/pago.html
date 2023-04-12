@@ -6,39 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fenix electronics.</title>
-    <style>
-        header>a>img {
-            float: left;
-        }
-
-        footer {
-            background-color: rgb(233, 8, 8);
-            padding: 3%;
-            color: white;
-            position: absolute;
-            bottom: 0%;
-            width: 92%;
-        }
-
-        footer>div {
-            float: right;
-            padding: 5px;
-        }
-
-        /*formato para pantallas pequeñas (menos de 768px)*/
-        @media only screen and (max-width: 768px)   {
-        .marcas {
-            width: 100%;
-        }
-
-        /* Dispositivos medianos (pantallas min 769px y max 1279) */
-        @media only screen and (min-width:769px) and (max-width: 1279px)   {
-        .item   {
-            padding: 5px;
-            width: 45%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/anexos.css">
 
 </head>
 
@@ -47,45 +15,52 @@
     <header>
         <a href="../index.html"><img
                 src="https://static.vecteezy.com/system/resources/previews/007/578/784/non_2x/luxury-awesome-phoenix-logo-design-template-vector.jpg"
-                height="40"></a>
+                alt="logo" height="40"></a>
         <H1> Fenix electronics</H1>
         <h3>!!SI SE QUEMA LO REEMBOLSAMOS¡¡ ...Renacido cual Fenix. </h3>
         <nav>
-
-            <ul>
-                <il><a href="../anexos/comprar.html"> Como comprar </il></a>|
-                <il><a href="../anexos/marcas_asociadas.html"> Marcas asociadas </il></a>|
-                <il><a href="../anexos/pago.html"> Pagos y Tranferencias </a></il>|
-                <il><a href="../anexos/contacto.html"> Contacto</a></il>
-            </ul>
-
+            <a href="../anexos/comprar.html"> Como comprar </a> |
+            <a href="../anexos/marcas_asociadas.html"> Marcas asociadas</a> |
+            <a href="../anexos/pago.html"> Pagos y Tranferencias </a> |
+            <a href="../anexos/contacto.html"> Contacto</a>
+            <br><br>
         </nav>
     </header>
 
     <main>
-        <center>
+        <div class="container">
+            <div class="item">
+                <h3>Transferencia Bancaria</h3>
 
-            <h3>Transferencia Bancaria</h3>
-            <p> A continuación se indica la cuenta bancaria a generar el pago del monto <b>$XXX.XXX.</b> A continuación
-                adjuntar el comprobante de transferencia bancaria.</p>
-            <blockquote>
-                <li>Nombre: <b>Fenix Electronics S.A</b></li>
-                <li>Rut: 68.786.456-8</li>
-                <li>Banco PorAhi</li>
-                <li>Cuenta Corriente</li>
-                <li>Número de cuenta: 456-0235-123</li>
-                <li>Correo Electrónico: Pagos@fenixelectronics.tk</li>
-            </blockquote>
-            <form action="finalizacion.html">
-                <div class="container">
-                    <label for="file"><b>Comprobante de transferencia: </b></label>
-                    <input type="file" name="adjunto" accept=".pdf,.jpg,.png" required />
-                    <br><br>
-                    <input type="submit" value="Enviar Comprobante">
-                </div>
-            </form>
-            <br> <br>
-        </center>
+            </div>
+            <div class="item">
+                <p> A continuación se indica la cuenta bancaria a generar el pago del monto <b>$XXX.XXX.</b> A
+                    continuación
+                    adjuntar el comprobante de transferencia bancaria.</p>
+
+            </div>
+            <div class="item">
+                <blockquote>
+                    <li>Nombre: <b>Fenix Electronics S.A</b></li>
+                    <li>Rut: 68.786.456-8</li>
+                    <li>Banco PorAhi</li>
+                    <li>Cuenta Corriente</li>
+                    <li>Número de cuenta: 456-0235-123</li>
+                    <li>Correo Electrónico: Pagos@fenixelectronics.tk</li>
+                </blockquote>
+            </div>
+            <div class="item">
+                <form action="finalizacion.html">
+                    <div class="container">
+                        <b>Adjunta el comprobante</b>
+                        <input type="file" name="adjunto" accept=".pdf,.jpg,.png" required />
+                        <br><br><br>
+                        <input type="submit" value="Enviar Comprobante">
+                    </div>
+                </form>
+            </div>
+        </div>
+
 
     </main>
 

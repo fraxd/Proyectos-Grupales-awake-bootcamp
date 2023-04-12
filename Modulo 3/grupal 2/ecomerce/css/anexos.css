@@ -1,0 +1,126 @@
+header>a>img {
+    float: left;
+}
+
+footer {
+    background-color: red;
+    color: white;
+    width: auto;
+    height: 5rem;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+footer>div {
+    float: right;
+    padding: 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.item {
+    background-color: #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+.item-mapa {
+    background-color: #ccc;
+    padding: 0px;
+    text-align: center;
+}
+
+iframe {
+    width: 100%;
+}
+
+.item-datos {
+    background-color: #ccc;
+    padding: 0px;
+    text-align: center;
+}
+
+/*formato para pantallas pequeñas (menos de 768px)*/
+@media only screen and (max-width: 768px) {
+    .marcas {
+        width: 100%;
+    }
+
+    .item:nth-child(1) {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+    }
+
+    .item:nth-child(2) {
+        grid-column: 1 / span 3;
+        grid-row: 2;
+    }
+
+    .item:nth-child(3) {
+        grid-column: 1 / span 3;
+        grid-row: 3;
+    }
+
+    .item:nth-child(4) {
+        grid-column: 1 / span 3;
+        grid-row: 4;
+    }
+
+    .item:nth-child(5) {
+        grid-column: 1 / span 3;
+        grid-row: 5;
+    }
+
+
+}
+
+/* Dispositivos medianos (pantallas min 769px y max 1279) */
+@media only screen and (min-width:769px) {
+    .item:nth-child(1) {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+    }
+
+    .item:nth-child(2) {
+        grid-column: 1 / span 1;
+        grid-row: 2;
+    }
+
+    .item:nth-child(3) {
+        grid-column: 2 / span 1;
+        grid-row: 2;
+    }
+
+    .item:nth-child(4) {
+        grid-column: 3 / span 1;
+        grid-row: 2;
+    }
+
+    .item:nth-child(5) {
+        margin-left: 7rem;
+        margin-right: 7rem;
+        grid-column: 1 / span 3;
+        grid-row: 3;
+    }
+
+    .item-datos:nth-child(2) {
+        grid-column: 1 / span 3;
+        grid-row: 2;
+        height: 15rem;
+    }
+
+    .item-mapa:nth-child(1) {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+    }
+
+    iframe {
+        height: 300px;
+    }
+}
