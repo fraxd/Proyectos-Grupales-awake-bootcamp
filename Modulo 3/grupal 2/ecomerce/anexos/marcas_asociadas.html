@@ -7,8 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fenix electronics.</title>
     <style>
-        header>a>img {
+        header img {
             float: left;
+        }
+
+        main    {
+            text-align: center;
         }
 
         .titulo {
@@ -32,20 +36,18 @@
         h4 {
             padding-left: 30%;
         }
-
-        .marcas {
-            width: 100%;
-            display: inline-flex;
-            flex-direction: row;
-            padding: 10px; 
-            margin: 10px;
-            margin-bottom: 20px;
-            height: 300px;
-
-        }
+     
         /*formato para pantallas pequeñas (menos de 768px)*/
         @media only screen and (max-width: 768px)   {
-            
+        .marcas {
+            width: 100%;
+        }
+        /* Dispositivos medianos (pantallas min 769px y max 1279) */
+        @media only screen and (min-width:769px) and (max-width: 1279px)   {
+        .item   {
+            padding: 5px;
+            width: 45%;
+        }
         }
     </style>
 
@@ -78,17 +80,17 @@
         <div class="marcas">
             <a href="https://www.sony.cl/" target="_blank"><img
                 src="https://bandeim.files.wordpress.com/2012/03/sony_logo.jpg?w=2000&h=" width="100" alt="Sony"></a>
-        &nbsp; &nbsp; &nbsp; &nbsp;
-        <a href="https://www.sindelen.cl/" target="_blank"><img
+                &nbsp; &nbsp; &nbsp; &nbsp;
+            <a href="https://www.sindelen.cl/" target="_blank"><img
                 src="https://ospinaservicios.cl/wp-content/uploads/2018/03/sindelen.jpg" width="100" alt="Sindelen"></a>
-        &nbsp; &nbsp; &nbsp; &nbsp;
-        <a href="https://www.midea.com/cl" target="_blank"><img
+                &nbsp; &nbsp; &nbsp; &nbsp;
+            <a href="https://www.midea.com/cl" target="_blank"><img
                 src="https://revistaprotiendas.com/wp-content/uploads/2019/05/midea-logo.png" width="100"
                 alt="Midea"></a> &nbsp; &nbsp; &nbsp; &nbsp;
-        <a href="https://www.tiendamademsa.cl/" target="_blank"><img
+            <a href="https://www.tiendamademsa.cl/" target="_blank"><img
                 src="https://www.america-retail.com/static//2021/10/Nuevo-logo-mademsa.jpg" width="100"
                 alt="Mademsa"></a> &nbsp; &nbsp;&nbsp; &nbsp;
-        <a href="https://www.lg.com/cl" target="_blank"><img
+            <a href="https://www.lg.com/cl" target="_blank"><img
                 src="https://bandeim.files.wordpress.com/2012/03/logo_lg_lifesgood_300.jpg?w=2000&h=" width="100"
                 alt="Lg"></a> &nbsp; &nbsp;
         </div>

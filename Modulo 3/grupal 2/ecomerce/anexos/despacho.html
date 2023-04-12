@@ -24,9 +24,19 @@
             float: right;
             padding: 5px;
         }
-
-        h4 {
-            padding-left: 30%;
+       
+        /*formato para pantallas pequeñas (menos de 768px)*/
+        @media only screen and (max-width: 768px)   {
+        .marcas {
+            width: 100%;
+        }
+        
+        /* Dispositivos medianos (pantallas min 769px y max 1279) */
+        @media only screen and (min-width:769px) and (max-width: 1279px)   {
+        .item   {
+            padding: 5px;
+            width: 45%;
+            }
         }
     </style>
 
