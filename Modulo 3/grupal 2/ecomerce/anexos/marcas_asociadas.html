@@ -11,6 +11,10 @@
             float: left;
         }
 
+        .titulo {
+            width: 100%;
+        }
+
         footer {
             background-color: rgb(233, 8, 8);
             padding: 3%;
@@ -28,6 +32,21 @@
         h4 {
             padding-left: 30%;
         }
+
+        .marcas {
+            width: 100%;
+            display: inline-flex;
+            flex-direction: row;
+            padding: 10px; 
+            margin: 10px;
+            margin-bottom: 20px;
+            height: 300px;
+
+        }
+        /*formato para pantallas pequeñas (menos de 768px)*/
+        @media only screen and (max-width: 768px)   {
+            
+        }
     </style>
 
 </head>
@@ -35,11 +54,13 @@
 <body>
 
     <header>
-        <a href="../index.html"><img
-                src="https://static.vecteezy.com/system/resources/previews/007/578/784/non_2x/luxury-awesome-phoenix-logo-design-template-vector.jpg"
-                height="40"></a>
-        <H1> Fenix electronics</H1>
-        <h3>!!SI SE QUEMA LO REEMBOLSAMOS¡¡ ...Renacido cual Fenix. </h3>
+        <div class="titulo">
+            <a href="../index.html"><img
+                    src="https://static.vecteezy.com/system/resources/previews/007/578/784/non_2x/luxury-awesome-phoenix-logo-design-template-vector.jpg"
+                    height="40"></a>
+            <H1> Fenix electronics</H1>
+            <h3>!!SI SE QUEMA LO REEMBOLSAMOS¡¡ ...Renacido cual Fenix. </h3>
+        </div>
         <nav>
 
             <ul>
@@ -54,7 +75,8 @@
 
     <main>
         <h2>Nuestros nuevos fabricantes y proveedores</h2>
-        <a href="https://www.sony.cl/" target="_blank"><img
+        <div class="marcas">
+            <a href="https://www.sony.cl/" target="_blank"><img
                 src="https://bandeim.files.wordpress.com/2012/03/sony_logo.jpg?w=2000&h=" width="100" alt="Sony"></a>
         &nbsp; &nbsp; &nbsp; &nbsp;
         <a href="https://www.sindelen.cl/" target="_blank"><img
@@ -69,6 +91,7 @@
         <a href="https://www.lg.com/cl" target="_blank"><img
                 src="https://bandeim.files.wordpress.com/2012/03/logo_lg_lifesgood_300.jpg?w=2000&h=" width="100"
                 alt="Lg"></a> &nbsp; &nbsp;
+        </div>
 
     </main>
 
