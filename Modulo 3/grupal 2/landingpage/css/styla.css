@@ -1,0 +1,62 @@
+html {
+    background-color: rgb(163, 196, 209);
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+header      {
+    background-color: rgb(247, 247, 247);
+    border: 1px solid black;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    height: 230px;
+    display:flex;
+    justify-content: center;
+
+}
+
+.caballeros { display: flexbox; justify-content: center;}
+
+* {
+box-sizing: border-box;
+}
+
+.col-12 {width: 100%;}
+[class*="col-"] {
+float: left;
+
+}
+
+
+h1   {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size:  480%    ;
+        color: firebrick;
+        display: flexbox; justify-content: center; 
+        
+}
+
+#sub { font-family: Arial, Helvetica, sans-serif;
+    color: darkgreen; font-size: larger; 
+    padding-left: 10px; 
+}
+
+#fenix1 {
+    float: left; padding-top: 20%;
+    justify-content: center;
+}
+
+#reseña {
+    
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    
+    
+    padding-top: 40px;
+    
+}
+
+#equipo {
+    display: flex; 
+    justify-content: center;}

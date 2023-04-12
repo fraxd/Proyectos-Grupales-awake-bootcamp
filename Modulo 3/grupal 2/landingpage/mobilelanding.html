@@ -1,60 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-html {
-    background-color: white;
-    margin-left: 3vw;
-    margin-right: 3vw;
-    }
-* {
-box-sizing: border-box;
-}
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-[class*="col-"] {
-float: left;
-padding: 3px;
-border: 1px solid red;
-}
-.row::after {
-content: "";
-clear: both;
-display: table;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/styla.css">
 </head>
+
 <body>
 <div class="row"> <!----encabezado-->
 <div class="col-12">
     <header>
         <div class="imagen">
             <img src="https://www.kindpng.com/picc/m/10-102574_primera-armadura-de-fenix-hd-png-download.png"
-            alt="Armadura de Fenix" width="18%">
+            alt="Armadura de Fenix" width="100px" id="fenix1" >
             <h1 id="titulopag">Fenix</h1>
-            <h2>Electrodomesticos y linea blanca</h2>
+            <h2 id="sub">Electrodomesticos y linea blanca</h2>
         </div>
     </header>    
 </div>
-<div class="row"> <!----reseña, la reduje en tamaño para la version movil-->
+<div class="row" id="reseña"> <!----reseña, la reduje en tamaño para la version movil-->
     <section class="reseña">
         <h2>¡Revisa nuestra tienda en linea!</h2>
         <button onclick="location.href='../ecomerce/index.html'"><b>Comprar a los mejores precios</b> </button>
     </section>
 </div>
 <div class="row">
-    <p>Con un equipo tecnico joven e innovador Fenix es reconocido como la 
+    <p id="equipo">Con un equipo tecnico joven e innovador Fenix es reconocido como la 
         empresa con mayor respaldo de la región </p>
 
     <p>¡Nuestros socios nos respaldan! </p>
@@ -85,60 +58,36 @@ display: table;
     
 <!---- testimonios -->
 
-<div class="row">
-    <div class="col-12">
-        <header>
-            <h2>Vive la experiencia de algunos de nuestros clientes:</h2>   
-        </header>  
+<div>
+    <div>
+        <h2>Vive la experiencia de algunos de nuestros clientes:</h2>
     </div>
 </div>
 
-<div class="row">
-    <div class="col-12">
-        <header>
-            <div class="imagen">
-                <img src="https://www.fayerwayer.com/resizer/qQPab0QGJSkm161NPcEMRBlDXPg=/1440x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/GU7O5JINZFHHJJLSYW5YERGS2M.jpg"
-                alt="andromeda" width="40%" >
-            </div>
-        </header>  
-    </div>
+<div class="caballeros">
+    <img src="https://www.fayerwayer.com/resizer/qQPab0QGJSkm161NPcEMRBlDXPg=/1440x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/GU7O5JINZFHHJJLSYW5YERGS2M.jpg"
+    alt="andromeda" width="40%" >
+
+    <p class="testify">"Estoy muy satisfecho con la calidad de los electrodomésticos de Fenix. Compré una lavadora y una nevera
+        hace un año y siguen funcionando como el primer día. Además, el servicio al cliente fue excelente, me
+        ayudaron a elegir los modelos que mejor se adaptaban a mis necesidades y me dieron consejos útiles para
+        mantener los electrodomésticos en buen estado. Definitivamente recomendaría Fenix a cualquiera que esté
+        buscando electrodomésticos de alta calidad y un servicio excepcional."</p>
 </div>
 
-<div class="row">
-    <div class="col-12">
-        <header>
-            <div class="imagen">
-                <p class="testify">"Estoy muy satisfecho con la calidad de los electrodomésticos de Fenix. Compré una lavadora y una nevera
-                    hace un año y siguen funcionando como el primer día. Además, el servicio al cliente fue excelente, me
-                    ayudaron a elegir los modelos que mejor se adaptaban a mis necesidades y me dieron consejos útiles para
-                    mantener los electrodomésticos en buen estado. Definitivamente recomendaría Fenix a cualquiera que esté
-                    buscando electrodomésticos de alta calidad y un servicio excepcional."</p>
-            </div>
-        </header>  
-    </div>
+<div class="caballeros">
+    <img src="https://e7.pngegg.com/pngimages/57/760/png-clipart-pegasus-seiya-cygnus-hyoga-saint-seiya-knights-of-the-zodiac-armature-athena-hyoga.png"
+    alt="hyoga" width="40%">
+
+    <p class="testify">""Recientemente compré un aire acondicionado de Fenix y estoy muy contento con mi compra. La instalación
+        fue rápida y sencilla, y el aire acondicionado funciona de manera eficiente y silenciosa. Lo que más me
+        impresionó fue el excelente servicio al cliente que recibí de Fenix desde el momento en que llamé para
+        hacer mi pedido hasta la instalación final, siempre estuvieron dispuestos a ayudar y responder cualquier
+        pregunta que tuviera. Definitivamente recomendaría Fenix a cualquier persona que busque
+        electrodomésticos de alta calidad y un servicio excepcional."</p>
 </div>
 
-<div class="row">
-    <div class="col-12">
-        <header>
-            <div class="imagen">
-                <img src="https://e7.pngegg.com/pngimages/57/760/png-clipart-pegasus-seiya-cygnus-hyoga-saint-seiya-knights-of-the-zodiac-armature-athena-hyoga.png"
-                alt="hyoga" width="40%">
-            </div>
-        </header>  
-    </div>
-</div>
 
-<div class="row">
-    <div class="col-12">
-        <p class="testify">"Recientemente compré un aire acondicionado de Fenix y estoy muy contento con mi compra. La instalación
-            fue rápida y sencilla, y el aire acondicionado funciona de manera eficiente y silenciosa. Lo que más me
-            impresionó fue el excelente servicio al cliente que recibí de Fenix desde el momento en que llamé para
-            hacer mi pedido hasta la instalación final, siempre estuvieron dispuestos a ayudar y responder cualquier
-            pregunta que tuviera. Definitivamente recomendaría Fenix a cualquier persona que busque
-            electrodomésticos de alta calidad y un servicio excepcional."</p>
-    </div>
-</div>
 <!---ubicatex-->
 <div class="row">
     <div class="col-12">¡Visítanos!</div>
