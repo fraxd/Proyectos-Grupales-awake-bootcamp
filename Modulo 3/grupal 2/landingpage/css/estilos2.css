@@ -24,7 +24,7 @@ header      {
 * {
     box-sizing: border-box;
     }
-    .col-1 {width: 8.33%;}
+    .col-1 {width: 8.3%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 100%;}
     .col-4 {width: 100%;}
@@ -137,4 +137,9 @@ h1   {
         display: flex; 
         justify-content: center;}
     } 
+    #horario { 
+        display: flex; 
+        justify-content: center;
+        padding-left: 20px;
+    }
 }
