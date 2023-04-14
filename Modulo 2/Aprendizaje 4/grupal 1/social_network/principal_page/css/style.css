@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family:'Oswald';
+
+}
+.navbar-collapse{
+    margin-left: 10px;
+}
+ul{
+    width: 30;
+}
+main {
+    height: 1100px;
+    margin-top: 60px;
+}
+
+.bar_left{
+    display: block;
+    position:fixed;
+    width: 30%;
+    height: 90%;
+    list-style: none;
+    background-color: aliceblue;
+    border:solid #39dcb3 ;
+    border-radius: 1% ;
+
+}
+.card {
+    width: unset !important;
+    position: unset;
+}
+
+.flex-column{
+    position: unset;
+    font-family: "Montserrat";
+    
+}
+.btn-success:hover{
+animation-duration: 1s;
+    animation-name: puff;
+}
+.btn-danger:hover{
+    animation-duration: 1s;
+        animation-name: piff;
+    }
+.post{
+    font-family: "Roboto";
+    width: 64%;
+    margin-left: 33%;
+    margin-bottom: 30px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    
+}
+.post:hover{
+    animation-duration: .5s;
+    animation-name: poff;
+}
+@keyframes poff {
+    from {
+      width: 70%;
+      margin-left: 30%;
+
+    }
+    to{
+    width: 80% !important;
+    }
+}
+@keyframes puff {
+    from {
+      background-color: #3edc39;
+    }
+    to{
+    background-color: #dc3939;
+    }
+}
+@keyframes piff {
+    from {
+      background-color: #dc3939;
+    }
+    to{
+    background-color:#3edc39 ;
+    }
+}
+@media (max-width: 768px) {
+    .post{
+        width: 100%;
+        margin-left: 0;
+    }
+    .bar_left{
+        display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .navbar-collapse{
+margin-left: 33%;
+    }
+    .chis{
+        display: none;
+    }
+  }
+    
