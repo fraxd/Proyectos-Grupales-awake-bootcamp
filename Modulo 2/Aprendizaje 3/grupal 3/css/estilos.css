@@ -1,0 +1,209 @@
+html {
+    background-color: rgb(163, 196, 209);
+    margin-left: 3vw;
+    margin-right: 3vw;
+    }
+header      {
+    background-color: rgb(247, 247, 247);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 20px;
+    }
+    .titulo-subtitulo {
+        position: relative;
+        width: 100%;
+        height: 300px;
+    }
+    .titulo-subtitulo{
+        background-image: url('../img/Pngimg-PNG-Background.png'), url('../img/Blue-Background-Download-Free-PNG.png');
+        background-position: center center, center center;
+        background-size: cover, cover;
+        background-repeat: no-repeat, no-repeat;
+        font-size: xx-large;
+        margin-top: -44px;
+    }
+    header h1   {
+        font-family: Arial, Helvetica, sans-serif;
+        color: crimson;
+    }
+    header h2   {
+        font-family: 'Courier New', Courier, monospace;
+        color: darkgreen;
+    }
+    .imagen img   {
+    float: left;
+    margin-left: 5px;
+    width: 300PX; 
+    }
+
+/*formato cajas informacion body*/
+    .fabricantes {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        border: 3px solid black;
+        border-radius: 10px;
+        margin: 20px;
+        box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
+        padding-bottom: 20px;
+        
+    }
+    .reseña {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: justify;
+        margin: 20px;
+        border: 3px solid black;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px;
+        background-color: #f0f0f0;
+        box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
+    }
+    .testimonios {
+        border: 3px solid black;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px;
+        background-color: #f0f0f0;
+        box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
+    }
+    .testimonios h2 {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .foto-cliente img {
+        float: left;
+        margin-right: 10px;
+    } 
+    .foto-cliente blockquote {
+        margin-left: 10px;
+    }
+    .mapa iframe  {
+        margin-left: 20px;
+        float: left;
+        margin-right: 50px;
+        padding: 30px;
+    }   
+    .horario p    {
+        margin-top: -10px;
+    }  
+    .datos  {
+        font-family: Arial, Helvetica, sans-serif;
+        border: 3px solid black;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
+    }
+
+footer {
+    clear: both;
+    text-align: left;
+    background-color: rgb(219, 231, 242);
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
+    }         
+    .columna    {
+        display: inline-block;
+        width: 30%;
+        padding: 20px;
+        vertical-align: top;
+    }
+    .columna1  {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .columna2  {
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 60px;
+    }
+    .columna3  {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .redes {
+        clear: both;
+        text-align: center;
+    }
+/* Dispositivos pequeños (teléfonos, 768px y menos) */
+@media only screen and (max-width: 768px) {
+    .fabricantes img  {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+    }
+    .mapa iframe {
+        display: inline-block;
+        width:  90%;
+        height: auto;
+        margin-left: -7px;
+    }
+    .datos  {
+        text-align: center;
+    }
+    .columna  {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+/* Dispositivos medianos (pantallas 769px y 1279px) */
+@media only screen and (min-width:769px) and (max-width: 1279px)   {
+    .reseña {
+        display: inline-flex;
+        width: 40%;
+        height: auto;
+        float: left;
+    }
+    .fabricantes    {
+        display: inline-flexbox;
+        float: right;
+        width: 44%;
+        height: 425px;
+        padding: 10px;
+    }
+    .fabricantes a {
+        width: 100%;
+        height: auto;
+        margin: 5px;
+        margin-top: 10px;
+        
+    }
+
+    .testimonios {
+        display: block;
+        width: 43%;
+        height: auto;
+        float: right;
+    }
+    .testimonios h2 {
+        display: none;
+    }
+    .mapa {
+        display: inline-flexbox;
+        width:  90%;
+        height: auto;
+        float: left;
+        margin-top: -270px;
+        margin-left: -40px;
+    }
+    .datos {
+        display: inline-block;
+        width: 44%;
+        height: auto;
+        text-align: center;
+        margin-left: 15px;
+        margin-top: 20px;
+    }
+    .columna  {
+        display: inline-flex;
+        flex-direction: column;
+        width: 28%;
+        margin: -10px;
+    }
+
+}
+@media only screen and (min-width: 1280px)  {
+    .columna  {
+        display: inline-flex;
+        flex-direction: column;
+        width: 28%;
+        margin: -10px;
+    }
+}
