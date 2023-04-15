@@ -38,8 +38,8 @@ header h2 {
 
 .imagen img {
     float: left;
-    margin-left: 5px;
     width: 300PX;
+    padding: -10px;
 }
 
 /*formato cajas informacion body*/
@@ -65,9 +65,11 @@ header h2 {
     box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 40px;
 }
-.logo img   {
+
+.logo img {
     float: left;
 }
+
 .formulario {
     border: 3px solid black;
     border-radius: 10px;
@@ -75,6 +77,7 @@ header h2 {
     background-color: #f0f0f0;
     box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 40px;
+    font-weight: bold;
 }
 
 .formulario form {
@@ -86,6 +89,7 @@ header h2 {
 
 .beneficios {
     font-family: 'Roboto Slab', serif;
+    font-size: larger;
     background-color: rgb(243, 231, 70);
     padding: 10px;
     border: 2px solid black;
@@ -127,12 +131,16 @@ header h2 {
 
 .datos {
     font-family: 'Lora', serif;
+    font-weight: bold;
     border: 3px solid black;
     border-radius: 10px;
     box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 40px;
 }
-h2, h3, h4 {
+
+h2,
+h3,
+h4 {
     text-align: center;
 }
 
@@ -181,13 +189,18 @@ footer {
         margin-left: -4px;
     }
 
+    .imagen img {
+        float: left;
+        width: 50%;
+        padding: -10px;
+    }
+
     .reseña {
         display: block;
         width: 97%;
         height: auto;
         padding: 10px 5px;
         margin-left: -4px;
-
     }
 
     .formulario {
@@ -216,22 +229,23 @@ footer {
         width: 97%;
         padding: 10px 5px;
         margin-left: -4px;
+    }
 
+    .datos {
+        text-align: center;
+        display: inline-flexbox;
+        width: 97%;
+        height: 500px;
+        padding: 10px 5px;
     }
 
     .mapa iframe {
-        display: inline-block;
         width: 90%;
         height: auto;
         margin-left: -7px;
         margin-top: 10px;
     }
 
-    .datos {
-        text-align: center;
-        width: 97%;
-        padding: 10px 5px;
-    }
 
     .columna {
         display: flex;
@@ -244,14 +258,14 @@ footer {
 @media only screen and (min-width:769px) {
     .reseña {
         display: inline-block;
-        width: 44%;
+        width: 45%;
         height: auto;
         padding: 10px 10px;
     }
 
     .formulario {
         display: block;
-        width: 44%;
+        width: 45%;
         height: auto;
         float: right;
         padding: 10px 5px;
@@ -259,9 +273,9 @@ footer {
 
     .fabricantes {
         display: inline-block;
-        width: 44%;
+        width: 45%;
         height: auto;
-        padding: 10px 5px;
+        padding: 10px 10px;
     }
 
     .fabricantes a {
@@ -270,8 +284,8 @@ footer {
     }
 
     .testimonios {
-        display: block;
-        width: 44%;
+        display: inline-flexbox;
+        width: 45%;
         height: auto;
         float: right;
         padding: 10px 5px;
@@ -282,18 +296,19 @@ footer {
     }
 
     .mapa iframe {
-        display: flexbox;
-        position: relative;
-        width: 40%;
+        display: block;
+        width: 85%;
         height: auto;
         float: left;
     }
 
     .datos {
-        display: inline-block;
-        width: 44%;
+        display: block;
+        width: 45%;
         height: auto;
         text-align: center;
+        float: left;
+        padding: 10px 10px;
     }
 
     .columna {
