@@ -70,7 +70,7 @@ header h2 {
 /*animacion de la sombra*/
 .reseña:hover {
     -webkit-box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
-  box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
+    box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
 }
 /*cambio de color quienes somos*/
 #qs {color: black;
@@ -81,8 +81,11 @@ transition: color 1s linear;}
 
 .logo img {
     float: left;
+    transition: transform 410ms ease-out;
 }
-
+.logo img:hover {
+    transform: rotate(360deg) translate(0px, 0px);
+}
 .formulario {
     border: 3px solid black;
     border-radius: 10px;
