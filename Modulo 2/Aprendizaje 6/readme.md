@@ -1,11 +1,17 @@
 # Team 2
-04/04/2023
-## Modulo 2 - Proyecto Grupal 1
+16/04/2023
+## Modulo 2 - Proyecto Grupal 6.1
 
-### Integrantes:
+### notas
+el archivo a evaluar 'estadiscticas.html' 
+se encuentra dentro de la carpeta 'anexos'
+aunque de igual manera es accesible desde cualquier otro html dentro de su respectivo nav
+
+#### Integrantes:
 
  - Patricio Espinoza
  - Rafael Jara
  - Pablo Poblete
  - Franco Fuentes 
+ - Francisco Olivares
 
