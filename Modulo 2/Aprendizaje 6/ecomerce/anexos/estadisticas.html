@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <title>Fenix electronics.</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-danger">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="https://static.vecteezy.com/system/resources/previews/007/578/784/non_2x/luxury-awesome-phoenix-logo-design-template-vector.jpg"
+                        alt="" width="30" height="24" class="d-inline-block align-text-top">
+                    Fenix electronics
+                </a>
+                <span class="navbar-text">
+                    !!SI SE QUEMA LO REEMBOLSAMOS¡¡ ...Renacido cual Fenix.
+                </span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../anexos/comprar.html">Como comprar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../anexos/marcas_asociadas.html"> Marcas asociadas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../anexos/pago.html">Pagos y Tranferencias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../anexos/estadisticas.html">Estadisticas</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main style="margin-top: 120px;">
+        <div class="row" style="margin: 10%;">
+            <div class="col-lg-12">
+                <div class="table-responsive">
+                    <table id="myTable" class="table table-striped" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Existencias</th>
+                                <th>en transporte</th>
+                                <th>Vendidos</th>
+                                <th>Ganancia bruta</th>
+                                <th>Ganancia neta</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                            <tr>
+                                <td>Licuadora</td>
+                                <td>322</td>
+                                <td>7</td>
+                                <td>45</td>
+                                <td>$450,678</td>
+                                <td>$150,500</td>
+                            </tr>
+                            <tr>
+                                <td>Refrigerador</td>
+                                <td>50</td>
+                                <td>4</td>
+                                <td>63</td>
+                                <td>$325,070</td>
+                                <td>$170,750</td>
+                            </tr>
+                            <tr>
+                                <td>Microondas</td>
+                                <td>40</td>
+                                <td>6</td>
+                                <td>66</td>
+                                <td>$240,090</td>
+                                <td>$86,000</td>
+                            </tr>
+                            <tr>
+                                <td>Cocina</td>
+                                <td>32</td>
+                                <td>6</td>
+                                <td>22</td>
+                                <td>$900,050</td>
+                                <td>$433,060</td>
+                            </tr>
+                            <tr>
+                                <td>Aire Acondicionado</td>
+                                <td>15</td>
+                                <td>4</td>
+                                <td>33</td>
+                                <td>$320,760</td>
+                                <td>$162,700</td>
+                            </tr>
+                            <tr>
+                                <td>Ventilador</td>
+                                <td>280</td>
+                                <td>10</td>
+                                <td>61</td>
+                                <td>$560,780</td>
+                                <td>$372,000</td>
+                            </tr>
+                            <tr>
+                                <td>Aspiradora</td>
+                                <td>78</td>
+                                <td>9</td>
+                                <td>59</td>
+                                <td>$180,970</td>
+                                <td>$137,500</td>
+                            </tr>
+                            <tr>
+                                <td>Califont</td>
+                                <td>47</td>
+                                <td>5</td>
+                                <td>55</td>
+                                <td>$785,70</td>
+                                <td>$327,900</td>
+                            </tr>
+                            <tr>
+                                <td>Lavadora</td>
+                                <td>30</td>
+                                <td>7</td>
+                                <td>39</td>
+                                <td>$390,560</td>
+                                <td>$205,500</td>
+                            </tr>
+                            <tr>
+                                <td>Centrifuga</td>
+                                <td>24</td>
+                                <td>6</td>
+                                <td>39</td>
+                                <td>$750,980</td>
+                                <td>$405,500</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-danger text-white" style="margin-top: 60px;">
+        <nav class="navbar  navbar-expand navbar-dark bg-danger">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Terminos y Condiciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Terminos de uso</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Politicas de Privacidad</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Redes:</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#"><img src="../img/insta.png" alt="" height="30"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#"><img src="../img/twit.png" alt="" height="30"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#"><img src="../img/face.png" alt="" height="30"></a>
+                </li>
+            </ul>
+        </nav>
+
+        <h5 style="padding: 2%;">Copyright © 2023-2023 Fenix Electronics. Todos los Derechos Reservados.</h5>
+        </div>
+
+
+    </footer>
+</body>
+
+</html>
+<!--bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+<!-- datatables-->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+<script src="main.js"></script>
+<script>let table = new DataTable('#myTable');</script>

@@ -1,0 +1,272 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    display: none;
+}
+
+h1,
+h4 {
+    font-family: helvetica;
+}
+h4{
+    color: white;
+}
+a {
+    font-family: Arial;
+    color: black;
+    outline: none;
+    text-decoration: none;
+    
+}
+
+footer,
+footer a {
+    background-color: rgb(233, 8, 8);
+    padding: 3%;
+    color: white;
+}
+
+footer a:hover {
+    color: orange;
+}
+
+footer>div {
+    float: right;
+    padding: 5px;
+}
+
+main img:hover {
+    position: absolute;
+    outline: auto;
+    height: auto;
+    width: 300px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+[class*="col-"] {
+    width: 100%;
+    padding: 3px;
+    transition-duration: .25s;
+}
+
+main>.row {
+    margin: 7px;
+}
+
+.row {
+    border: 1px solid black;
+}
+
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+    header>div{
+        padding:2px 2px 1px;
+        background-color: #c91c1c;
+    }
+
+    footer>div{
+        display: none;
+
+    }
+
+    #menu__toggle:checked+.menu__btn>span {
+        transform: rotate(45deg);
+    }
+
+    #menu__toggle:checked+.menu__btn>span::before {
+        top: 0;
+        transform: rotate(0deg);
+    }
+
+    #menu__toggle:checked+.menu__btn>span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #menu__toggle:checked~.menu__box {
+        right: 0 !important;
+    }
+
+    .menu__btn {
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .menu__btn>span,
+    .menu__btn>span::before,
+    .menu__btn>span::after {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background-color:black;
+        transition-duration: .25s;
+    }
+
+    .menu__btn>span::before {
+        content: '';
+        top: +8px;
+    }
+
+    .menu__btn>span::after {
+        content: '';
+        top: 16px;
+    }
+
+    .menu__box {
+        display: block;
+        position: fixed;
+        top: 0px;
+        margin-top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100%;
+        padding: 80px 0;
+        list-style: none;
+        background-color: #c91c1c;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+        transition-duration: .25s;
+    }
+
+    .menu__item {
+        display: block;
+        padding: 12px 24px;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+        transition-duration: .25s;
+    }
+
+    .menu__item:hover {
+        background-color: #eb4b0cef;
+    }
+
+}
+
+/* Para versión escritorio o laptop: */
+@media only screen and (min-width: 768px) {
+
+    h1 {
+        display: block;
+    }
+    h4{
+        color: black;
+    }
+    header>div {
+        text-align: left;
+        display: inline-block;
+    }
+
+    header>a {
+        float: left;
+        margin-top: 20px;
+    }
+
+    .red{
+        display: none;
+    }
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    [class*="col-"] {
+        float: left;
+    }
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .menu__box {
+        margin-top: 0%;
+        transition-duration: .25;
+    }
+
+    nav {
+        background-color: #c91c1c;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 14px;
+
+    }
+
+    nav li {
+        display: inline-block;
+        width: 24%;
+        text-align: center;
+        color: #fff;
+        padding: 10px 10px;
+    }
+
+    nav li:hover {
+        background-color: #eb4b0cef;
+    }
+}
+
+#menu__toggle {
+    opacity: 0;
+    position: absolute;
+}
