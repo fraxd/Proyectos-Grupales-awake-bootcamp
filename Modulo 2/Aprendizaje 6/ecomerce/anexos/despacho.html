@@ -51,7 +51,7 @@
 
             <h3>Indique la direccion de despacho:</h3>
             <p> El despacho es realizado Por Pagar, es decir al recibirlo usted debe pagarlo al transportista.</p>
-            <form action="../anexos/pago.html">
+            <form action="../anexos/pago.html" id="formulario">
                 <div class="container">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required="true"><br><br>
@@ -145,13 +145,13 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
-    <script>document.getElementById('formulario').addEventListener('submit',(e)=>{
-        e.preventDefault();
-        var modal = new bootstrap.Modal(document.getElementById('modalp'));
-      modal.show();
-        setTimeout(redirigir, 5000);
-        
+<script>document.getElementById('formulario').addEventListener('submit',(e)=>{
+    e.preventDefault();
+    var modal = new bootstrap.Modal(document.getElementById('modalp'));
+  modal.show();
+    setTimeout(redirigir, 5000);
     
-    })
-    
-    function redirigir() { location.href = "../index.html" }</script>
+
+})
+
+function redirigir() { location.href = "../index.html" }</script>
