@@ -1,3 +1,17 @@
+a = JSON.parse(localStorage.getItem('molestia'))
+window.addEventListener('load', function () {
+    if(a==false){
+    window.location.href='anexos/login.html';
+}else{
+    setTimeout(logout,5000);
+    function logout(){
+    a=false;
+    localStorage.setItem('molestia', JSON.stringify(a));
+}
+}})
+
+
+
 
 //lista de articulos del carrito
 window.carro = [];
