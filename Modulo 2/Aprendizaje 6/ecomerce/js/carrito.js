@@ -3,7 +3,7 @@ window.addEventListener('load', function () {
     if(a==false){
     window.location.href='anexos/login.html';
 }else{
-    setTimeout(logout,20000);
+    setTimeout(logout,600000);
     function logout(){
     a=false;
     localStorage.setItem('molestia', JSON.stringify(a));
