@@ -7,7 +7,7 @@ nav {
     top: 0;
     width: 100%;
     font-family: 'Oswald';
-
+    z-index: 9999;
 }
 
 
@@ -33,7 +33,7 @@ main {
     background-color: aliceblue;
     border: solid #39dcb3;
     border-radius: 1%;
-    
+        
 
 }
 
