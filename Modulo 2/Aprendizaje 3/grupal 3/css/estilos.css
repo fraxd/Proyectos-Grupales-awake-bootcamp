@@ -66,26 +66,34 @@ header h2 {
     margin-bottom: 40px;
     -webkit-transition: 1s linear;
     transition: 1s linear;
-}   
+}
+
 /*animacion de la sombra*/
 .reseña:hover {
-    -webkit-box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
-    box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
+    -webkit-box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
+    box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
 }
-/*cambio de color quienes somos*/
-#qs {color: black;
--webkit-transition: color 1s linear;
-transition: color 1s linear;}
 
-#qs:hover {color: gold;}
+/*cambio de color quienes somos*/
+#qs {
+    color: black;
+    -webkit-transition: color 1s linear;
+    transition: color 1s linear;
+}
+
+#qs:hover {
+    color: gold;
+}
 
 .logo img {
     float: left;
     transition: transform 410ms ease-out;
 }
+
 .logo img:hover {
     transform: rotate(360deg) translate(0px, 0px);
 }
+
 .formulario {
     border: 3px solid black;
     border-radius: 10px;
@@ -95,6 +103,7 @@ transition: color 1s linear;}
     margin-bottom: 40px;
     font-weight: bold;
 }
+
 /*cambio de tamaño de la fuente*/
 #mov-1 {
     font-size: 19px;
@@ -105,6 +114,7 @@ transition: color 1s linear;}
 #mov-1:hover {
     font-size: 28px;
 }
+
 /*cambio de color de fondo*/
 .formulario form {
     background-color: rgb(243, 231, 70);
@@ -113,6 +123,7 @@ transition: color 1s linear;}
     border-radius: 10px;
     -webkit-transition: background-color 1s
 }
+
 .formulario form:hover {
     background-color: rgb(43, 245, 144);
 }
