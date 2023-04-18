@@ -1,3 +1,4 @@
+
 //lista de articulos del carrito
 window.carro = [];
 
@@ -33,7 +34,6 @@ window.crearArticulo=function(i){
     articulo.cantidad=cantidad;
     articulo.total=total;
     window.carro.push(articulo);
-
     localStorage.setItem('carro', JSON.stringify(carro));
 window.cargarCarro();
 };
@@ -66,7 +66,7 @@ window.cargarCarro = function () {
     let summary = document.querySelector("#divi");
     summary.innerText="";
     let span = document.createElement("span");
-    span.classList.add("position-absolute","top-0","start-100","translate-middle","badge","rounded-pill","bg-danger")
+    span.classList.add("position-absolute","top-100","start-100","translate-middle","badge","rounded-pill","bg-danger")
     span.setAttribute("id","badge")
     summary.appendChild(span);
     let largo=window.carro.length;
@@ -99,6 +99,7 @@ window.cargarCarro = function () {
 //evento que se activa al cargarse la pagina
 window.addEventListener('load', function () {
     window.cargarPag();
+    
 })
 
 //crea los elementos de la pagina y los rellena con los productos
@@ -137,24 +138,28 @@ window.cargarPag = function () {
         let col7 = document.createElement('div');
         col7.classList.add("col-3", "col-lg-6");
         col7.innerText = "Cantidad:";
+        let quantity=document.createElement('div');
+        quantity.classList.add("quantity");
+        let span1 = document.createElement('span');
+        span1.classList.add("quantity-add","quantity-button");
         let input = document.createElement('input');
-        input.classList.add("quantity-field", "border-0", "text-center", "w-50");
+        input.classList.add("quantity-field", "border-0", "text-center");
         input.setAttribute("type", "number");
         input.setAttribute("step", "1");
         input.setAttribute("min", "1");
         input.setAttribute("max", "20");
         input.setAttribute("value", "1");
         input.setAttribute("id", "cantidad" + i);
-        input.setAttribute("onclick", "crearArticulo(" + i + ")");
+        let span2 = document.createElement('span');
+        span2.classList.add("quantity-remove","quantity-button");
         let col8 = document.createElement('div');
         col8.classList.add("col-3", "col-lg-12");
         let button = document.createElement('button');
         button.classList.add("btn", "btn-light");
         button.innerText = "Añadir al carrito";
-        button.setAttribute("onclick", "crearArticulo(" + i + ")");
+        button.setAttribute("onclick", "crearArticulo("+i+")");
 
         post.appendChild(col);
-
         col.appendChild(row2);
         row2.appendChild(a);
         a.appendChild(col2);
@@ -164,11 +169,33 @@ window.cargarPag = function () {
         row2.appendChild(col5);
         row2.appendChild(col6);
         row2.appendChild(col7);
-        col7.appendChild(input);
+        col7.appendChild(quantity);
+        quantity.appendChild(span1)
+        quantity.appendChild(input)
+        quantity.appendChild(span2)
         row2.appendChild(col8);
         col8.appendChild(button);
 
+        
     }
+    $('.quantity-button').off('click').on('click', function () {
+  
+        if ($(this).hasClass('quantity-add')) {
+          var addValue = parseInt($(this).parent().find('input').val()) + 1;
+              $(this).parent().find('input').val(addValue).trigger('change');
+          }
+      
+          if ($(this).hasClass('quantity-remove')) {
+          var removeValue = parseInt($(this).parent().find('input').val()) - 1;
+              if( removeValue == 0 ) {
+            removeValue = 1;
+              }
+              $(this).parent().find('input').val(removeValue).trigger('change');
+          }
+      
+      });
+      
+    
 }
 //base de datos improvisada
 window.producto = [{
