@@ -1,5 +1,6 @@
 let nombre="Aldebaran"
 let contraseña="Taurus"
+a=false;
 
 const formulario = document.getElementById('formulario');
 const imputs = document.querySelectorAll('#formulario input');
@@ -13,8 +14,10 @@ formulario.addEventListener('submit',(e)=>{
     name.innerText=""
     pass.innerText=""
 
-    
+    let a=false;
     if(nom===nombre && contraseña===contra){
+        let a=true
+        localStorage.setItem('molestia', JSON.stringify(a));
         window.location.href='../index.html';
     }else{
         if(nom!==nombre){
@@ -43,4 +46,5 @@ formulario.addEventListener('submit',(e)=>{
     }
     formulario.reset();
 });
+
 
