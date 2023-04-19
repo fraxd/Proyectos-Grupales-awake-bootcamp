@@ -1,7 +1,7 @@
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .quantity {
@@ -9,6 +9,7 @@ input::-webkit-inner-spin-button {
     display: inline-block;
     color: #7f7f7f;
 }
+
 .quantity input[type="number"] {
     transition: border 0.3s ease-in-out, color 0.3s ease-in-out;
     -webkit-appearance: textfield;
@@ -28,12 +29,15 @@ input::-webkit-inner-spin-button {
     background-color: #fff;
     color: #342f2f;
 }
+
 .quantity input[type="number"]:focus {
     border-color: #57b8f6 !important;
 }
+
 .quantity input[type="number"]:hover {
     border-color: #a5a5a5;
 }
+
 .quantity-button {
     width: 39px;
     height: 34px;
@@ -42,7 +46,9 @@ input::-webkit-inner-spin-button {
     position: relative;
     cursor: pointer;
 }
-.quantity-button::before, .quantity-button::after {
+
+.quantity-button::before,
+.quantity-button::after {
     position: absolute;
     top: calc(50% - 1px);
     left: calc(50% - 7px);
@@ -52,31 +58,37 @@ input::-webkit-inner-spin-button {
     background-color: currentColor;
     display: block;
 }
+
 .quantity-remove::after {
     display: none;
 }
+
 .quantity-add::after {
     transform: rotate(90deg);
 }
 
 
-summary{
-    margin-top:150px; 
+summary {
+
+    margin-top: 150px;
     width: 50px;
     color: #af7b7b00;
 }
-details{
-width: 50px;
-height: 50px;
-    visibility:inherit;
+
+details {
+    right: 0;
+    width: 50px;
+    height: 50px;
+    visibility: inherit;
     position: absolute;
 }
-.card{
+
+.card {
     color: #000;
 }
 
 
-.carrito>p{
+.carrito>p {
     position: fixed;
     width: 50px;
     height: 50px;
@@ -84,6 +96,12 @@ height: 50px;
     background-size: 50px;
 }
 
-     
-  
-    
+@media (max-width: 768px) {
+    summary {
+        margin-top: 300px;
+        width: 50px;
+        color: #af7b7b00;
+        transition: 0.5s;
+    }
+
+}
