@@ -1,11 +1,10 @@
 # Team 2
-16/04/2023
+19/04/2023
 ## Modulo 2 - Proyecto Grupal 6.1
 
 ### notas
-el archivo a evaluar 'estadiscticas.html' 
-se encuentra dentro de la carpeta 'anexos'
-aunque de igual manera es accesible desde cualquier otro html dentro de su respectivo nav
+Este es el repositorio utilizado durante nuestros trabajos, esta alojado en la carpeta Aprendizaje 6 el ecommerce.
+https://github.com/fraxd/Proyectos-Grupales-awake-bootcamp
 
 #### Integrantes:
 
