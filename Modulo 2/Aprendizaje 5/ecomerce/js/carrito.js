@@ -1,6 +1,6 @@
 a = JSON.parse(localStorage.getItem('molestia'))
 window.addEventListener('load', function () {
-    if(a==false){
+    if(a!==true){
     window.location.href='anexos/login.html';
 }else{
     setTimeout(logout,600000);
