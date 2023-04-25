@@ -30,7 +30,7 @@ while stock>0: #- El programa debe verificar que existan unidades disponibles.
 
                 elif productos_seleccionados>12 and stock==productos_seleccionados: #- Si no hay suficiente stock se entregan las unidades justas.
 
-                     print("unidades entregadas(sin extra por falta de stock.) : "+str(productos_seleccionados)) 
+                    print("unidades entregadas(sin extra por falta de stock.) : "+str(productos_seleccionados)) 
                 else:
 
                     print("unidades entregadas "+str(productos_seleccionados))
