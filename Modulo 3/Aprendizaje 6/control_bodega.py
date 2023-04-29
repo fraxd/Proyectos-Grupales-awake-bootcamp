@@ -2,26 +2,32 @@ import os
 
 productos = [
     {
+        'id_producto': 1,
         'producto': 'Zapatillas',
         'stock': '20'
     },
     {
+        'id_producto': 2,
         'producto': 'Poleras',
         'stock': '10'
     },
     {
+        'id_producto': 3,
         'producto': 'Zapatos',
         'stock': '15'
     },
     {
+        'id_producto': 4,
         'producto': 'Poleron',
         'stock': '3'
     },
     {
+        'id_producto': 5,
         'producto': 'Chaqueta',
         'stock': '5'
     },
     {
+        'id_producto': 6,
         'producto': 'Guantes',
         'stock': '4'
     },
@@ -56,6 +62,47 @@ def menu_bodega():
                 newProduct(nombre_producto, stock_producto)
             case 2:
                 borrarPantalla()
+                stockGlobal()
+                while True:
+                    nombre_producto = input('\n Indique el nombre del producto a editar: ')
+                    while True:
+                        try:
+                            nuevo_stock = int(input('Ingrese nuevo Stock: '))
+                            break
+                        except:
+                            print('Recuerda Ingresar un valor numerico.')
+                    if updateStock(nombre_producto, nuevo_stock):
+                        break
+            #opcion 3: Ver stock actual global
+            case 3:
+                borrarPantalla()
+                stockGlobal()
+            # Opcion 4: Ver stock actual especifico
+            case 4:
+                borrarPantalla()
+                while True:
+                    nombre_producto = input('Indique producto a actualizar stock: ')
+                    if stockEspecifico(nombre_producto):
+                        break
+            # Opcion 5: Ver todos los productos'
+            case 5:
+                borrarPantalla()
+                productosGlobal()
+
+            #opcion 6:  Revisar productos son sobrestock        
+            case 6:
+                borrarPantalla()
+                while True:
+                    try:
+                        sobre_stock = int(input('Ingrese valor de sobrestock a buscar: '))
+                        break
+                    except:
+                        print('Error, Debe ingresar un numero entero. \n')
+                sobreStock(sobre_stock)
+            
+            # Opcion 9: Salir
+            case 9:
+                break
 
 
 
@@ -81,9 +128,9 @@ def updateStock(nombre_producto, stock):
 
 #Mostrar y retornar las unidades disponibles por producto.
 def stockGlobal():
+    print('Stock de todos nuestros productos:')
     for producto in productos:
-        print('Stock de todos nuestros productos:')
-        print('Nombre: ',producto['producto'], 'Stock: ', producto['stock'])        
+        print('Producto:',producto['producto'], 'Stock: ', producto['stock'])        
     return productos
 
 #Mostrar y retornar las unidades disponibles de un producto en particular.
@@ -99,16 +146,17 @@ def stockEspecifico(nombre_producto):
 #Mostrar y retornar todos los productos de la tienda.
 def productosGlobal():
     nombre_productos = []
+    print('Listado de Productos: ')
     for producto in productos:
         nombre_productos.append(producto['producto'])
-        print(producto['producto'])
+        print('-',producto['producto'])
     return nombre_productos
 
 #Mostrar y retornar los productos que tienen más de un número de unidades (el usuario puede escoger el número de unidades).
 def sobreStock(sobre_stock):
     sobre_stock_productos = []
     for producto in productos:
-        if(producto['stock']>sobre_stock):
+        if(int(producto['stock'])>sobre_stock):
             sobre_stock_productos.append(producto)
             print(producto)
     return sobre_stock_productos
