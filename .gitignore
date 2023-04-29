@@ -3,3 +3,5 @@
 *.ini
 .venv
 .vscode
+*.pyc
+*.pyc
