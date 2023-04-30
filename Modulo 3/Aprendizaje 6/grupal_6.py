@@ -3,6 +3,9 @@ import control_venta
 
 def menu_principal():
     while True:
+        control_bodega.borrarPantalla()
+        print('\n      Bienvenido a Te lo vendo systems 2.0')
+        print('----- Todos los derechos reservados 1995 © ----- ')
         print('\nMenu Principal: ')
         print('1.- Control de Bodega')
         print('2.- Control de Ventas')
@@ -25,9 +28,6 @@ def menu_principal():
 
 
 ## INICIO DEL PROGRAMA
-print('\n      Bienvenido a Te lo vendo systems 2.0')
-print('----- Todos los derechos reservados 1995 © ----- \n\n')
-
 control_bodega.start()
 menu_principal()
 
