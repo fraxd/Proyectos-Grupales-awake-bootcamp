@@ -3,17 +3,20 @@ clientes = [
     {
         "nombre" : "Alexis" , 
         "edad" : 25 , 
-        "id" : "54mtmtrg9df" 
+        "id" : "54mtmtrg9df",
+        "compras" : [] 
     },
     {
         "nombre" : "Ana" , 
         "edad" : 18 , 
-        "id" : "f9f335g" 
+        "id" : "f9f335g",
+        "compras" : []     
     },  
     {
         "nombre" : "Bera" , 
         "edad" : 33 , 
-        "id" : "sgk5k339"
+        "id" : "sgk5k339",
+        "compras" : [] 
     },  
     {
         "nombre" : "Beni" , 
@@ -87,11 +90,11 @@ productos = [
 
 
 # ALTERNATIVA 1 PARA FORMAR LISTA DE COMPRA DE CLIENTES, Y VAYA AGREGANDO
-lista_comprasclientes = []
-for cliente_key, cliente_value in clientes.items():
-    for producto_key, producto_value in productos.items():
-        lista_comprasclientes.append((cliente_value, producto_value))
-print(lista_comprasclientes)
+# lista_comprasclientes = []
+# for cliente_key, cliente_value in clientes.items():
+#     for producto_key, producto_value in productos.items():
+#         lista_comprasclientes.append((cliente_value, producto_value))
+# print(lista_comprasclientes)
 
 
 #  ALTERNATIVA 2: COMPRA DE CLIENTES EN BASE A INGRESAR CANTIDAD DE PRODUCTOS 
