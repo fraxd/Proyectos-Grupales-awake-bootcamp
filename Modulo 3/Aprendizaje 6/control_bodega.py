@@ -161,7 +161,18 @@ def sobreStock(sobre_stock):
             print(producto)
     return sobre_stock_productos
 
+def getProducto(id_producto):
+    for producto in productos:
+        if int(producto['id_producto']) == id_producto:
+            return producto
+    return False
 
+def validaStock(pedido, id_producto):
+    for producto in productos:
+        if int(producto['id_producto']) == id_producto:
+            if int(producto['stock'])>= pedido:
+                return True
+    return False
 
 
 ## Limpiar pantalla
