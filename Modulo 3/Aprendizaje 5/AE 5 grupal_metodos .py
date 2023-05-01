@@ -33,8 +33,7 @@ for producto in productos:
 ## si se recorre con un for con un random se puede elegir cualquiera no es necesario
 ## El random elegira un numero al azar del 0 hasta el largo de la lista, el numero elegido se elimina.
 i = 0
-delNumber = random.randint(0,len(cliente))
-print(delNumber)
+delNumber = random.randint(0,len(clientes))
 for cliente in clientes:
     if(i== delNumber):
         print('Cliente Eliminaod: ',cliente['nombre'])
@@ -46,7 +45,6 @@ for cliente in clientes:
 ## Mismo metedo que el aterior
 i = 0
 delNumber = random.randint(0,len(productos))
-print(delNumber)
 for producto in productos:
     if(i== delNumber):
         print('Cliente Eliminaod: ',producto['nombre'])
@@ -58,7 +56,7 @@ for producto in productos:
 print('Claves Usuarios')
 for cliente in clientes:
     for clave in cliente.keys():
-        time.sleep(2)
+        time.sleep(0)  ## SE PONE 0 PARA APURAR LA CAUSA |||| VALOR NORMAL 2
         print(clave)
     break ## Se asume que con 1 vez basta ...
 
@@ -66,14 +64,14 @@ for cliente in clientes:
 print('Valores Usuarios')
 for cliente in clientes:
     for valor in cliente.values():
-        time.sleep(3)
+        time.sleep(0)        ## SE PONE 0 PARA APURAR LA CAUSA |||| VALOR NORMAL 3
         print(valor)
 
 # Imprimir todas las claves usuarioscon delay 2 segundos
 print('Claves productos')
 for producto in productos:
     for clave in producto.keys():
-        time.sleep(2)
+        time.sleep(0)        ## SE PONE 0 PARA APURAR LA CAUSA |||| VALOR NORMAL 2
         print(clave)
     break ## Se asume que con 1 vez basta ...
 
@@ -81,7 +79,28 @@ for producto in productos:
 print('Valores Productos')
 for producto in productos:
     for valor in producto.values():
-        time.sleep(3)
+        time.sleep(0)       ## SE PONE 0 PARA APURAR LA CAUSA |||| VALOR NORMAL 3
         print(valor)
 
+# Imprimir listado id usuarios
+for cliente in clientes:
+    print('-', cliente['id'])
 
+# Agrega _piloto a cada id usuario
+for cliente in clientes:
+    newId = cliente['id'] + '_pilot'
+    tupla = {'id': newId}
+    cliente.update(tupla)
+
+#Imprime listado de id usuarios
+for cliente in clientes:
+    print(cliente['id'])
+    
+# Eliminar los ultimos 4 id
+count = i=0
+newId = {'id': ''}
+for cliente in clientes:
+    if i >= len(clientes)-4:
+        cliente.update(newId)
+    i = i+1
+    print(cliente)
