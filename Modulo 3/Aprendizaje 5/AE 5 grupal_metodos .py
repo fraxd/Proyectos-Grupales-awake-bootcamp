@@ -52,7 +52,7 @@ for producto in productos:
         break
     i= i+1
 
-# Imprimir todas las claves usuarioscon delay 2 segundos
+# Imprimir todas las claves usuarios con delay 2 segundos
 print('Claves Usuarios')
 for cliente in clientes:
     for clave in cliente.keys():

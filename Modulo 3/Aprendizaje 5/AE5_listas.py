@@ -4,19 +4,16 @@ clientes = [
         "nombre" : "Alexis" , 
         "edad" : 25 , 
         "id" : "54mtmtrg9df",
-        "compras" : [] 
     },
     {
         "nombre" : "Ana" , 
         "edad" : 18 , 
         "id" : "f9f335g",
-        "compras" : []     
     },  
     {
         "nombre" : "Bera" , 
         "edad" : 33 , 
         "id" : "sgk5k339",
-        "compras" : [] 
     },  
     {
         "nombre" : "Beni" , 
@@ -89,52 +86,3 @@ productos = [
 ]
 
 
-# ALTERNATIVA 1 PARA FORMAR LISTA DE COMPRA DE CLIENTES, Y VAYA AGREGANDO
-# lista_comprasclientes = []
-# for cliente_key, cliente_value in clientes.items():
-#     for producto_key, producto_value in productos.items():
-#         lista_comprasclientes.append((cliente_value, producto_value))
-# print(lista_comprasclientes)
-
-
-#  ALTERNATIVA 2: COMPRA DE CLIENTES EN BASE A INGRESAR CANTIDAD DE PRODUCTOS 
-# cantidad = int(input("Ingrese la cantidad de suscripciones spotify que compra: "))
-# # for cantidad in productos:
-# #     productos["precio"]* cantidad
-# #     print(cantidad)
- 
-# # compras_clientes = {
-# #     [
-# #     clientes["alexis"], productos[0]["precio"] * cantidad
-# #     clientes["alexis"], productos[1]["precio"] * cantidad
-# #     clientes["alexis"], productos[2]["precio"] * cantidad
-# #     clientes["alexis"], productos[3]["precio"] * cantidad
-# #     clientes["alexis"], productos[4]["precio"] * cantidad
-# #     [
-# #     clientes["Ana"], productos(0)["precio"] * cantidad
-# #     ],
-# #     [
-# #     clientes["Bera"], productos() * cantidad
-# #     ],
-# #     [
-# #     clientes["Beni"], productos() * cantidad
-# #     ],
-# #     [
-# #     clientes["Camila"], productos() * cantidad
-# #     ],
-# #     [
-# #     clientes["Carlos"], productos() * cantidad
-# #     ],
-# #     [
-# #     clientes["Dani"], productos() * cantidad
-# #     ],
-# #     [
-# #     clientes["Mara"], productos() * cantidad
-# #     ],
-# #     [
-# #     clientes["Trinidad"], productos() * cantidad
-# #     ],
-# #     [
-# #     clientes["Carlota"], productos() * cantidad
-# #     ], 
-# # }
