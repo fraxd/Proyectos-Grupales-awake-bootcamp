@@ -21,8 +21,12 @@ class Clientes():
     def mostrar_saldo (self):
         return self.__saldo
     
-juanperez = Clientes(idcliente ='juanperez', nombre = 'juan', apellido = 'perez', correo = 'juanitoxBellakito@gmail.com', fechaderegistro = '02/02/2020', saldo = 100000)   
-#4 mas
+juanperez = Clientes('juanperez', 'Juan', 'Pérez', 'juanitoxBellakito@gmail.com', '02/02/2020', 100000)
+ignaciomiranda = Clientes('ignaciomiranda', 'Ignacio', 'Miranda', 'nachito1313@gmail.com', '03/03/2020', 80000)
+sofiaaraya = Clientes('sofiaaraya', 'Sofia','Araya', 'sofiaAraya@gmail.com', '04/04/2020', 110000)
+anasanchez = Clientes("anasanchez", "Ana", "Sánchez", "anaSanchez@mail.com", "2022-01-03", 100000)
+carlosgomez = Clientes("carlosgomez", "Carlos", "Gómez", "carlosGomez@mail.com", "2022-01-03", 25000)
+
 
 # 'id_clientes' : 1,
 #         'nombre' : 'Juan perez',
@@ -41,7 +45,7 @@ juanperez = Clientes(idcliente ='juanperez', nombre = 'juan', apellido = 'perez'
 #         'email' : 'sofiaAraya@gmail.com',
 #         'compras' : []
 
-class Productos() :
+class Productos():
     sku = str
     nombre = str
     categoria = str
@@ -61,7 +65,12 @@ class Productos() :
         self.valor_neto = valor_neto
 
 zapatillanike = Productos('001', 'Nike Revolution 6', 'zapatillas','dimarsa','20', '64990')
-#5 mas instancias
+poleranike = Productos('002', 'Nike Sportswear', 'poleras','dimarsa','10', '19990')
+zapatosnike = Productos('003', 'Nike Air Max 90', 'zapatos','dimarsa','15', '79990')
+poleronnike = Productos('004', 'Nike Sportswear', 'poleron','dimarsa','3', '29990')
+chaquetanike = Productos('005', 'Nike Sportswear', 'chaqueta','dimarsa','5', '39990')
+guantesnike = Productos('006', 'Nike Sportswear', 'guantes','dimarsa','4', '9990')
+
 
         # 'id_producto': 2,
         # 'producto': 'Poleras',
@@ -93,19 +102,8 @@ def __init__(self, run, nombre, apellido, seccion):
         self.apellido = apellido
         self.seccion = seccion
 
-vendedor1 = ('17888111-1', 'Pablo', 'Picasso', 'Zapatillas')
-#asi 4 instancias mas
-
-  
-    
-    
-        
-    
-   
-    
-    
-
-        
-    
-        
-    
+vendedor1 = Vendedor('17888111-1', 'Pablo', 'Picasso', 'Zapatillas')
+vendedor2 = Vendedor('18999666-9', 'Vincent', 'Vangoh', 'Poleras' )
+vendedor3 = Vendedor("33333333-3", "Marcela", "Torres", "Zapatos")
+vendedor4 = Vendedor("44444444-4", "Santiago", "Sánchez", "Poleron")
+vendedor5 = Vendedor("55555555-5", "Lucía", "González", "Chaquetas")
