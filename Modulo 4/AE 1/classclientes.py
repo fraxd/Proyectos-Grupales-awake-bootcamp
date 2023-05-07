@@ -1,5 +1,5 @@
 class Clientes():
-    idcliente = str
+    idcliente = int
     nombre = str
     apellido = str
     correo = str
@@ -7,7 +7,7 @@ class Clientes():
     __saldo = int
     
     def __init__(self, idclientes, nombre, apellido, correo, fechaderegistro, saldo):
-        self.idclientes = idclientes
+        self.idcliente = idclientes
         self.nombre = nombre
         self.apellido = apellido
         self.correo = correo
@@ -21,11 +21,11 @@ class Clientes():
     def mostrar_saldo (self):
         return self.__saldo
     
-juanperez = Clientes('juanperez', 'Juan', 'Pérez', 'juanitoxBellakito@gmail.com', '02/02/2020', 100000)
-ignaciomiranda = Clientes('ignaciomiranda', 'Ignacio', 'Miranda', 'nachito1313@gmail.com', '03/03/2020', 80000)
-sofiaaraya = Clientes('sofiaaraya', 'Sofia','Araya', 'sofiaAraya@gmail.com', '04/04/2020', 110000)
-anasanchez = Clientes("anasanchez", "Ana", "Sánchez", "anaSanchez@mail.com", "2022-01-03", 100000)
-carlosgomez = Clientes("carlosgomez", "Carlos", "Gómez", "carlosGomez@mail.com", "2022-01-03", 25000)
+juanperez = Clientes('1', 'Juan', 'Pérez', 'juanitoxBellakito@gmail.com', '02/02/2020', 100000)
+ignaciomiranda = Clientes('2', 'Ignacio', 'Miranda', 'nachito1313@gmail.com', '03/03/2020', 80000)
+sofiaaraya = Clientes('3', 'Sofia','Araya', 'sofiaAraya@gmail.com', '04/04/2020', 110000)
+anasanchez = Clientes("4", "Ana", "Sánchez", "anaSanchez@mail.com", "2022-01-03", 100000)
+carlosgomez = Clientes("5", "Carlos", "Gómez", "carlosGomez@mail.com", "2022-01-03", 25000)
 
 
 # 'id_clientes' : 1,
