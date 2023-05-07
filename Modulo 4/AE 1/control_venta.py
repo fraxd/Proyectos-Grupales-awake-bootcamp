@@ -2,11 +2,11 @@ import os
 import control_bodega
 import classclientes
 
-juanperez = classclientes.Clientes(1,'Juan', 'Pérez', 'juanitoxBellakito@gmail.com', '02/02/2020', 100000)
-ignaciomiranda = classclientes.Clientes(2,'Ignacio', 'Miranda', 'nachito1313@gmail.com', '03/03/2020', 80000)
-sofiaaraya = classclientes.Clientes(3,'Sofia','Araya', 'sofiaAraya@gmail.com', '04/04/2020', 110000)
-anasanchez = classclientes.Clientes(4,"Ana", "Sánchez", "anaSanchez@mail.com", "2022-01-03", 100000)
-carlosgomez = classclientes.Clientes(5,"Carlos", "Gómez", "carlosGomez@mail.com", "2022-01-03", 25000)
+juanperez = classclientes.Clientes(1,'Juan', 'Pérez', 'juanitoxBellakito@gmail.com', '02/02/2020')
+ignaciomiranda = classclientes.Clientes(2,'Ignacio', 'Miranda', 'nachito1313@gmail.com', '03/03/2020')
+sofiaaraya = classclientes.Clientes(3,'Sofia','Araya', 'sofiaAraya@gmail.com', '04/04/2020')
+anasanchez = classclientes.Clientes(4,"Ana", "Sánchez", "anaSanchez@mail.com", "2022-01-03")
+carlosgomez = classclientes.Clientes(5,"Carlos", "Gómez", "carlosGomez@mail.com", "2022-01-03")
 
 clientes = [juanperez, ignaciomiranda, sofiaaraya, anasanchez, carlosgomez]
 
