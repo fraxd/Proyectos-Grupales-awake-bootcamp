@@ -96,8 +96,8 @@ def newProduct(nombre_producto, stock):
 def updateStock(nombre_producto, stock):
     for producto in productos:
         # Se busca el producto por nombre 
-        if producto['producto'] == nombre_producto:
-            producto['stock'] = stock
+        if producto.nombre == nombre_producto:
+            producto.stock = stock
             print('Stock Actualizado')
             return True
         else:
@@ -108,15 +108,15 @@ def updateStock(nombre_producto, stock):
 def stockGlobal():
     print('Stock de todos nuestros productos:')
     for producto in productos:
-        print('Producto:',producto['producto'], 'Stock: ', producto['stock'])        
+        print('Producto:',producto.nombre, 'Stock: ', producto.stock)        
     return productos
 
 #Mostrar y retornar las unidades disponibles de un producto en particular.
 def stockEspecifico(nombre_producto):
     for producto in productos:
-        if producto['producto'] == nombre_producto:
-            print('Nombre: ',producto['producto'], 'Stock: ', producto['stock'])
-            return producto['stock']
+        if producto.nombre == nombre_producto:
+            print('Nombre: ',producto.nombre, 'Stock: ', producto.stock)
+            return producto.stock
     print('Producto no encontrado.')
     return False
 
@@ -126,29 +126,29 @@ def productosGlobal():
     nombre_productos = []
     print('Listado de Productos: ')
     for producto in productos:
-        nombre_productos.append(producto['producto'])
-        print('-',producto['producto'])
+        nombre_productos.append(producto.nombre)
+        print('-',producto.nombre)
     return nombre_productos
 
 #Mostrar y retornar los productos que tienen más de un número de unidades (el usuario puede escoger el número de unidades).
 def sobreStock(sobre_stock):
     sobre_stock_productos = []
     for producto in productos:
-        if(int(producto['stock'])>sobre_stock):
+        if(int(producto.stock)>sobre_stock):
             sobre_stock_productos.append(producto)
             print(producto)
     return sobre_stock_productos
 
 def getProducto(id_producto):
     for producto in productos:
-        if int(producto['id_producto']) == id_producto:
+        if int(producto.sku) == id_producto:
             return producto
     return False
 
 def validaStock(pedido, id_producto):
     for producto in productos:
-        if int(producto['id_producto']) == id_producto:
-            if int(producto['stock'])>= pedido:
+        if int(producto.sku) == id_producto:
+            if int(producto.stock)>= pedido:
                 return True
     return False
 

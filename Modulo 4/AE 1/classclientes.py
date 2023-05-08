@@ -20,11 +20,11 @@ class Clientes():
     def mostrar_saldo (self):
         return self.__saldo
     
-juanperez = Clientes('1', 'Juan', 'Pérez', 'juanitoxBellakito@gmail.com', '02/02/2020', 100000)
-ignaciomiranda = Clientes('2', 'Ignacio', 'Miranda', 'nachito1313@gmail.com', '03/03/2020', 80000)
-sofiaaraya = Clientes('3', 'Sofia','Araya', 'sofiaAraya@gmail.com', '04/04/2020', 110000)
-anasanchez = Clientes("4", "Ana", "Sánchez", "anaSanchez@mail.com", "2022-01-03", 100000)
-carlosgomez = Clientes("5", "Carlos", "Gómez", "carlosGomez@mail.com", "2022-01-03", 25000)
+juanperez = Clientes('1', 'Juan', 'Pérez', 'juanitoxBellakito@gmail.com', '02/02/2020')
+ignaciomiranda = Clientes('2', 'Ignacio', 'Miranda', 'nachito1313@gmail.com', '03/03/2020')
+sofiaaraya = Clientes('3', 'Sofia','Araya', 'sofiaAraya@gmail.com', '04/04/2020')
+anasanchez = Clientes("4", "Ana", "Sánchez", "anaSanchez@mail.com", "2022-01-03")
+carlosgomez = Clientes("5", "Carlos", "Gómez", "carlosGomez@mail.com", "2022-01-03")
 
 
 # 'id_clientes' : 1,
