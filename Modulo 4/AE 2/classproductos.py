@@ -1,9 +1,9 @@
-
+from classProveedor import proveedor
 class Productos():
     sku = int
     nombre = str
     categoria = str
-    proveedor = str
+    proveedor = proveedor
     stock = str
     valor_neto = int
     __impuesto = 1.19
@@ -18,12 +18,12 @@ class Productos():
         self.stock = stock
         self.valor_neto = valor_neto
 
-zapatillanike = Productos('001', 'Nike Revolution 6', 'zapatillas','dimarsa','20', '64990')
-poleranike = Productos('002', 'Nike Sportswear', 'poleras','dimarsa','10', '19990')
-zapatosnike = Productos('003', 'Nike Air Max 90', 'zapatos','dimarsa','15', '79990')
-poleronnike = Productos('004', 'Nike Sportswear', 'poleron','dimarsa','3', '29990')
-chaquetanike = Productos('005', 'Nike Sportswear', 'chaqueta','dimarsa','5', '39990')
-guantesnike = Productos('006', 'Nike Sportswear', 'guantes','dimarsa','4', '9990')
+# zapatillanike = Productos('001', 'Nike Revolution 6', 'zapatillas','dimarsa','20', '64990')
+# poleranike = Productos('002', 'Nike Sportswear', 'poleras','dimarsa','10', '19990')
+# zapatosnike = Productos('003', 'Nike Air Max 90', 'zapatos','dimarsa','15', '79990')
+# poleronnike = Productos('004', 'Nike Sportswear', 'poleron','dimarsa','3', '29990')
+# chaquetanike = Productos('005', 'Nike Sportswear', 'chaqueta','dimarsa','5', '39990')
+# guantesnike = Productos('006', 'Nike Sportswear', 'guantes','dimarsa','4', '9990')
 
 
         # 'id_producto': 2,

@@ -1,14 +1,23 @@
 import os
 from classproductos import Productos
+from classProveedor import proveedor
 
-zapatillanike = Productos('001', 'Nike Revolution 6', 'zapatillas','dimarsa','20', '64990')
-poleranike = Productos('002', 'Nike Sportswear', 'poleras','dimarsa','10', '19990')
-zapatosnike = Productos('003', 'Nike Air Max 90', 'zapatos','dimarsa','15', '79990')
-poleronnike = Productos('004', 'Nike Sportswear', 'poleron','dimarsa','3', '29990')
-chaquetanike = Productos('005', 'Nike Sportswear', 'chaqueta','dimarsa','5', '39990')
-guantesnike = Productos('006', 'Nike Sportswear', 'guantes','dimarsa','4', '9990')
 
-productos=[zapatillanike,poleranike,zapatosnike,poleronnike,chaquetanike,guantesnike]
+
+dimarsa = proveedor('77777777-k','Dimarsa S.A.', 'Dimarsa S.A', 'Chile', True)
+mallChino = proveedor('888888888-k','Chino Originals S.A.', 'Chino Originals S.A', 'Chile', True)
+
+provedores = [dimarsa, mallChino]
+
+zapatillanike = Productos('001', 'Nike Revolution 6', 'zapatillas',dimarsa,'20', '64990')
+zapatillanaike = Productos('001', 'Naike Revolution 6', 'zapatillas',mallChino,'20', '24990')
+poleranike = Productos('002', 'Nike Sportswear', 'poleras', dimarsa,'10', '19990')
+zapatosnike = Productos('003', 'Nike Air Max 90', 'zapatos',dimarsa,'15', '79990')
+poleronnike = Productos('004', 'Nike Sportswear', 'poleron',dimarsa,'3', '29990')
+chaquetanike = Productos('005', 'Nike Sportswear', 'chaqueta',dimarsa,'5', '39990')
+guantesnike = Productos('006', 'Nike Sportswear', 'guantes',dimarsa,'4', '9990')
+
+productos=[zapatillanike, zapatillanaike, poleranike,zapatosnike,poleronnike,chaquetanike,guantesnike]
 
 
 def start():
@@ -23,6 +32,7 @@ def menu_bodega():
         print('4.- Ver stock actual especifico')
         print('5.- Ver todos los productos')
         print('6.- Revisar productos son sobrestock')
+        print('7.- Ver todos los provedores')
         print('9.- Regresar Menu principal')
 
         opcion = int(input('\n Indique su opcion: '))
@@ -59,7 +69,7 @@ def menu_bodega():
             case 4:
                 borrarPantalla()
                 while True:
-                    nombre_producto = input('Indique producto a actualizar stock: ')
+                    nombre_producto = input('Indique producto a visualizar stock stock: ')
                     if stockEspecifico(nombre_producto):
                         break
             # Opcion 5: Ver todos los productos'
@@ -77,6 +87,12 @@ def menu_bodega():
                     except:
                         print('Error, Debe ingresar un numero entero. \n')
                 sobreStock(sobre_stock)
+            
+            case 7: 
+                borrarPantalla()
+                print('Listado de Proveedores')
+                for prov in provedores:
+                    print(prov.nombreLegal)
             
             # Opcion 9: Salir
             case 9:
