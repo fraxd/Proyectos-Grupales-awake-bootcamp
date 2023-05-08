@@ -17,7 +17,14 @@ class Productos():
         self.proveedor = proveedor
         self.stock = stock
         self.valor_neto = valor_neto
+    
+    def generarVenta(self, cant_pedida):
+        self.stock -= cant_pedida
 
+    def getValor_neto(self):
+        return self.valor_neto
+    
+    
 # zapatillanike = Productos('001', 'Nike Revolution 6', 'zapatillas','dimarsa','20', '64990')
 # poleranike = Productos('002', 'Nike Sportswear', 'poleras','dimarsa','10', '19990')
 # zapatosnike = Productos('003', 'Nike Air Max 90', 'zapatos','dimarsa','15', '79990')

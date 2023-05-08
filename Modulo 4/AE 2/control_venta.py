@@ -49,7 +49,7 @@ def menu_venta():
 def getCliente(id_cliente):
     for cliente in clientes:
         if cliente.idcliente == id_cliente:
-            return cliente.nombre
+            return cliente
     return ''
 
 
@@ -76,10 +76,10 @@ def compras():
     while True:
         try:
             id = int(input('Indique N° de cliente: ')) 
-            nombre = getCliente(id)
-            if nombre != '':
+            cliente = getCliente(id)
+            if cliente != '':
                 control_bodega.borrarPantalla()
-                print('Cliente Selecionado: ', nombre )
+                print('Cliente Selecionado: ', cliente.nombre )
                 break
         except: 
             print('Debes ingresar un numero entero.')
@@ -102,9 +102,7 @@ def compras():
             break
     print('Procesando Pedido...')
     if control_bodega.validaStock(stock_pedido, producto):
-        print('Compra Aprobada.')
-        print('Procesando Despacho.')
-        print('Gracias por Elegirnos.')
+        vendedor.vender(cliente,producto, stock_pedido)
     else:
         print('Compra Cancelada.')
         print('Stock Insuficiente.')
