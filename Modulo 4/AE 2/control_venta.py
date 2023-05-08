@@ -60,8 +60,8 @@ def printNumeroClientes():
 
 # Armar Pedidos
 def compras():
+    vendedor = ''
     while True:
-            vendedor = ''
             rut_Vendedor = input('Ingrese rut del vendedor. (sin puntos solo con -): ')
             for vend in list_vendedores:
                 if rut_Vendedor == vend.getRun():
@@ -72,8 +72,7 @@ def compras():
             if vendedor != '':
                 break
             else:
-                raise Exception()                
-
+                print('Run de trabajador no encontrado')
     while True:
         try:
             id = int(input('Indique N° de cliente: ')) 
