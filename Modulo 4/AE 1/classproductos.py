@@ -1,6 +1,6 @@
 
 class Productos():
-    sku = str
+    sku = int
     nombre = str
     categoria = str
     proveedor = str

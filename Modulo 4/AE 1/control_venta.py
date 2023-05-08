@@ -15,8 +15,6 @@ clientes = [juanperez, ignaciomiranda, sofiaaraya, anasanchez, carlosgomez]
 def menu_venta():
     while True:
         control_bodega.borrarPantalla()
-        for cliente in clientes:
-            print(f"Nombre: {cliente.idcliente}, Apellido: {cliente.apellido}, Saldo:{cliente.mostrar_saldo()}")
         print('Te lo vendo SA.')
         print('Control de ventas System 1.8v')
         print('1. Ver numero de clientes')
@@ -53,7 +51,6 @@ def printNumeroClientes():
 
 # Armar Pedidos
 def compras():
-    producto = {}
     while True:
         try:
             id = int(input('Indique N° de cliente: ')) 
@@ -69,7 +66,7 @@ def compras():
             id_producto = int(input('Indique Id Producto: '))
             producto = control_bodega.getProducto(id_producto)
             if producto:
-                print('Producto Selecionado: ', producto['producto'])
+                print('Producto Selecionado: ', producto.nombre)
                 break
         except:
             print('Debe Ingresar un numero entero.')
@@ -81,12 +78,12 @@ def compras():
             print('Por defecto se pide 1.')
             stock_pedido = 1.
             break
-    autorizarCompra(stock_pedido, producto)
+    autorizarCompra(stock_pedido, producto.sku)
 
 # Procesamiento de pedidos
 def autorizarCompra(stock_pedido, producto):
     print('Procesando Pedido...')
-    if control_bodega.validaStock(stock_pedido, int(producto['id_producto'])):
+    if control_bodega.validaStock(stock_pedido, producto):
         print('Compra Aprobada.')
         print('Procesando Despacho.')
         print('Gracias por Elegirnos.')

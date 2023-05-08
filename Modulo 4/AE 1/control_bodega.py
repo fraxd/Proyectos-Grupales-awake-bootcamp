@@ -147,7 +147,7 @@ def getProducto(id_producto):
 
 def validaStock(pedido, id_producto):
     for producto in productos:
-        if int(producto.sku) == id_producto:
+        if producto.sku == id_producto:
             if int(producto.stock)>= pedido:
                 return True
     return False
