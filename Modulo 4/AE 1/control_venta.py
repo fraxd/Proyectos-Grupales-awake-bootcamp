@@ -86,8 +86,4 @@ def compras():
     else:
         print('Compra Cancelada.')
         print('Stock Insuficiente.')
-<<<<<<< HEAD
-    input("press any key")
-=======
     input('Presione enter para continuar.')
->>>>>>> 950a2e024e77cb616724f83eb062042f151a47d5
