@@ -90,3 +90,4 @@ def autorizarCompra(stock_pedido, producto):
     else:
         print('Compra Cancelada.')
         print('Stock Insuficiente.')
+    input('Presione enter para continuar.')
