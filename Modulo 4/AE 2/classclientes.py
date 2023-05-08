@@ -4,7 +4,7 @@ class Clientes():
     apellido = str
     correo = str
     fechaderegistro = str
-    __saldo = int(0)
+    __saldo = 10000
     
     def __init__(self, idclientes, nombre, apellido, correo, fechaderegistro):
         self.idcliente = idclientes
@@ -13,11 +13,11 @@ class Clientes():
         self.correo = correo
         self.fechaderegistro = fechaderegistro
         
-        
+    property 
     def agregar_saldo(self,saldo):
         self.__saldo += saldo
-        
-    def mostrar_saldo (self):
+    property
+    def mostrar_saldo(self):
         return self.__saldo
     
 juanperez = Clientes('1', 'Juan', 'Pérez', 'juanitoxBellakito@gmail.com', '02/02/2020')
@@ -44,8 +44,8 @@ carlosgomez = Clientes("5", "Carlos", "Gómez", "carlosGomez@mail.com", "2022-01
 #         'email' : 'sofiaAraya@gmail.com',
 #         'compras' : []
 
-clientes = [juanperez, ignaciomiranda, sofiaaraya, anasanchez, carlosgomez]
+#clientes = [juanperez, ignaciomiranda, sofiaaraya, anasanchez, carlosgomez]
 
 # Imprimir nombre y apellido de los clientes
-for cliente in clientes:
-    print(f"Nombre: {cliente.nombre}, Apellido: {cliente.apellido}, Saldo:{cliente.mostrar_saldo()}")
+#for cliente in clientes:
+#    print(f"Nombre: {cliente.nombre}, Apellido: {cliente.apellido}, Saldo:{mostrar_saldo(cliente)}")

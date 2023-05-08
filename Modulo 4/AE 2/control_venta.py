@@ -78,10 +78,6 @@ def compras():
             print('Por defecto se pide 1.')
             stock_pedido = 1.
             break
-    autorizarCompra(stock_pedido, producto.sku)
-
-# Procesamiento de pedidos
-def autorizarCompra(stock_pedido, producto):
     print('Procesando Pedido...')
     if control_bodega.validaStock(stock_pedido, producto):
         print('Compra Aprobada.')

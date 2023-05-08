@@ -86,23 +86,23 @@ def menu_bodega():
 
 ## Agregar nuevos productos a la "base de datos"
 def newProduct(nombre_producto, stock):
-    productos.append({
-        'producto' : nombre_producto,
-        'stock' : stock
-    })
+    id=len(productos)+1
+    newProdu=Productos(id,nombre_producto,"","",stock,"")
+    productos.append(newProdu)
+    mostrarProducto(newProdu)
     print('Producto Agregado Correctamente.')
     return True
 
 def updateStock(nombre_producto, stock):
-    for producto in productos:
         # Se busca el producto por nombre 
-        if producto.nombre == nombre_producto:
-            producto.stock = stock
-            print('Stock Actualizado')
-            return True
-        else:
-            print('Por algun motivo no encontramos el producto.')
-            return False
+    producto=getProductoByName(nombre_producto)
+    if producto:
+        producto.stock = stock
+        print('Stock Actualizado')
+        return True
+    else:
+        print('Por algun motivo no encontramos el producto.')
+        return False
 
 #Mostrar y retornar las unidades disponibles por producto.
 def stockGlobal():
@@ -113,10 +113,10 @@ def stockGlobal():
 
 #Mostrar y retornar las unidades disponibles de un producto en particular.
 def stockEspecifico(nombre_producto):
-    for producto in productos:
-        if producto.nombre == nombre_producto:
-            print('Nombre: ',producto.nombre, 'Stock: ', producto.stock)
-            return producto.stock
+    producto=getProductoByName(nombre_producto)
+    if producto:
+        print('Nombre: ',producto.nombre, 'Stock: ', producto.stock)
+        return producto.stock
     print('Producto no encontrado.')
     return False
 
@@ -136,7 +136,7 @@ def sobreStock(sobre_stock):
     for producto in productos:
         if(int(producto.stock)>sobre_stock):
             sobre_stock_productos.append(producto)
-            print(producto)
+            print(mostrarProducto(producto))
     return sobre_stock_productos
 
 def getProducto(id_producto):
@@ -145,13 +145,20 @@ def getProducto(id_producto):
             return producto
     return False
 
-def validaStock(pedido, id_producto):
+def getProductoByName(nombre_producto):
     for producto in productos:
-        if producto.sku == id_producto:
-            if int(producto.stock)>= pedido:
-                return True
+        if producto.nombre == nombre_producto:
+            return producto
     return False
 
+def validaStock(pedido, product):
+    if int(product.stock)>= pedido:
+        print(product.stock)
+        return True
+    return False
+
+def mostrarProducto(produ):
+    print("ID :",produ.sku,"Nombre :",produ.nombre,"Categoría :",produ.categoria,"Proveedor :",produ.proveedor,"Stock :",produ.stock,"Precio :",produ.valor_neto)
 
 ## Limpiar pantalla
 def borrarPantalla(): #Definimos la función estableciendo el nombre que queramos
