@@ -1,6 +1,6 @@
 import os
-from classproductos import Productos
-from classProveedor import proveedor
+from clases.classproductos import Productos
+from clases.classProveedor import proveedor
 
 
 
@@ -13,8 +13,8 @@ zapatillanike = Productos('001', 'Nike Revolution 6', 'zapatillas',dimarsa,'20',
 zapatillanaike = Productos('001', 'Naike Revolution 6', 'zapatillas',mallChino,'20', '24990')
 poleranike = Productos('002', 'Nike Sportswear', 'poleras', dimarsa,'10', '19990')
 zapatosnike = Productos('003', 'Nike Air Max 90', 'zapatos',dimarsa,'15', '79990')
-poleronnike = Productos('004', 'Nike Sportswear', 'poleron',dimarsa,'3', '29990')
-chaquetanike = Productos('005', 'Nike Sportswear', 'chaqueta',dimarsa,'5', '39990')
+poleronnike = Productos('004', 'Nike poleron', 'poleron',dimarsa,'3', '29990')
+chaquetanike = Productos('005', 'Nike chaqueta', 'chaqueta',dimarsa,'5', '39990')
 guantesnike = Productos('006', 'Nike Sportswear', 'guantes',dimarsa,'4', '9990')
 
 productos=[zapatillanike, zapatillanaike, poleranike,zapatosnike,poleronnike,chaquetanike,guantesnike]
@@ -169,7 +169,6 @@ def getProductoByName(nombre_producto):
 
 def validaStock(pedido, product):
     if int(product.stock)>= pedido:
-        print(product.stock)
         return True
     return False
 

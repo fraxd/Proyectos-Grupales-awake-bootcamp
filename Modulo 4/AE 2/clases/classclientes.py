@@ -12,6 +12,7 @@ class Clientes():
         self.apellido = apellido
         self.correo = correo
         self.fechaderegistro = fechaderegistro
+        self.__saldo = 10000
         
     property 
     def agregar_saldo(self,saldo):
@@ -19,6 +20,13 @@ class Clientes():
     property
     def mostrar_saldo(self):
         return self.__saldo
+    
+    def generarCobro(self, valorNeto):
+        if valorNeto <= self.__saldo:
+            self.__saldo -= valorNeto
+            return True
+        else:
+            return False
     
 juanperez = Clientes('1', 'Juan', 'Pérez', 'juanitoxBellakito@gmail.com', '02/02/2020')
 ignaciomiranda = Clientes('2', 'Ignacio', 'Miranda', 'nachito1313@gmail.com', '03/03/2020')

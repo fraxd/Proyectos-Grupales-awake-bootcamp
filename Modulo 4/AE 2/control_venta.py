@@ -1,23 +1,23 @@
 import os
 import control_bodega
-import classclientes
-import classvendedores
+import clases.classclientes
+import clases.classvendedores
 
 ## CLIENTES
-juanperez = classclientes.Clientes(1,'Juan', 'Pérez', 'juanitoxBellakito@gmail.com', '02/02/2020')
-ignaciomiranda = classclientes.Clientes(2,'Ignacio', 'Miranda', 'nachito1313@gmail.com', '03/03/2020')
-sofiaaraya = classclientes.Clientes(3,'Sofia','Araya', 'sofiaAraya@gmail.com', '04/04/2020')
-anasanchez = classclientes.Clientes(4,"Ana", "Sánchez", "anaSanchez@mail.com", "2022-01-03")
-carlosgomez = classclientes.Clientes(5,"Carlos", "Gómez", "carlosGomez@mail.com", "2022-01-03")
+juanperez = clases.classclientes.Clientes(1,'Juan', 'Pérez', 'juanitoxBellakito@gmail.com', '02/02/2020')
+ignaciomiranda = clases.classclientes.Clientes(2,'Ignacio', 'Miranda', 'nachito1313@gmail.com', '03/03/2020')
+sofiaaraya = clases.classclientes.Clientes(3,'Sofia','Araya', 'sofiaAraya@gmail.com', '04/04/2020')
+anasanchez = clases.classclientes.Clientes(4,"Ana", "Sánchez", "anaSanchez@mail.com", "2022-01-03")
+carlosgomez = clases.classclientes.Clientes(5,"Carlos", "Gómez", "carlosGomez@mail.com", "2022-01-03")
 
 clientes = [juanperez, ignaciomiranda, sofiaaraya, anasanchez, carlosgomez]
 
 ## Vendedores
-vendedor1 = classvendedores.Vendedor('17888111-1', 'Pablo', 'Picasso', 'Zapatillas')
-vendedor2 = classvendedores.Vendedor('18999666-9', 'Vincent', 'Vangoh', 'Poleras' )
-vendedor3 = classvendedores.Vendedor("33333333-3", "Marcela", "Torres", "Zapatos")
-vendedor4 = classvendedores.Vendedor("44444444-4", "Santiago", "Sánchez", "Poleron")
-vendedor5 = classvendedores.Vendedor("55555555-5", "Lucía", "González", "Chaqueta")
+vendedor1 = clases.classvendedores.Vendedor('17888111-1', 'Pablo', 'Picasso', 'Zapatillas')
+vendedor2 = clases.classvendedores.Vendedor('18999666-9', 'Vincent', 'Vangoh', 'Poleras' )
+vendedor3 = clases.classvendedores.Vendedor("33333333-3", "Marcela", "Torres", "Zapatos")
+vendedor4 = clases.classvendedores.Vendedor("44444444-4", "Santiago", "Sánchez", "Poleron")
+vendedor5 = clases.classvendedores.Vendedor("55555555-5", "Lucía", "González", "Chaqueta")
 
 list_vendedores = [vendedor1, vendedor2, vendedor3, vendedor4, vendedor5]
 

@@ -16,8 +16,13 @@ class Vendedor():
         return self.run
 
     def vender(self, cliente, producto, cant_Solicitada):
-        producto.generarVenta(cant_Solicitada)
-        self.comisiones += producto.getValor_neto()*0.005 ## 0.5%
+        valor_neto = producto.getValor_neto()
+        if cliente.generarCobro(valor_neto):
+            self.comisiones += int(valor_neto*0.005) ## 0.5%
+            producto.generarVenta(cant_Solicitada)
+            print('Compra Aprobada')
+        else:
+            print('Saldo Insuficiente \nCompra Cancelada')
         
 
 

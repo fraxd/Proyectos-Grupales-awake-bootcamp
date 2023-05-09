@@ -1,10 +1,10 @@
-from classProveedor import proveedor
+from clases.classProveedor import proveedor
 class Productos():
     sku = int
     nombre = str
     categoria = str
     proveedor = proveedor
-    stock = str
+    stock = int
     valor_neto = int
     __impuesto = 1.19
     
@@ -15,8 +15,8 @@ class Productos():
         self.nombre = nombre
         self.categoria = categoria
         self.proveedor = proveedor
-        self.stock = stock
-        self.valor_neto = valor_neto
+        self.stock = int(stock)
+        self.valor_neto = int(valor_neto)
     
     def generarVenta(self, cant_pedida):
         self.stock -= cant_pedida
