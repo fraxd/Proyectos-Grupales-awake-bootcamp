@@ -5,14 +5,16 @@ class Clientes():
     correo = str
     fechaderegistro = str
     __saldo = 10000
+    genero = str
     
-    def __init__(self, idclientes, nombre, apellido, correo, fechaderegistro):
+    def __init__(self, idclientes, nombre, apellido, correo, fechaderegistro, genero = ''):
         self.idcliente = idclientes
         self.nombre = nombre
         self.apellido = apellido
         self.correo = correo
         self.fechaderegistro = fechaderegistro
         self.__saldo = 10000
+        self.genero = genero
         
     property 
     def agregar_saldo(self,saldo):

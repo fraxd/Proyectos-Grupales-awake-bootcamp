@@ -7,9 +7,10 @@ class Productos():
     stock = int
     valor_neto = int
     __impuesto = 1.19
+    descripcion = str
     
     
-    def __init__(self, sku, nombre, categoria, proveedor, stock, valor_neto):
+    def __init__(self, sku, nombre, categoria, proveedor, stock, valor_neto, descripcion = ''):
         
         self.sku = sku
         self.nombre = nombre
@@ -17,7 +18,8 @@ class Productos():
         self.proveedor = proveedor
         self.stock = int(stock)
         self.valor_neto = int(valor_neto)
-    
+        self.descripcion = descripcion    
+
     def generarVenta(self, cant_pedida):
         self.stock -= cant_pedida
 
