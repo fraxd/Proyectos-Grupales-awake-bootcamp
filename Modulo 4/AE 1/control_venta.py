@@ -36,16 +36,21 @@ def menu_venta():
             id_cliente = int(input('Ingrese el ID del cliente: '))
             cliente = getCliente(id_cliente)
             if cliente:
-                print(f"Saldo actual de {cliente}: {cliente.mostrar_saldo()}")
+                saldo = cliente.saldo()
+                print(f"El saldo del cliente {cliente.nombre} es: {saldo}")
+                input("Presione cualquier tecla para continuar")
             else:
                 print("Cliente no encontrado.")
+
         elif opcion == 4:
             id_cliente = int(input('Ingrese el ID del cliente: '))
             cliente = getCliente(id_cliente)
             if cliente:
                 saldo = int(input('Ingrese el saldo a agregar: '))
                 cliente.agregar_saldo(saldo)
-                print(f"Saldo actual de {cliente.nombre}: {cliente.mostrar_saldo()}")
+                saldoTotal = 
+                print(f"Saldo actual de {cliente.nombre}: {agregar_saldo()}")
+                input("Presione cualquier tecla para continuar")
             else:
                 print("Cliente no encontrado.")
         elif opcion == 9:
@@ -58,7 +63,7 @@ def menu_venta():
 def getCliente(id_cliente):
     for cliente in clientes:
         if cliente.idcliente == id_cliente:
-            return cliente.nombre
+            return cliente
     return ''
 
 

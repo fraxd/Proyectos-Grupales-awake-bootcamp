@@ -16,8 +16,10 @@ class Clientes():
     property 
     def agregar_saldo(self,saldo):
         self.__saldo += saldo
+        return self.__saldo
+        
     property
-    def mostrar_saldo(self):
+    def saldo(self):
         return self.__saldo
     
 juanperez = Clientes('1', 'Juan', 'Pérez', 'juanitoxBellakito@gmail.com', '02/02/2020')
@@ -27,7 +29,7 @@ anasanchez = Clientes("4", "Ana", "Sánchez", "anaSanchez@mail.com", "2022-01-03
 carlosgomez = Clientes("5", "Carlos", "Gómez", "carlosGomez@mail.com", "2022-01-03")
 
 clientes = [juanperez, ignaciomiranda, sofiaaraya, anasanchez, carlosgomez]
-    
+
 # 'id_clientes' : 1,
 #         'nombre' : 'Juan perez',
 #         'email' : 'juanitoxBellakito@gmail.com',
