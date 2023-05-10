@@ -36,7 +36,7 @@ def menu_venta():
             id_cliente = int(input('Ingrese el ID del cliente: '))
             cliente = getCliente(id_cliente)
             if cliente:
-                print(f"Saldo actual de {cliente}: {cliente.__saldo}")
+                print(f"Saldo actual de {cliente}: {cliente.mostrar_saldo()}")
             else:
                 print("Cliente no encontrado.")
         elif opcion == 4:
@@ -61,12 +61,6 @@ def getCliente(id_cliente):
             return cliente.nombre
     return ''
 
-## obtener el saldo
-def getSaldo(__saldo):
-    for cliente in clientes:
-        if cliente.__saldo == __saldo:
-            return cliente.__saldo
-    return ''
 
 def printNumeroClientes():
     print(' Actualmente hay registrados',len(clientes),'Clientes.')
