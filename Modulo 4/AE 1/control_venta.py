@@ -48,8 +48,8 @@ def menu_venta():
             if cliente:
                 saldo = int(input('Ingrese el saldo a agregar: '))
                 cliente.agregar_saldo(saldo)
-                saldoTotal = 
-                print(f"Saldo actual de {cliente.nombre}: {agregar_saldo()}")
+                saldoTotal = cliente.agregar_saldo(saldo)
+                print(f"Saldo actual de {cliente.nombre}: {saldoTotal}")
                 input("Presione cualquier tecla para continuar")
             else:
                 print("Cliente no encontrado.")
