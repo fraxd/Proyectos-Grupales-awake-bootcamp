@@ -10,7 +10,7 @@ carlosgomez = classclientes.Clientes(5,"Carlos", "Gómez", "carlosGomez@mail.com
 
 clientes = [juanperez, ignaciomiranda, sofiaaraya, anasanchez, carlosgomez]
 
-
+consulta_saldo = 0
 
 def menu_venta():
     while True:
@@ -37,7 +37,8 @@ def menu_venta():
             cliente = getCliente(id_cliente)
             if cliente:
                 saldo = cliente.saldo()
-                print(f"El saldo del cliente {cliente.nombre} es: {saldo}")
+                consulta_saldo
+                print(f"El saldo del cliente {cliente.nombre} es: {consulta_saldo}")
                 input("Presione cualquier tecla para continuar")
             else:
                 print("Cliente no encontrado.")
@@ -49,6 +50,7 @@ def menu_venta():
                 saldo = int(input('Ingrese el saldo a agregar: '))
                 cliente.agregar_saldo(saldo)
                 saldoTotal = cliente.agregar_saldo(saldo)
+                consulta_saldo = cliente.agregar_saldo(saldo)
                 print(f"Saldo actual de {cliente.nombre}: {saldoTotal}")
                 input("Presione cualquier tecla para continuar")
             else:
