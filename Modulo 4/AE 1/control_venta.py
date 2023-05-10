@@ -62,10 +62,11 @@ def menu_venta():
 
 ## Get Cliente
 def getCliente(id_cliente):
+    nombre_cliente = ''
     for cliente in clientes:
         if cliente.idcliente == id_cliente:
-            return cliente
-    return ''
+            nombre_cliente = cliente
+    return nombre_cliente
 
 
 def printNumeroClientes():
@@ -76,11 +77,12 @@ def printNumeroClientes():
 def compras():
     while True:
         try:
-            id = int(input('Indique N° de cliente: ')) 
-            nombre = getCliente(id)
-            if nombre != '':
+            id = int(input('Indique N° de cliente: '))
+            cliente = getCliente(id)
+            nombre_cliente = cliente.nombre
+            if nombre_cliente != '':
                 control_bodega.borrarPantalla()
-                print('Cliente Selecionado: ', nombre )
+                print('Cliente Selecionado: ', nombre_cliente )
                 break
         except: 
             print('Debes ingresar un numero entero.')
