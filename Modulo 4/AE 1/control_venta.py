@@ -48,9 +48,7 @@ def menu_venta():
             if cliente:
                 try:                    
                     saldo = int(input('Ingrese el saldo a agregar: '))
-                    cliente.agregar_saldo(saldo)
                     saldoTotal = cliente.agregar_saldo(saldo)
-                    consulta_saldo = cliente.actualizar_saldo(saldoTotal)                
                     print(f"Saldo actual de {cliente.nombre}: {saldoTotal}")
                 except ValueError:
                     print('Por favor ingrese un valor numerico')

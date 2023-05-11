@@ -15,8 +15,8 @@ class Clientes():
         
     property 
     def agregar_saldo(self,saldo):
-        resultado = self.__saldo + saldo
-        return resultado
+        self.__saldo += saldo
+        return self.__saldo
         
     property
     def saldo(self):

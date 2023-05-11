@@ -28,6 +28,8 @@ def menu_venta():
         print('Control de ventas System 1.8v')
         print('1. Ver numero de clientes')
         print('2. Generar Pedidos')
+        print('3. Mostrar Saldo')
+        print('4. Agregar Saldo')
         print('9. Salir')
         while True:    
             try:
@@ -39,6 +41,10 @@ def menu_venta():
             printNumeroClientes()
         elif opcion == 2:
             compras()
+        elif opcion == 3:
+            mostrarSaldoCliente()
+        elif opcion == 4:
+            agregarSaldoCliente()
         elif opcion == 9:
             print('\n \n \n Muchas gracias por usarnos \n \n PencaLabs ©')
             break
@@ -52,7 +58,32 @@ def getCliente(id_cliente):
             return cliente
     return ''
 
+#Mostrar Saldo Cliente
+def mostrarSaldoCliente():
+    id_cliente = int(input('Ingrese el ID del cliente: '))
+    cliente = getCliente(id_cliente)
+    if cliente:
+        saldo = cliente.saldo()
+        print(f"El saldo del cliente {cliente.nombre} es: {saldo}")
+        input("Presione cualquier tecla para continuar")
+    else:
+        print("Cliente no encontrado.")
 
+#Agregar Saldo Cliente
+def agregarSaldoCliente():
+    id_cliente = int(input('Ingrese el ID del cliente: '))
+    cliente = getCliente(id_cliente)
+    if cliente:
+        try:                    
+            saldo = int(input('Ingrese el saldo a agregar: '))
+            saldoTotal = cliente.agregar_saldo(saldo)
+            print(f"Saldo actual de {cliente.nombre}: {saldoTotal}")
+        except ValueError:
+            print('Por favor ingrese un valor numerico')
+            
+        input("Presione cualquier tecla para continuar")
+    else:
+        print("Cliente no encontrado.")
 # Imprimir cantidad de clientes
 def printNumeroClientes():
     print(' Actualmente hay registrados',len(clientes),'Clientes.')

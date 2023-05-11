@@ -3,16 +3,14 @@ class Vendedor():
     nombre = str
     apellido = str
     seccion = str
-    direccion = str
-    __comisiones = int(0)
-
-    def __init__(self, run, nombre, apellido, seccion, direccion = ''):
+    
+    def __init__(self, run, nombre, apellido, seccion):
             
-        self.run = run
-        self.nombre = nombre
-        self.apellido = apellido
-        self.seccion = seccion
-        self.direccion = direccion
+            self.run = run
+            self.nombre = nombre
+            self.apellido = apellido
+            self.seccion = seccion
+
     
     def getRun(self):
         return self.run
@@ -26,5 +24,4 @@ class Vendedor():
         else:
             print('Saldo Insuficiente \nCompra Cancelada')
         
-
 
