@@ -10,7 +10,6 @@ class Vendedor():
             self.nombre = nombre
             self.apellido = apellido
             self.seccion = seccion
-
     
     def getRun(self):
         return self.run
@@ -24,4 +23,3 @@ class Vendedor():
         else:
             print('Saldo Insuficiente \nCompra Cancelada')
         
-

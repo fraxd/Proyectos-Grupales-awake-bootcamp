@@ -26,6 +26,8 @@ class Clientes():
         self.__saldo = saldo
         return self.__saldo
     
+    
+    
 juanperez = Clientes('1', 'Juan', 'Pérez', 'juanitoxBellakito@gmail.com', '02/02/2020')
 ignaciomiranda = Clientes('2', 'Ignacio', 'Miranda', 'nachito1313@gmail.com', '03/03/2020')
 sofiaaraya = Clientes('3', 'Sofia','Araya', 'sofiaAraya@gmail.com', '04/04/2020')

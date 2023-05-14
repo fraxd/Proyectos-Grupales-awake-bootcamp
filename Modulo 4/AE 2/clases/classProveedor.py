@@ -14,4 +14,6 @@ class proveedor():
         self.personaJuridica = personaJuridica
         self.direccion = direccion
 
+    def set_tipo_persona(self, tipo): #TRUE ES juridica y False es Natural
+        self.personaJuridica = tipo
     
