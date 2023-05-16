@@ -9,13 +9,13 @@ mallChino = proveedor('888888888-k','Chino Originals S.A.', 'Chino Originals S.A
 
 provedores = [dimarsa, mallChino]
 
-zapatillanike = Productos('001', 'Nike Revolution 6', 'zapatillas',dimarsa,'20', '64990')
-zapatillanaike = Productos('001', 'Naike Revolution 6', 'zapatillas',mallChino,'20', '24990')
-poleranike = Productos('002', 'Nike Sportswear', 'poleras', dimarsa,'10', '19990')
-zapatosnike = Productos('003', 'Nike Air Max 90', 'zapatos',dimarsa,'15', '79990')
-poleronnike = Productos('004', 'Nike poleron', 'poleron',dimarsa,'3', '29990')
-chaquetanike = Productos('005', 'Nike chaqueta', 'chaqueta',dimarsa,'5', '39990')
-guantesnike = Productos('006', 'Nike Sportswear', 'guantes',dimarsa,'4', '9990')
+zapatillanike = Productos('001', 'Nike Revolution 6', 'zapatillas',dimarsa,'50', '64990')
+zapatillanaike = Productos('001', 'Naike Revolution 6', 'zapatillas',mallChino,'50', '24990')
+poleranike = Productos('002', 'Nike Sportswear', 'poleras', dimarsa,'50', '19990')
+zapatosnike = Productos('003', 'Nike Air Max 90', 'zapatos',dimarsa,'50', '79990')
+poleronnike = Productos('004', 'Nike poleron', 'poleron',dimarsa,'50', '29990')
+chaquetanike = Productos('005', 'Nike chaqueta', 'chaqueta',dimarsa,'50', '39990')
+guantesnike = Productos('006', 'Nike Sportswear', 'guantes',dimarsa,'50', '9990')
 
 productos=[zapatillanike, zapatillanaike, poleranike,zapatosnike,poleronnike,chaquetanike,guantesnike]
 

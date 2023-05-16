@@ -23,3 +23,11 @@ class Sucursal(Bodega):
                 print("Productos repuestos en la sucursal.")
             else:
                 print("No hay suficiente stock en la bodega para reponer.")
+                
+                
+    # Crear una instancia de Sucursal
+sucursal1 = Sucursal()
+sucursal1.nombre = "Sucursal San Antonio"
+sucursal1.direccion = "Calle Principal, Valparaiso"
+sucursal1.stock = 100
+sucursal1.productos = ["Producto 1", "Producto 2", "Producto 3"]
