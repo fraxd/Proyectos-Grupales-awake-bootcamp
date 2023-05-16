@@ -1,29 +1,14 @@
 import os
 from clases.classproductos import Productos
 from clases.classProveedor import proveedor
+from clases.classSucursal import Sucursal
 
 
 
-dimarsa = proveedor('77777777-k','Dimarsa S.A.', 'Dimarsa S.A', 'Chile', True)
-mallChino = proveedor('888888888-k','Chino Originals S.A.', 'Chino Originals S.A', 'Chile', True)
-
-provedores = [dimarsa, mallChino]
-
-zapatillanike = Productos('001', 'Nike Revolution 6', 'zapatillas',dimarsa,'50', '64990')
-zapatillanaike = Productos('001', 'Naike Revolution 6', 'zapatillas',mallChino,'50', '24990')
-poleranike = Productos('002', 'Nike Sportswear', 'poleras', dimarsa,'50', '19990')
-zapatosnike = Productos('003', 'Nike Air Max 90', 'zapatos',dimarsa,'50', '79990')
-poleronnike = Productos('004', 'Nike poleron', 'poleron',dimarsa,'50', '29990')
-chaquetanike = Productos('005', 'Nike chaqueta', 'chaqueta',dimarsa,'50', '39990')
-guantesnike = Productos('006', 'Nike Sportswear', 'guantes',dimarsa,'50', '9990')
-
-productos=[zapatillanike, zapatillanaike, poleranike,zapatosnike,poleronnike,chaquetanike,guantesnike]
 
 
-def start():
-    print('Stock Inicial establecido.')
-
-def menu_bodega():
+def menu_bodega(nombre_sucursal):
+    tienda = Sucursal(nombre_sucursal)
     while True:
         print('\nTe lo vendo | Bodega System 2.0 \n')
         print('1.- Agregar Nuevo Producto')
@@ -91,8 +76,7 @@ def menu_bodega():
             case 7: 
                 borrarPantalla()
                 print('Listado de Proveedores')
-                for prov in provedores:
-                    print(prov.nombreLegal)
+                tienda.print_provedores
             
             # Opcion 9: Salir
             case 9:
