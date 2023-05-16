@@ -43,34 +43,3 @@ class Productos():
         self.descuento = 0
         self.valor_neto = self.valor_neto * 100 / porcentaje
         return self.valor_neto
-
-
-
-
-zapatillanike = Productos('001', 'Nike Revolution 6', 'zapatillas','dimarsa',20, 64990)
-poleranike = Productos('002', 'Nike Sportswear', 'poleras','dimarsa','10', '19990')
-zapatosnike = Productos('003', 'Nike Air Max 90', 'zapatos','dimarsa','15', '79990')
-poleronnike = Productos('004', 'Nike Sportswear', 'poleron','dimarsa','3', '29990')
-chaquetanike = Productos('005', 'Nike Sportswear', 'chaqueta','dimarsa','5', '39990')
-guantesnike = Productos('006', 'Nike Sportswear', 'guantes','dimarsa','4', '9990')
-
-
-        # 'id_producto': 2,
-        # 'producto': 'Poleras',
-        # 'stock': '10'
-
-        # 'id_producto': 3,
-        # 'producto': 'Zapatos',
-        # 'stock': '15'
-
-        # 'id_producto': 4,
-        # 'producto': 'Poleron',
-        # 'stock': '3'
-
-        # 'id_producto': 5,
-        # 'producto': 'Chaqueta',
-        # 'stock': '5'
-
-
-
-    

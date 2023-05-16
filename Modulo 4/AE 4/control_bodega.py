@@ -31,7 +31,7 @@ def menu_bodega():
         print('3.- Ver stock actual global')
         print('4.- Ver stock actual especifico')
         print('5.- Ver todos los productos')
-        print('6.- Revisar productos son sobrestock')
+        print('6.- Revisar productos con sobrestock')
         print('7.- Ver todos los provedores')
         print('9.- Regresar Menu principal')
 
