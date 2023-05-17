@@ -27,3 +27,10 @@ class Clientes():
     def actualizar_saldo(self, saldo):
         self.__saldo = saldo
         return self.__saldo
+
+    def generarCobro(self, valorNeto):
+        if valorNeto <= self.__saldo:
+            self.__saldo -= valorNeto
+            return True
+        else:
+            return False        

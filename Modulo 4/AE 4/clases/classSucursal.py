@@ -9,7 +9,7 @@ class Sucursal(tienda):
     nombre = str
     productos = list
 
-    def __init__(self, nombre):
+    def __init__(self, nombre = ''):
         self.nombre_tienda = 'Te lo Vendo'
         self.nombre = nombre
         self.provedores = cargarProvedores()
@@ -57,7 +57,7 @@ class Sucursal(tienda):
 
     def mostrarProducto(produ):
         print("ID :", produ.sku, "Nombre :", produ.nombre, "Categoría :", produ.categoria,
-              "Proveedor :", produ.proveedor, "Stock :", produ.stock, "Precio :", produ.valor_neto)
+            "Proveedor :", produ.proveedor, "Stock :", produ.stock, "Precio :", produ.valor_neto)
 
     # Mostrar y retornar los productos que tienen más de un número de unidades (el usuario puede escoger el número de unidades).
     def sobreStock(self, sobre_stock):
@@ -91,26 +91,26 @@ class Sucursal(tienda):
 
     def cargarStock(self):
         zapatillanike = Productos(
-            '001', 'Nike Revolution 6', 'zapatillas', self.provedores[0], '50', '64990')
+            1, 'Nike Revolution 6', 'zapatillas', self.provedores[0], 52, 64990)
         zapatillanaike = Productos(
-            '001', 'Naike Revolution 6', 'zapatillas', self.provedores[1], '50', '24990')
-        poleranike = Productos('002', 'Nike Sportswear',
-                               'poleras', self.provedores[0], '50', '19990')
-        zapatosnike = Productos('003', 'Nike Air Max 90',
-                                'zapatos', self.provedores[0], '50', '79990')
-        poleronnike = Productos('004', 'Nike poleron',
-                                'poleron', self.provedores[0], '50', '29990')
+            2, 'Naike Revolution 6', 'zapatillas', self.provedores[1], 51, 24990)
+        poleranike = Productos(3, 'Nike Sportswear',
+                            'poleras', self.provedores[0], 58, 19990)
+        zapatosnike = Productos(4, 'Nike Air Max 90',
+                                'zapatos', self.provedores[0], 50, 79990)
+        poleronnike = Productos(5, 'Nike poleron',
+                                'poleron', self.provedores[0], 50, 29990)
         chaquetanike = Productos(
-            '005', 'Nike chaqueta', 'chaqueta', self.provedores[0], '50', '39990')
+            6, 'Nike chaqueta', 'chaqueta', self.provedores[0], 50, 39990)
         guantesnike = Productos('006', 'Nike Sportswear',
-                                'guantes', self.provedores[0], '50', '9990')
+                                'guantes', self.provedores[0], 50, 9990)
 
-        return [zapatillanike, zapatillanaike, poleranike, zapatosnike, poleronnike, chaquetanike, ]
+        return [zapatillanike, zapatillanaike, poleranike, zapatosnike, poleronnike, chaquetanike, guantesnike]
 
 
 def cargarProvedores():
     dimarsa = proveedor('77777777-k', 'Dimarsa S.A.',
                         'Dimarsa S.A', 'Chile', True)
     mallChino = proveedor('888888888-k', 'Chino Originals S.A.',
-                          'Chino Originals S.A', 'Chile', True)
+                        'Chino Originals S.A', 'Chile', True)
     return [dimarsa, mallChino]

@@ -1,6 +1,7 @@
 import os
 from clases.classSucursal import Sucursal
 
+sucursal_actual = Sucursal()
 def menu_bodega(nombre_sucursal):
     Sucursal_actual = Sucursal(nombre_sucursal)
     while True:
@@ -107,6 +108,9 @@ def validaStock(pedido, product):
     if int(product.stock)>= pedido:
         return True
     return False
+
+def getProducto(id_producto):
+    return sucursal_actual.getProducto(id_producto)
 
 def mostrarProducto(produ):
     print("ID :",produ.sku,"Nombre :",produ.nombre,"Categoría :",produ.categoria,"Proveedor :",produ.proveedor,"Stock :",produ.stock,"Precio :",produ.valor_neto)
