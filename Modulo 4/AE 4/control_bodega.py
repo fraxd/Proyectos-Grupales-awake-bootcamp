@@ -53,7 +53,7 @@ def menu_bodega(nombre_sucursal):
                 while True:
                     nombre_producto = input('Indique producto a visualizar stock stock: ')
                     if stockEspecifico(nombre_producto):
-                        break
+                       break
             # Opcion 5: Ver todos los productos'
             case 5:
                 borrarPantalla()

@@ -57,12 +57,12 @@ class Sucursal(tienda):
 
     def mostrarProducto(self,produ):
         print("ID :", produ.sku, "Nombre :", produ.nombre, "Categoría :", produ.categoria,
-            "Proveedor :", produ.proveedor, "Stock :", produ.stock, "Precio :", produ.valor_neto)
+            "Proveedor :", produ.proveedor.nombreLegal, "Stock :", produ.stock, "Precio :", produ.valor_neto)
 
     # Mostrar y retornar los productos que tienen más de un número de unidades (el usuario puede escoger el número de unidades).
     def sobreStock(self, sobre_stock):
         sobre_stock_productos = []
-        for producto in self.cargarStockproductos:
+        for producto in self.productos:
             if (int(producto.stock) > sobre_stock):
                 sobre_stock_productos.append(producto)
                 print(self.mostrarProducto(producto))
