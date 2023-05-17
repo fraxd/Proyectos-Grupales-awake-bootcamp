@@ -36,7 +36,7 @@ class Sucursal(tienda):
 
     def newProduct(self, nombre_producto, stock):
         id = len(self.productos)+1
-        newProdu = Productos(id, nombre_producto, "", "", stock, "")
+        newProdu = Productos(id,nombre_producto, "", "", stock, "")
         self.productos.append(newProdu)
         self.mostrarProducto(newProdu)
         print('Producto Agregado Correctamente.')
@@ -55,7 +55,7 @@ class Sucursal(tienda):
             print('-', producto.nombre)
         return nombre_productos
 
-    def mostrarProducto(produ):
+    def mostrarProducto(self,produ):
         print("ID :", produ.sku, "Nombre :", produ.nombre, "Categoría :", produ.categoria,
             "Proveedor :", produ.proveedor, "Stock :", produ.stock, "Precio :", produ.valor_neto)
 
