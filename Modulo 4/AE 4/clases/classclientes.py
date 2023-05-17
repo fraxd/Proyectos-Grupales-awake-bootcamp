@@ -4,7 +4,7 @@ class Clientes():
     apellido = str
     correo = str
     fechaderegistro = str
-    __saldo = 10000
+    __saldo = 100000
 
     def __init__(self, idclientes, nombre, apellido, correo, fechaderegistro):
         self.idcliente = idclientes
