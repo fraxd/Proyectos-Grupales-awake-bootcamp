@@ -1,13 +1,11 @@
 import os
 from clases.classSucursal import Sucursal
 
-
-
-
 def menu_bodega(nombre_sucursal):
     Sucursal_actual = Sucursal(nombre_sucursal)
     while True:
-        print('\nTe lo vendo | Bodega System 2.0 \n')
+        print('\nTe lo vendo | Bodega System 2.0')
+        print(f'--- {nombre_sucursal} ---\n')
         print('1.- Agregar Nuevo Producto')
         print('2.- Actualizar Stock producto')
         print('3.- Ver stock actual global')

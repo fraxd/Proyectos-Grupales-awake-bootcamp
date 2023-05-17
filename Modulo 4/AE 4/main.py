@@ -4,7 +4,6 @@ import control_venta
 
 def menu_principal(sucursal):
     while True:
-        control_bodega.start(sucursal)
         control_bodega.borrarPantalla()
         print('\n      Bienvenido a Te lo vendo systems 2.0')
         print('----- Todos los derechos reservados 1995 © ----- ')

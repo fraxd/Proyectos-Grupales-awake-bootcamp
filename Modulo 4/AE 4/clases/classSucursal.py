@@ -1,6 +1,6 @@
-from classproductos import Productos
-from class_tienda import tienda
-from classProveedor import proveedor
+from .classproductos import Productos
+from .class_tienda import tienda
+from .classProveedor import proveedor
 
 # class Sucursal(Bodega):
 class Sucursal(tienda):
