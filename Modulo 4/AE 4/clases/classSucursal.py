@@ -22,6 +22,9 @@ class Sucursal(tienda):
     #     self.stock = int
     #     self.productos = list
 
+    def setNombre(self, nombre_sucursal):
+        self.nombre = nombre_sucursal
+
     def validarStock(self):
         if self.Stock < 50:
             return False
@@ -80,6 +83,13 @@ class Sucursal(tienda):
                 return producto
         return False
 
+    def updateStockByname(self, nombre_producto, stock):
+        for i in range(len(self.productos)):
+            if self.productos[i].nombre == nombre_producto:
+                self.productos[i].stock = stock
+                return True
+        return False
+
     def solicitar_reposicion(self):
         if self.Stock < 50:
             print("Solicitando y reponiendo productos...")
@@ -102,7 +112,7 @@ class Sucursal(tienda):
                                 'poleron', self.provedores[0], 50, 29990)
         chaquetanike = Productos(
             6, 'Nike chaqueta', 'chaqueta', self.provedores[0], 50, 39990)
-        guantesnike = Productos('006', 'Nike Sportswear',
+        guantesnike = Productos('006', 'Nike guantesWear',
                                 'guantes', self.provedores[0], 50, 9990)
 
         return [zapatillanike, zapatillanaike, poleranike, zapatosnike, poleronnike, chaquetanike, guantesnike]

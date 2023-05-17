@@ -1,9 +1,10 @@
 import os
 from clases.classSucursal import Sucursal
 
+global Sucursal_actual
 Sucursal_actual = Sucursal()
 def menu_bodega(nombre_sucursal):
-    Sucursal_actual = Sucursal(nombre_sucursal)
+    Sucursal_actual.setNombre(nombre_sucursal)
     while True:
         print('\nTe lo vendo | Bodega System 2.0')
         print(f'--- {nombre_sucursal} ---\n')
@@ -47,13 +48,14 @@ def menu_bodega(nombre_sucursal):
             case 3:
                 borrarPantalla()
                 Sucursal_actual.stockGlobal()
+                input('Presione Enter para continuar.')
             # Opcion 4: Ver stock actual especifico
             case 4:
                 borrarPantalla()
                 while True:
                     nombre_producto = input('Indique producto a visualizar stock stock: ')
                     if stockEspecifico(nombre_producto):
-                       break
+                        break
             # Opcion 5: Ver todos los productos'
             case 5:
                 borrarPantalla()
@@ -82,11 +84,9 @@ def menu_bodega(nombre_sucursal):
     ## Agregar nuevos productos a la "base de datos"
 
 def updateStock(nombre_producto, stock):
-        # Se busca el producto por nombre 
-    producto=Sucursal_actual.getProductoByName(nombre_producto)
-    if producto:
-        producto.stock = stock
+    if Sucursal_actual.updateStockByname(nombre_producto, stock):
         print('Stock Actualizado')
+        input('Presione Enter para continuar...')
         return True
     else:
         print('Por algun motivo no encontramos el producto.')
