@@ -1,7 +1,7 @@
 import os
 from clases.classSucursal import Sucursal
 
-sucursal_actual = Sucursal()
+Sucursal_actual = Sucursal()
 def menu_bodega(nombre_sucursal):
     Sucursal_actual = Sucursal(nombre_sucursal)
     while True:
@@ -81,28 +81,29 @@ def menu_bodega(nombre_sucursal):
 
     ## Agregar nuevos productos a la "base de datos"
 
-    def updateStock(nombre_producto, stock):
-            # Se busca el producto por nombre 
-        producto=Sucursal_actual.getProductoByName(nombre_producto)
-        if producto:
-            producto.stock = stock
-            print('Stock Actualizado')
-            return True
-        else:
-            print('Por algun motivo no encontramos el producto.')
-            return False
-
-    #Mostrar y retornar las unidades disponibles por producto.
-
-
-    #Mostrar y retornar las unidades disponibles de un producto en particular.
-    def stockEspecifico(nombre_producto):
-        producto=Sucursal_actual.getProductoByName(nombre_producto)
-        if producto:
-            print('Nombre: ',producto.nombre, 'Stock: ', producto.stock)
-            return producto.stock
-        print('Producto no encontrado.')
+def updateStock(nombre_producto, stock):
+        # Se busca el producto por nombre 
+    producto=Sucursal_actual.getProductoByName(nombre_producto)
+    if producto:
+        producto.stock = stock
+        print('Stock Actualizado')
+        return True
+    else:
+        print('Por algun motivo no encontramos el producto.')
         return False
+
+#Mostrar y retornar las unidades disponibles por producto.
+
+
+#Mostrar y retornar las unidades disponibles de un producto en particular.
+def stockEspecifico(nombre_producto):
+    producto=Sucursal_actual.getProductoByName(nombre_producto)
+    if producto:
+        print('Nombre: ',producto.nombre, 'Stock: ', producto.stock)
+        input('Presione Enter para continuar...')
+        return producto.stock
+    print('Producto no encontrado.')
+    return False
 
 def validaStock(pedido, product):
     if int(product.stock)>= pedido:
@@ -110,7 +111,7 @@ def validaStock(pedido, product):
     return False
 
 def getProducto(id_producto):
-    return sucursal_actual.getProducto(id_producto)
+    return Sucursal_actual.getProducto(id_producto)
 
 def mostrarProducto(produ):
     print("ID :",produ.sku,"Nombre :",produ.nombre,"Categoría :",produ.categoria,"Proveedor :",produ.proveedor,"Stock :",produ.stock,"Precio :",produ.valor_neto)
