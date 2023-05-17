@@ -12,7 +12,7 @@ def menu_principal(sucursal):
         print('1.- Control de Bodega')
         print('2.- Control de Ventas')
         print('9.- Salir del Programa')
-        while True:    
+        while True:
             try:
                 opcion = int(input('Ingrese su opcion: '))
                 break
@@ -28,6 +28,7 @@ def menu_principal(sucursal):
         else:
             print('Opcion Selecionada NO Valida. ')
 
+
 def menu_sucursales():
     while True:
         control_bodega.borrarPantalla()
@@ -39,7 +40,7 @@ def menu_sucursales():
         print('3.- Quilpue')
         print('4.- Quillota')
         print('9.- Salir del Programa')
-        while True:    
+        while True:
             try:
                 opcion = int(input('Ingrese su opcion: '))
                 break
@@ -59,19 +60,6 @@ def menu_sucursales():
         else:
             print('Opcion Selecionada NO Valida. ')
 
-## INICIO DEL PROGRAMA
+
+# INICIO DEL PROGRAMA
 menu_sucursales()
-
-
-
-
-
-
-
-
-
-
-
-
-
-

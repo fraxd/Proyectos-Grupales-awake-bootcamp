@@ -4,9 +4,9 @@ class proveedor():
     razonSocial = str
     direccion = str
     pais = str
-    personaJuridica = bool #True = Persona Juridica | False = Persona Natural
+    personaJuridica = bool  # True = Persona Juridica | False = Persona Natural
 
-    def __init__(self, rut, nombreLegal, razonSocial, pais, personaJuridica, direccion =''):
+    def __init__(self, rut, nombreLegal, razonSocial, pais, personaJuridica, direccion=''):
         self.rut = rut
         self.nombreLegal = nombreLegal
         self.razonSocial = razonSocial
@@ -14,6 +14,5 @@ class proveedor():
         self.personaJuridica = personaJuridica
         self.direccion = direccion
 
-    def set_tipo_persona(self, tipo): #TRUE ES juridica y False es Natural
+    def set_tipo_persona(self, tipo):  # TRUE ES juridica y False es Natural
         self.personaJuridica = tipo
-    

@@ -4,7 +4,7 @@ class OrdenCompra:
         self.id_ordencompra = id_ordencompra
         self.producto = producto
         self.despacho = despacho
-        
+
     def vender(self, orden_compra):
         self.valor_neto = orden_compra.producto.precio
         self.impuesto = self.valor_neto * 0.19
