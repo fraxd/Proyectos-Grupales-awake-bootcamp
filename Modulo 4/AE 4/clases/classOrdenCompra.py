@@ -1,13 +1,33 @@
-
+import clases.classproductos as classproductos
 class OrdenCompra:
-    def __init__(self, id_ordencompra, producto, despacho):
+    id_ordencompra = int
+    producto = classproductos.Productos
+    id_cliente = int
+    ind_vendedor = int
+    cantidad = int
+    despacho = int
+    subtotal = int
+    total = int
+    nombre_sucursal = str
+
+    def __init__(self, id_ordencompra, id_cliente, id_vendedor, producto, cantidad,nombre_sucursal):
         self.id_ordencompra = id_ordencompra
         self.producto = producto
-        self.despacho = despacho
+        self.cantidad = cantidad
+        self.id_cliente = id_cliente
+        self.ind_vendedor = id_vendedor
+        self.subtotal = producto.getValor_total() * cantidad
+        if self.subtotal >= 50000:  #Despacho gratis sobre 50k
+            self.despacho = 0
+        else:
+            self.despacho = 5000
+        self.total = self.subtotal + self.despacho
+        self.nombre_sucursal = nombre_sucursal
 
-    def vender(self, orden_compra):
-        self.valor_neto = orden_compra.producto.precio
-        self.impuesto = self.valor_neto * 0.19
-        self.despacho = 5000 if orden_compra.despacho else 0
-        self.valor_total = self.valor_neto + self.impuesto + self.despacho
-        return self.valor_total
+
+    def print_pedido(self):
+        print(f'Pedido N°: {self.id}')
+        print(f'Producto: {self.producto}')
+        print(f'Cantidad:{self.cantidad}')
+        print(f'Id Cliente: {self.id_cliente}')
+        print(f'')

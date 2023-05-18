@@ -21,6 +21,8 @@ class Vendedor():
             self.comisiones = int(valor_neto*0.005) ## 0.5%
             producto.generarVenta(cant_Solicitada)
             print('Compra Aprobada')
+            return True
         else:
             print('Saldo Insuficiente \nCompra Cancelada')
+            return False
         

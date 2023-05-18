@@ -2,7 +2,7 @@ import os
 import control_bodega
 import clases.classclientes
 import clases.classvendedores
-
+import clases.classOrdenCompra as classOrdenCompra
 # CLIENTES
 juanperez = clases.classclientes.Clientes(
     1, 'Juan', 'Pérez', 'juanitoxBellakito@gmail.com', '02/02/2020')
@@ -31,12 +31,14 @@ vendedor5 = clases.classvendedores.Vendedor(
 
 list_vendedores = [vendedor1, vendedor2, vendedor3, vendedor4, vendedor5]
 
-
-def menu_venta():
+#Lista de pedidos
+pedidos = []
+def menu_venta(nombre_sucursal):
     while True:
         control_bodega.borrarPantalla()
-        print('Te lo vendo SA.')
-        print('Control de ventas System 1.8v')
+        print('----- Te lo vendo SA. -----')
+        print('- Control de ventas System 1.8v -')
+        print(f'----- Sucursal: {nombre_sucursal} -----\n')
         print('1. Ver numero de clientes')
         print('2. Generar Pedidos')
         print('3. Mostrar Saldo')
@@ -51,7 +53,7 @@ def menu_venta():
         if opcion == 1:
             printNumeroClientes()
         elif opcion == 2:
-            compras()
+            compras(nombre_sucursal)
         elif opcion == 3:
             mostrarSaldoCliente()
         elif opcion == 4:
@@ -111,7 +113,7 @@ def printNumeroClientes():
 # Armar Pedidos
 
 
-def compras():
+def compras(nombre_sucursal):
     vendedor = ''
     while True:
         rut_Vendedor = input(
@@ -155,7 +157,9 @@ def compras():
             break
     print('Procesando Pedido...')
     if control_bodega.validaStock(stock_pedido, producto):
-        vendedor.vender(cliente, producto, stock_pedido)
+        if vendedor.vender(cliente, producto, stock_pedido):
+            pedido = classOrdenCompra.OrdenCompra(len(pedidos)+1, id, rut_Vendedor, producto, stock_pedido, nombre_sucursal)
+            pedidos.append(pedido)
     else:
         print('Compra Cancelada.')
         print('Stock Insuficiente.')
