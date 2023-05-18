@@ -118,6 +118,10 @@ def getProducto(id_producto):
 def mostrarProducto(produ):
     print("ID :",produ.sku,"Nombre :",produ.nombre,"Categoría :",produ.categoria,"Proveedor :",produ.proveedor,"Stock :",produ.stock,"Precio :",produ.valor_neto)
 
+def revisarStock(producto):
+    if producto.stock < 50:
+        Sucursal_actual.solicitar_mas_stock(producto)
+
 ## Limpiar pantalla
 def borrarPantalla(): #Definimos la función estableciendo el nombre que queramos
     if os.name == "posix":
