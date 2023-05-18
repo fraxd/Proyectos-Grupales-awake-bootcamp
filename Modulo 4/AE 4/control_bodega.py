@@ -1,8 +1,10 @@
 import os
 from clases.classSucursal import Sucursal
 
+
 global Sucursal_actual
 Sucursal_actual = Sucursal()
+
 def menu_bodega(nombre_sucursal):
     Sucursal_actual.setNombre(nombre_sucursal)
     while True:
@@ -75,7 +77,7 @@ def menu_bodega(nombre_sucursal):
             case 7: 
                 borrarPantalla()
                 print('Listado de Proveedores')
-                Sucursal_actual.print_provedores
+                Sucursal_actual.print_provedores()
             
             # Opcion 9: Salir
             case 9:
