@@ -1,3 +1,6 @@
+from clases.classCarrito import Carrito
+
+
 class Clientes():
     idcliente = int
     nombre = str
@@ -5,6 +8,7 @@ class Clientes():
     correo = str
     fechaderegistro = str
     __saldo = 100000
+    carrito = Carrito
 
     def __init__(self, idclientes, nombre, apellido, correo, fechaderegistro):
         self.idcliente = idclientes

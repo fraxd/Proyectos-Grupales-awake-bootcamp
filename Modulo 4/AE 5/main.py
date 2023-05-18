@@ -20,7 +20,7 @@ def menu_principal(sucursal):
         if opcion == 1:
             control_bodega.menu_bodega(sucursal)
         elif opcion == 2:
-            control_venta.menu_venta(sucursal)
+            control_venta.login(sucursal)
         elif opcion == 9:
             print('\n \n \n Muchas gracias por usarnos \n \n PencaLabs ©')
             break

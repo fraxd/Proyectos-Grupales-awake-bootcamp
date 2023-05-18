@@ -1,4 +1,6 @@
 import os
+import random
+from clases.classCarrito import Carrito
 import control_bodega
 import clases.classclientes
 import clases.classvendedores
@@ -30,10 +32,32 @@ vendedor5 = clases.classvendedores.Vendedor(
     "55555555-5", "Lucía", "González", "Chaqueta")
 
 list_vendedores = [vendedor1, vendedor2, vendedor3, vendedor4, vendedor5]
-
+#lista del carrito
+carrito=Carrito([])
 #Lista de pedidos
 pedidos = []
-def menu_venta(nombre_sucursal):
+
+def login(nombre_sucursal):
+   ran=random.randint(1,len(list_vendedores)-1)
+   control_bodega.borrarPantalla()
+   print('----- Te lo vendo SA. -----')
+   print('- Iniciar Sesion 1.8v -')
+   print(f'----- Sucursal: {nombre_sucursal} -----\n')
+   print("Usted será atendido por :", list_vendedores[ran].nombre, list_vendedores[ran].apellido,"Run :", list_vendedores[ran].run )
+   
+   while True:
+        try:
+            id = int(input("Ingrese su ID de usuario :"))
+            cliente = getCliente(id)
+            if cliente != '':
+                control_bodega.borrarPantalla()
+                print('Cliente Selecionado: ', cliente.nombre)
+                break
+        except:
+            print('Debes ingresar un usuario valido')
+   menu_venta(nombre_sucursal,list_vendedores[ran],cliente)
+
+def menu_venta(nombre_sucursal,vendedor,cliente):
     while True:
         control_bodega.borrarPantalla()
         print('----- Te lo vendo SA. -----')
@@ -43,6 +67,7 @@ def menu_venta(nombre_sucursal):
         print('2. Generar Pedidos')
         print('3. Mostrar Saldo')
         print('4. Agregar Saldo')
+        print('5. Efectuar compra')
         print('9. Salir')
         while True:
             try:
@@ -53,11 +78,13 @@ def menu_venta(nombre_sucursal):
         if opcion == 1:
             printNumeroClientes()
         elif opcion == 2:
-            compras(nombre_sucursal)
+            compras(cliente)
         elif opcion == 3:
-            mostrarSaldoCliente()
+            mostrarSaldoCliente(cliente)
         elif opcion == 4:
-            agregarSaldoCliente()
+            agregarSaldoCliente(cliente)
+        elif opcion == 5:
+            efectuarCompra(vendedor,cliente)
         elif opcion == 9:
             print('\n \n \n Muchas gracias por usarnos \n \n PencaLabs ©')
             break
@@ -76,23 +103,17 @@ def getCliente(id_cliente):
 # Mostrar Saldo Cliente
 
 
-def mostrarSaldoCliente():
-    id_cliente = int(input('Ingrese el ID del cliente: '))
-    cliente = getCliente(id_cliente)
-    if cliente:
-        saldo = cliente.saldo()
-        print(f"El saldo del cliente {cliente.nombre} es: {saldo}")
-        input("Presione cualquier tecla para continuar")
-    else:
-        print("Cliente no encontrado.")
+def mostrarSaldoCliente(cliente):
+    
+    saldo = cliente.saldo()
+    print(f"El saldo del cliente {cliente.nombre} es: {saldo}")
+    input("Presione cualquier tecla para continuar.")
 
 # Agregar Saldo Cliente
 
 
-def agregarSaldoCliente():
-    id_cliente = int(input('Ingrese el ID del cliente: '))
-    cliente = getCliente(id_cliente)
-    if cliente:
+def agregarSaldoCliente(cliente):
+    
         try:
             saldo = int(input('Ingrese el saldo a agregar: '))
             saldoTotal = cliente.agregar_saldo(saldo)
@@ -101,8 +122,7 @@ def agregarSaldoCliente():
             print('Por favor ingrese un valor numerico')
 
         input("Presione cualquier tecla para continuar")
-    else:
-        print("Cliente no encontrado.")
+    
 # Imprimir cantidad de clientes
 
 
@@ -113,31 +133,7 @@ def printNumeroClientes():
 # Armar Pedidos
 
 
-def compras(nombre_sucursal):
-    vendedor = ''
-    while True:
-        rut_Vendedor = input(
-            'Ingrese rut del vendedor. (sin puntos solo con -): ')
-        for vend in list_vendedores:
-            if rut_Vendedor == vend.getRun():
-                vendedor = vend
-                break
-            else:
-                continue
-        if vendedor != '':
-            break
-        else:
-            print('Run de trabajador no encontrado')
-    while True:
-        try:
-            id = int(input('Indique N° de cliente: '))
-            cliente = getCliente(id)
-            if cliente != '':
-                control_bodega.borrarPantalla()
-                print('Cliente Selecionado: ', cliente.nombre)
-                break
-        except:
-            print('Debes ingresar un numero entero.')
+def compras(cliente):
     while True:
         try:
             id_producto = int(input('Indique Id Producto: '))
@@ -147,21 +143,37 @@ def compras(nombre_sucursal):
                 break
         except:
             print('Debe Ingresar un numero entero.')
+
     while True:
         try:
-            stock_pedido = int(input('Indique cantidad de unidades: '))
-            break
+                stock_pedido = int(input('Indique cantidad de unidades: '))
         except:
-            print('Por defecto se pide 1.')
-            stock_pedido = 1.
-            break
-    print('Procesando Pedido...')
-    if control_bodega.validaStock(stock_pedido, producto):
-        pedido = classOrdenCompra.OrdenCompra(len(pedidos)+1, producto, stock_pedido)
-        if vendedor.vender(cliente, pedido):
-            control_bodega.revisarStock(producto)
-            pedidos.append(pedido)
-    else:
-        print('Compra Cancelada.')
-        print('Stock Insuficiente.')
+            print("ingrese un numero valido")
+        if stock_pedido<11:
+                break
+        print("La cantidad no puede exceder las 10 unidades.")
+    newprodu=producto
+    newprodu.stock=stock_pedido
+    carrito.productos.append(producto)
+    cliente.carrito=carrito
+    print("Su pedido se ha añadido al carrito.")
+    for produ in cliente.carrito.productos:
+        print(produ.nombre,"cantidad :",produ.stock)
     input('Presione enter para continuar.')
+
+def efectuarCompra(vendedor, cliente):
+    print('Procesando Pedido...')
+    try:
+        for produ in cliente.carrito.productos:
+            producto = control_bodega.getProducto(produ.sku)
+            if control_bodega.validaStock(produ.stock, producto):
+                pedido = classOrdenCompra.OrdenCompra(len(pedidos)+1, producto, produ.stock)
+                if vendedor.vender(cliente, pedido):
+                    pedidos.append(pedido)
+            else:
+                print('Compra Cancelada.')
+                print('Stock Insuficiente.')
+    except:
+        print("el carrito está vacio.")
+    input('Presione enter para continuar.')
+

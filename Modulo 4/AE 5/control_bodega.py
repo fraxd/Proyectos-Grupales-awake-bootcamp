@@ -62,6 +62,7 @@ def menu_bodega(nombre_sucursal):
             case 5:
                 borrarPantalla()
                 Sucursal_actual.productosGlobal()
+                input("Presione cualquier tecla para continuar.")
 
             #opcion 6:  Revisar productos son sobrestock        
             case 6:
@@ -117,10 +118,6 @@ def getProducto(id_producto):
 
 def mostrarProducto(produ):
     print("ID :",produ.sku,"Nombre :",produ.nombre,"Categoría :",produ.categoria,"Proveedor :",produ.proveedor,"Stock :",produ.stock,"Precio :",produ.valor_neto)
-
-def revisarStock(producto):
-    if producto.stock < 50:
-        Sucursal_actual.solicitar_mas_stock(producto)
 
 ## Limpiar pantalla
 def borrarPantalla(): #Definimos la función estableciendo el nombre que queramos
