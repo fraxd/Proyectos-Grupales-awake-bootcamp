@@ -157,8 +157,8 @@ def compras(nombre_sucursal):
             break
     print('Procesando Pedido...')
     if control_bodega.validaStock(stock_pedido, producto):
-        if vendedor.vender(cliente, producto, stock_pedido):
-            pedido = classOrdenCompra.OrdenCompra(len(pedidos)+1, id, rut_Vendedor, producto, stock_pedido, nombre_sucursal)
+        pedido = classOrdenCompra.OrdenCompra(len(pedidos)+1, producto, stock_pedido)
+        if vendedor.vender(cliente, pedido):
             pedidos.append(pedido)
     else:
         print('Compra Cancelada.')
