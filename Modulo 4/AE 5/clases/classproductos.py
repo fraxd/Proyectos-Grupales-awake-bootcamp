@@ -3,7 +3,7 @@ class Productos():
     nombre = str
     categoria = str
     proveedor = object
-    stock = str
+    stock = int
     valor_neto = int
     __impuesto = 1.19
     descuento = int

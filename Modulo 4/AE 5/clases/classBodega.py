@@ -1,6 +1,10 @@
 class Bodega():
-    Stock: 50000
+    Stock: int
 
-    def descontarStock(self, stock):
-        self.Stock -= stock
+    def __init__(self) -> None:
+        self.Stock = 5000
+        pass
+        
+    def descontarStock(self, desc):
+        self.Stock -= desc
         return self.Stock
