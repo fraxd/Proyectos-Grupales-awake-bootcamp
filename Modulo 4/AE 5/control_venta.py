@@ -187,6 +187,8 @@ def efectuarCompra(vendedor, cliente):
                 print('Stock Insuficiente.')
     except:
         print("el carrito está vacio.")
+    cliente.carrito.productos = []
+    print("El carrito de compras ha sido vaciado.")
     input('Presione enter para continuar.')
 
 def promediarCompras(cliente):
