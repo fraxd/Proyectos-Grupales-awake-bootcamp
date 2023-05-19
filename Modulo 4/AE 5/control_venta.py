@@ -114,17 +114,17 @@ def mostrarSaldoCliente(cliente):
 
 
 def agregarSaldoCliente(cliente):
-    
-        try:
-            saldo = int(input('Ingrese el saldo a agregar: '))
-            saldoTotal = cliente.agregar_saldo(saldo)
-            print(f"Saldo actual de {cliente.nombre}: {saldoTotal}")
-        except ValueError:
-            print('Por favor ingrese un valor numerico')
+    try:
+        saldo = int(input('Ingrese el saldo a agregar: '))
+        saldoTotal = cliente.agregar_saldo(saldo)
+        print(f"Saldo actual de {cliente.nombre}: {saldoTotal}")
+        return True  # Retorna True si no hay errores
+    except ValueError:
+        print('Por favor ingrese un valor numérico')
+        return False  # Retorna False si hay un error
 
-        input("Presione cualquier tecla para continuar")
-    
-# Imprimir cantidad de clientes
+    input("Presione cualquier tecla para continuar")
+
 
 
 def printNumeroClientes():
@@ -149,21 +149,27 @@ def compras(cliente):
         try:
             try:
                 try:
-                        stock_pedido = int(input('Indique cantidad de unidades: '))
+                    stock_pedido = int(input('Indique cantidad de unidades: '))
                 except:
-                    print("ingrese un numero valido")
-                if stock_pedido>10:
-                    raise 
+                    print("Ingrese un número válido")
+                    return True  # Retornar True en caso de error
+                if stock_pedido > 10:
+                    raise
                 else:
                     break
             except:
                 print("La cantidad no puede exceder las 10 unidades.")
+                input()
+                return True  # Retornar True en caso de error
             if control_bodega.validaStock(stock_pedido, producto):
                 break
             else:
                 raise notFoundExcept(producto.nombre)
+            
         except notFoundExcept as e:
             print(e)
+            return True  # Retornar True en caso de error
+
     carrito=Carrito
     newprodu=producto
     newprodu.stock=stock_pedido
