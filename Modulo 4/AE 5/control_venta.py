@@ -191,13 +191,16 @@ def efectuarCompra(vendedor, cliente):
     input('Presione enter para continuar.')
 
 def promediarCompras(cliente):
-    promedio=0
-    total=0
-    suma=0
-    for pedido in cliente.pedidos:
-        total=(pedido.cantidad * pedido.producto.valor_neto)
-        suma+=total
-    promedio=suma/len(cliente.pedidos)
-    print("el valor de compra promedio es:",promedio)
-    input('Presione enter para continuar.')
-
+    try:
+        promedio=0
+        total=0
+        suma=0
+        for pedido in cliente.pedidos:
+            total=(pedido.cantidad * pedido.producto.valor_neto)
+            suma+=total
+        promedio=suma/len(cliente.pedidos)
+        print("el valor de compra promedio es:",promedio)
+        input('Presione enter para continuar.')
+    except:
+        print(cliente.nombre,"aún no ha hecho ninguna compra.")
+        input('Presione enter para continuar.')
