@@ -1,6 +1,7 @@
 import os
 import random
 from clases.classCarrito import Carrito
+from clases.classException import notFoundExcept
 import control_bodega
 import clases.classclientes
 import clases.classvendedores
@@ -61,6 +62,7 @@ def menu_venta(nombre_sucursal,vendedor,cliente):
     while True:
         control_bodega.borrarPantalla()
         print('----- Te lo vendo SA. -----')
+        print(f'- Bienvenido {cliente.nombre} {cliente.apellido} -')
         print('- Control de ventas System 1.8v -')
         print(f'----- Sucursal: {nombre_sucursal} -----\n')
         print('1. Ver numero de clientes')
@@ -146,12 +148,24 @@ def compras(cliente):
 
     while True:
         try:
-                stock_pedido = int(input('Indique cantidad de unidades: '))
-        except:
-            print("ingrese un numero valido")
-        if stock_pedido<11:
+            try:
+                try:
+                        stock_pedido = int(input('Indique cantidad de unidades: '))
+                except:
+                    print("ingrese un numero valido")
+                if stock_pedido>10:
+                    raise 
+                else:
+                    break
+            except:
+                print("La cantidad no puede exceder las 10 unidades.")
+            if control_bodega.validaStock(stock_pedido, producto):
                 break
-        print("La cantidad no puede exceder las 10 unidades.")
+            else:
+                raise notFoundExcept(producto.nombre)
+        except notFoundExcept as e:
+            print(e)
+
     newprodu=producto
     newprodu.stock=stock_pedido
     carrito.productos.append(producto)
