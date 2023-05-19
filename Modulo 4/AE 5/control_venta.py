@@ -33,10 +33,6 @@ vendedor5 = clases.classvendedores.Vendedor(
     "55555555-5", "Lucía", "González", "Chaqueta")
 
 list_vendedores = [vendedor1, vendedor2, vendedor3, vendedor4, vendedor5]
-#lista del carrito
-carrito=Carrito([])
-#Lista de pedidos
-pedidos = []
 
 def login(nombre_sucursal):
    ran=random.randint(1,len(list_vendedores)-1)
@@ -70,6 +66,7 @@ def menu_venta(nombre_sucursal,vendedor,cliente):
         print('3. Mostrar Saldo')
         print('4. Agregar Saldo')
         print('5. Efectuar compra')
+        print('6. Ver promedio de compras')
         print('9. Salir')
         while True:
             try:
@@ -87,6 +84,8 @@ def menu_venta(nombre_sucursal,vendedor,cliente):
             agregarSaldoCliente(cliente)
         elif opcion == 5:
             efectuarCompra(vendedor,cliente)
+        elif opcion == 6:
+            promediarCompras(cliente)
         elif opcion == 9:
             print('\n \n \n Muchas gracias por usarnos \n \n PencaLabs ©')
             break
@@ -165,7 +164,7 @@ def compras(cliente):
                 raise notFoundExcept(producto.nombre)
         except notFoundExcept as e:
             print(e)
-
+    carrito=Carrito
     newprodu=producto
     newprodu.stock=stock_pedido
     carrito.productos.append(producto)
@@ -181,13 +180,24 @@ def efectuarCompra(vendedor, cliente):
         for produ in cliente.carrito.productos:
             producto = control_bodega.getProducto(produ.sku)
             if control_bodega.validaStock(produ.stock, producto):
-                pedido = classOrdenCompra.OrdenCompra(len(pedidos)+1, producto, produ.stock)
+                pedido = classOrdenCompra.OrdenCompra(len(cliente.pedidos)+1, producto, produ.stock)
                 if vendedor.vender(cliente, pedido):
-                    pedidos.append(pedido)
+                    cliente.pedidos.append(pedido)
             else:
                 print('Compra Cancelada.')
                 print('Stock Insuficiente.')
     except:
         print("el carrito está vacio.")
+    input('Presione enter para continuar.')
+
+def promediarCompras(cliente):
+    promedio=0
+    total=0
+    suma=0
+    for pedido in cliente.pedidos:
+        total=(pedido.cantidad * pedido.producto.valor_neto)
+        suma+=total
+    promedio=suma/len(cliente.pedidos)
+    print("el valor de compra promedio es:",promedio)
     input('Presione enter para continuar.')
 

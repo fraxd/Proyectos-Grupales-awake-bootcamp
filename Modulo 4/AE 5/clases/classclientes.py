@@ -9,6 +9,7 @@ class Clientes():
     fechaderegistro = str
     __saldo = 100000
     carrito = Carrito
+    pedidos = []
 
     def __init__(self, idclientes, nombre, apellido, correo, fechaderegistro):
         self.idcliente = idclientes
