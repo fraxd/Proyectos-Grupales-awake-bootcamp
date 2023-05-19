@@ -147,30 +147,29 @@ def compras(cliente):
 
     while True:
         try:
-            try:
+            
                 try:
-                        stock_pedido = int(input('Indique cantidad de unidades: '))
+                    stock_pedido = int(input('Indique cantidad de unidades: '))
                 except:
                     print("ingrese un numero valido")
-                if stock_pedido>10:
-                    raise 
-                else:
+                try:
+                    if stock_pedido>10:
+                        raise 
+                except:
+                    print("La cantidad no puede exceder las 10 unidades.")
+                if control_bodega.validaStock(stock_pedido, producto):
                     break
-            except:
-                print("La cantidad no puede exceder las 10 unidades.")
-            if control_bodega.validaStock(stock_pedido, producto):
-                break
-            else:
-                raise notFoundExcept(producto.nombre)
+                else:
+                    raise notFoundExcept
         except notFoundExcept as e:
             print(e)
-    carrito=Carrito
     newprodu=producto
     newprodu.stock=stock_pedido
-    carrito.productos.append(producto)
-    cliente.carrito=carrito
+    cliente.carrito.productos.append(newprodu)
     print("Su pedido se ha añadido al carrito.")
+    print(cliente.nombre)
     for produ in cliente.carrito.productos:
+        print(cliente.nombre)
         print(produ.nombre,"cantidad :",produ.stock)
     input('Presione enter para continuar.')
 
