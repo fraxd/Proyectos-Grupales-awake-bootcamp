@@ -1,3 +1,4 @@
+import copy
 import os
 import random
 from clases.classCarrito import Carrito
@@ -135,6 +136,7 @@ def printNumeroClientes():
 
 
 def compras(cliente):
+    carrito=copy.copy(cliente.carrito.productos)
     while True:
         try:
             id_producto = int(input('Indique Id Producto: '))
@@ -147,29 +149,33 @@ def compras(cliente):
 
     while True:
         try:
-            
-                try:
-                    stock_pedido = int(input('Indique cantidad de unidades: '))
-                except:
-                    print("ingrese un numero valido")
-                try:
-                    if stock_pedido>10:
-                        raise 
-                except:
-                    print("La cantidad no puede exceder las 10 unidades.")
-                if control_bodega.validaStock(stock_pedido, producto):
-                    break
-                else:
-                    raise notFoundExcept
+            stock_pedido = int(input('Indique cantidad de unidades: '))
+        except:
+            print("ingrese un numero valido")
+        try:
+            if stock_pedido>10:
+                raise 
+                return True  # Retornar True en caso de error
+        except:
+            print("La cantidad no puede exceder las 10 unidades.")
+            input()
+            return True  # Retornar True en caso de error
+        try:
+            if control_bodega.validaStock(stock_pedido, producto):
+                break
+            else:
+                raise notFoundExcept(producto.nombre)   
         except notFoundExcept as e:
             print(e)
-    newprodu=producto
+            input()
+            return True  # Retornar True en caso de error
+    newprodu=copy.copy(producto)
     newprodu.stock=stock_pedido
-    cliente.carrito.productos.append(newprodu)
+    carrito.append(newprodu)
+    cliente.carrito = Carrito(carrito)
     print("Su pedido se ha añadido al carrito.")
     print(cliente.nombre)
     for produ in cliente.carrito.productos:
-        print(cliente.nombre)
         print(produ.nombre,"cantidad :",produ.stock)
     input('Presione enter para continuar.')
 
