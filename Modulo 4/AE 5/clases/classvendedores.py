@@ -16,7 +16,7 @@ class Vendedor():
         return self.run
 
     def vender(self, cliente, pedido):
-        valor_neto = pedido.producto.getValor_neto()
+        valor_neto = pedido.total
         if cliente.generarCobro(valor_neto):
             self.comisiones = int(valor_neto*0.005) ## 0.5%
             pedido.producto.generarVenta(pedido.cantidad)

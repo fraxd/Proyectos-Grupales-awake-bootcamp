@@ -35,7 +35,7 @@ class Clientes():
 
     def generarCobro(self, valorNeto):
         if valorNeto <= self.__saldo:
-            self.__saldo -= valorNeto
+            self.__saldo -= int(valorNeto)
             return True
         else:
             return False        

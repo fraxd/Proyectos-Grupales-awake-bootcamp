@@ -2,7 +2,8 @@ import copy
 import os
 import random
 from clases.classCarrito import Carrito
-from clases.classException import notFoundExcept
+from clases.classException import notMoney
+from clases.classException import insufficientStock
 import control_bodega
 import clases.classclientes
 import clases.classvendedores
@@ -36,14 +37,14 @@ vendedor5 = clases.classvendedores.Vendedor(
 list_vendedores = [vendedor1, vendedor2, vendedor3, vendedor4, vendedor5]
 
 def login(nombre_sucursal):
-   ran=random.randint(1,len(list_vendedores)-1)
-   control_bodega.borrarPantalla()
-   print('----- Te lo vendo SA. -----')
-   print('- Iniciar Sesion 1.8v -')
-   print(f'----- Sucursal: {nombre_sucursal} -----\n')
-   print("Usted será atendido por :", list_vendedores[ran].nombre, list_vendedores[ran].apellido,"Run :", list_vendedores[ran].run )
-   
-   while True:
+    ran=random.randint(1,len(list_vendedores)-1)
+    control_bodega.borrarPantalla()
+    print('----- Te lo vendo SA. -----')
+    print('- Iniciar Sesion 1.8v -')
+    print(f'----- Sucursal: {nombre_sucursal} -----\n')
+    print("Usted será atendido por :", list_vendedores[ran].nombre, list_vendedores[ran].apellido,"Run :", list_vendedores[ran].run )
+
+    while True:
         try:
             id = int(input("Ingrese su ID de usuario :"))
             cliente = getCliente(id)
@@ -53,7 +54,7 @@ def login(nombre_sucursal):
                 break
         except:
             print('Debes ingresar un usuario valido')
-   menu_venta(nombre_sucursal,list_vendedores[ran],cliente)
+    menu_venta(nombre_sucursal,list_vendedores[ran],cliente)
 
 def menu_venta(nombre_sucursal,vendedor,cliente):
     while True:
@@ -155,7 +156,6 @@ def compras(cliente):
         try:
             if stock_pedido>10:
                 raise 
-                return True  # Retornar True en caso de error
         except:
             print("La cantidad no puede exceder las 10 unidades.")
             input()
@@ -164,8 +164,8 @@ def compras(cliente):
             if control_bodega.validaStock(stock_pedido, producto):
                 break
             else:
-                raise notFoundExcept(producto.nombre)   
-        except notFoundExcept as e:
+                raise insufficientStock(producto.nombre)   
+        except insufficientStock as e:
             print(e)
             input()
             return True  # Retornar True en caso de error
@@ -182,17 +182,25 @@ def compras(cliente):
 def efectuarCompra(vendedor, cliente):
     print('Procesando Pedido...')
     try:
-        for produ in cliente.carrito.productos:
-            producto = control_bodega.getProducto(produ.sku)
-            if control_bodega.validaStock(produ.stock, producto):
+        if evaluarTotalySaldo(cliente, cliente.carrito.productos):
+            for produ in cliente.carrito.productos:
+                producto = control_bodega.getProducto(produ.sku)
                 pedido = classOrdenCompra.OrdenCompra(len(cliente.pedidos)+1, producto, produ.stock)
                 if vendedor.vender(cliente, pedido):
                     cliente.pedidos.append(pedido)
-            else:
-                print('Compra Cancelada.')
-                print('Stock Insuficiente.')
-    except:
+        else:
+            raise notMoney()
+        
+    except notMoney as e:
+            cliente.carrito.productos = []
+            print(e)
+            input()
+            return True  # Retornar True en caso de error
+    except Exception:
         print("el carrito está vacio.")
+        input('Presione enter para continuar.')
+        return True
+
     cliente.carrito.productos = []
     print("El carrito de compras ha sido vaciado.")
     input('Presione enter para continuar.')
@@ -211,3 +219,12 @@ def promediarCompras(cliente):
     except:
         print(cliente.nombre,"aún no ha hecho ninguna compra.")
         input('Presione enter para continuar.')
+
+def evaluarTotalySaldo(cliente, productos):
+    total = 0
+    for prod in productos:
+        total = total + prod.getValor_total()*prod.stock
+    if cliente.saldo()>= total:
+        return True
+    else: 
+        return False
