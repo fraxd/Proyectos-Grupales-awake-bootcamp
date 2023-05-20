@@ -116,6 +116,9 @@ def validaStock(pedido, product):
 def getProducto(id_producto):
     return Sucursal_actual.getProducto(id_producto)
 
+def getProductoLista():
+    return Sucursal_actual.productos
+
 def mostrarProducto(produ):
     print("ID :",produ.sku,"Nombre :",produ.nombre,"Categoría :",produ.categoria,"Proveedor :",produ.proveedor,"Stock :",produ.stock,"Precio :",produ.valor_neto)
 

@@ -33,7 +33,7 @@ class Productos():
         return self.valor_neto
     
     def getValor_total(self):
-        return self.valor_neto*1.19
+        return self.valor_neto*self.__impuesto
 
     def activarDescuento(self, porcentaje):
         self.descuento = porcentaje

@@ -180,19 +180,25 @@ def compras(cliente):
     input('Presione enter para continuar.')
 
 def efectuarCompra(vendedor, cliente):
+    if cliente.carrito.productos == []:
+        return print("el carrito está vacio.")
+
     print('Procesando Pedido...')
-    try:
-        for produ in cliente.carrito.productos:
-            producto = control_bodega.getProducto(produ.sku)
-            if control_bodega.validaStock(produ.stock, producto):
-                pedido = classOrdenCompra.OrdenCompra(len(cliente.pedidos)+1, producto, produ.stock)
-                if vendedor.vender(cliente, pedido):
-                    cliente.pedidos.append(pedido)
-            else:
-                print('Compra Cancelada.')
-                print('Stock Insuficiente.')
-    except:
-        print("el carrito está vacio.")
+    subtotal=0
+    valorneto=0
+    for produ in cliente.carrito.productos:
+        producto = control_bodega.getProducto(produ.sku)
+        subtotal+=produ.getValor_total()
+        valorneto+=produ.valor_neto
+        if control_bodega.validaStock(produ.stock, producto) is False:
+            print('Compra Cancelada.')
+            return print(f'Stock de {produ} Insuficiente.')
+    
+    pedido = classOrdenCompra.OrdenCompra(len(cliente.pedidos)+1, cliente.carrito.productos, subtotal)
+    if vendedor.vender(cliente, pedido,valorneto):
+        cliente.pedidos.append(pedido)
+    else:
+        return
     cliente.carrito.productos = []
     print("El carrito de compras ha sido vaciado.")
     input('Presione enter para continuar.')
