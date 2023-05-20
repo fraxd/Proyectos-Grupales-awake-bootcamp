@@ -223,8 +223,11 @@ def promediarCompras(cliente):
 def evaluarTotalySaldo(cliente, productos):
     total = 0
     for prod in productos:
-        total = total + prod.getValor_total()*prod.stock
+        total = int(total + prod.getValor_total()*prod.stock)
     if cliente.saldo()>= total:
         return True
     else: 
+        print(f'Valor Carrito: ${total} - Saldo Disponible: ${cliente.saldo()}')
+        faltante = total - cliente.saldo()
+        print(f'Te faltan: ${faltante}')
         return False
