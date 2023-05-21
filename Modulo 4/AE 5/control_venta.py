@@ -191,7 +191,6 @@ def mensajecarro(cliente):
 
 def efectuarCompra(vendedor, cliente):
     if cliente.carrito.productos == []:
-<<<<<<< Updated upstream
         return print("el carrito está vacio.")
 
     print('Procesando Pedido...')
@@ -209,8 +208,6 @@ def efectuarCompra(vendedor, cliente):
     if vendedor.vender(cliente, pedido,valorneto):
         cliente.pedidos.append(pedido)
     else:
-        return
-=======
         print("El carrito está vacio.") 
         input('Presione enter para continuar.')
         return False
@@ -224,7 +221,6 @@ def efectuarCompra(vendedor, cliente):
             print('Compra Cancelada.')
             print('Stock Insuficiente.')
     print('Procesando Pedido...')
->>>>>>> Stashed changes
     cliente.carrito.productos = []
     print("El carrito de compras ha sido vaciado.")
     input('Presione enter para continuar.')
