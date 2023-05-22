@@ -1,0 +1,114 @@
+[
+    {
+        "sku": 1,
+        "nombre": "Nike Revolution 6",
+        "categoria": "zapatillas",
+        "provedoor": {
+            "nombreLegal": "Dimarsa S.A.",
+            "razonSocial": "Dimarsa S.A",
+            "direccion": "",
+            "pais": "Chile",
+            "personaJuridica": true
+        },
+        "stock": 52,
+        "valor_neto": 64990,
+        "__impuesto": 1.19,
+        "descuento": 0
+    },
+    {
+        "sku": 2,
+        "nombre": "Naike Revolution 6",
+        "categoria": "zapatillas",
+        "provedoor": {
+            "nombreLegal": "Chino Originals S.A.",
+            "razonSocial": "Chino Originals S.A",
+            "direccion": "",
+            "pais": "Chile",
+            "personaJuridica": true
+        },
+        "stock": 51,
+        "valor_neto": 24990,
+        "__impuesto": 1.19,
+        "descuento": 0
+    },
+    {
+        "sku": 3,
+        "nombre": "Nike Sportswear",
+        "categoria": "poleras",
+        "provedoor": {
+            "nombreLegal": "Dimarsa S.A.",
+            "razonSocial": "Dimarsa S.A",
+            "direccion": "",
+            "pais": "Chile",
+            "personaJuridica": true
+        },
+        "stock": 58,
+        "valor_neto": 19990,
+        "__impuesto": 1.19,
+        "descuento": 0
+    },
+    {
+        "sku": 4,
+        "nombre": "Nike Air Max 90",
+        "categoria": "zapatos",
+        "provedoor": {
+            "nombreLegal": "Dimarsa S.A.",
+            "razonSocial": "Dimarsa S.A",
+            "direccion": "",
+            "pais": "Chile",
+            "personaJuridica": true
+        },
+        "stock": 50,
+        "valor_neto": 79990,
+        "__impuesto": 1.19,
+        "descuento": 0
+    },
+    {
+        "sku": 5,
+        "nombre": "Nike poleron",
+        "categoria": "poleron",
+        "provedoor": {
+            "nombreLegal": "Dimarsa S.A.",
+            "razonSocial": "Dimarsa S.A",
+            "direccion": "",
+            "pais": "Chile",
+            "personaJuridica": true
+        },
+        "stock": 50,
+        "valor_neto": 29990,
+        "__impuesto": 1.19,
+        "descuento": 0
+    },
+    {
+        "sku": 6,
+        "nombre": "Nike chaqueta",
+        "categoria": "chaqueta",
+        "provedoor": {
+            "nombreLegal": "Dimarsa S.A.",
+            "razonSocial": "Dimarsa S.A",
+            "direccion": "",
+            "pais": "Chile",
+            "personaJuridica": true
+        },
+        "stock": 50,
+        "valor_neto": 39990,
+        "__impuesto": 1.19,
+        "descuento": 0
+    },
+    {
+        "sku": 7,
+        "nombre": "Nike guantesWear",
+        "categoria": "guantes",
+        "provedoor": {
+            "nombreLegal": "Dimarsa S.A.",
+            "razonSocial": "Dimarsa S.A",
+            "direccion": "",
+            "pais": "Chile",
+            "personaJuridica": true
+        },
+        "stock": 50,
+        "valor_neto": 9990,
+        "__impuesto": 1.19,
+        "descuento": 0
+    }
+]
