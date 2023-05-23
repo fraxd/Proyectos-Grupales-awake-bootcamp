@@ -1,0 +1,33 @@
+"JSON"
+
+#admite: matrices booleanas.
+#facilidad de escribir y leer.
+#mayor accecibilidad y rendimiento.
+#se utiliza para serializar datos
+#usa etiquetas
+#es muy sencillo importar a leguanjes como Perl, Ruby, JavaScript, Python,etc.
+#es ampliamente usado para intercambio de información entre servicios web y Apis REST
+#tipo de datos más limitados.
+#no puede integrar comentarios.
+
+<XML>
+
+	admite: datos binarios, grafícos, imágenes, datos no primitivos.
+	es vulnerable a modificaciones.
+	es un lenguaje de marcado, almacena los datos en estructura de arbol.
+	necesita un analisis respectivo.
+	se utiliza para intercambiar datos entre aplicaciones
+	se requiere tranformar los datos para poder importarlos
+	se usa ampliamente para transmitir información en servicios webs y Apis REST y para archivos de configuración
+	usa tabulaciones como sangría.
+
+
+
+--- YAML
+
+- admite: marcas de fecha y hora, secuencias, valores anidados y recursivos, tipos de datos primitivos.
+- permite comentarios.
+- mayor facilidad de lectura por encima de JSON
+- se utiliza para archivos de depuración y configuración
+- es ampliamente usado en frameworks como ruby
+- usa un guion con espacio como sangría.
