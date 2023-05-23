@@ -2,24 +2,22 @@
     {
         "status": "Confirmada",
         "id_ordencompra": 1,
-        "productos": [
-            {
-                "sku": 5,
-                "nombre": "Nike poleron",
-                "categoria": "poleron",
-                "proveedor": {
-                    "rut": "77777777-k",
-                    "nombreLegal": "Dimarsa S.A.",
-                    "razonSocial": "Dimarsa S.A",
-                    "pais": "Chile",
-                    "personaJuridica": true,
-                    "direccion": ""
-                },
-                "stock": 1,
-                "valor_neto": 29990,
-                "descuento": 0
-            }
-        ],
+        "productos": {
+            "sku": 5,
+            "nombre": "Nike poleron",
+            "categoria": "poleron",
+            "proveedor": {
+                "rut": "77777777-k",
+                "nombreLegal": "Dimarsa S.A.",
+                "razonSocial": "Dimarsa S.A",
+                "pais": "",
+                "personaJuridica": "Chile",
+                "direccion": true
+            },
+            "stock": 1,
+            "valor_neto": 29990,
+            "descuento": 0
+        },
         "subtotal": 35688,
         "despacho": true,
         "total": 40688
@@ -27,6 +25,29 @@
     {
         "status": "cancelada",
         "id_ordencompra": 2,
+        "productos": {
+            "sku": 2,
+            "nombre": "Naike Revolution 6",
+            "categoria": "zapatillas",
+            "proveedor": {
+                "rut": "888888888-k",
+                "nombreLegal": "Chino Originals S.A.",
+                "razonSocial": "Chino Originals S.A",
+                "pais": "",
+                "personaJuridica": "Chile",
+                "direccion": true
+            },
+            "stock": 1,
+            "valor_neto": 24990,
+            "descuento": 0
+        },
+        "subtotal": 107076,
+        "despacho": false,
+        "total": 107076
+    },
+    {
+        "status": "cancelada",
+        "id_ordencompra": 1,
         "productos": [
             {
                 "sku": 1,
@@ -36,33 +57,17 @@
                     "rut": "77777777-k",
                     "nombreLegal": "Dimarsa S.A.",
                     "razonSocial": "Dimarsa S.A",
-                    "pais": "Chile",
-                    "personaJuridica": true,
-                    "direccion": ""
+                    "pais": "",
+                    "personaJuridica": "Chile",
+                    "direccion": true
                 },
-                "stock": 1,
+                "stock": 3,
                 "valor_neto": 64990,
-                "descuento": 0
-            },
-            {
-                "sku": 2,
-                "nombre": "Naike Revolution 6",
-                "categoria": "zapatillas",
-                "proveedor": {
-                    "rut": "888888888-k",
-                    "nombreLegal": "Chino Originals S.A.",
-                    "razonSocial": "Chino Originals S.A",
-                    "pais": "Chile",
-                    "personaJuridica": true,
-                    "direccion": ""
-                },
-                "stock": 1,
-                "valor_neto": 24990,
                 "descuento": 0
             }
         ],
-        "subtotal": 107076,
+        "subtotal": 232014,
         "despacho": false,
-        "total": 107076
+        "total": 232014
     }
 ]

@@ -37,8 +37,6 @@ vendedor5 = clases.classvendedores.Vendedor(
     "55555555-5", "Lucía", "González", "Chaqueta")
 
 list_vendedores = [vendedor1, vendedor2, vendedor3, vendedor4, vendedor5]
-global Pedidos
-pedidos = []
 
 def login(nombre_sucursal):
     ran=random.randint(1,len(list_vendedores)-1)
@@ -61,7 +59,6 @@ def login(nombre_sucursal):
     menu_venta(nombre_sucursal,list_vendedores[ran],cliente)
 
 def menu_venta(nombre_sucursal,vendedor,cliente):
-    pedidos = cargar_pedidos()
     while True:
         control_bodega.borrarPantalla()
         print('----- Te lo vendo SA. -----')
@@ -100,8 +97,6 @@ def menu_venta(nombre_sucursal,vendedor,cliente):
             print('Opcion Selecionada NO Valida. ')
 
 # Get Cliente
-
-
 def getCliente(id_cliente):
     for cliente in clientes:
         if cliente.idcliente == id_cliente:
@@ -109,8 +104,6 @@ def getCliente(id_cliente):
     return ''
 
 # Mostrar Saldo Cliente
-
-
 def mostrarSaldoCliente(cliente):
     
     saldo = cliente.saldo()
@@ -118,8 +111,6 @@ def mostrarSaldoCliente(cliente):
     input("Presione cualquier tecla para continuar.")
 
 # Agregar Saldo Cliente
-
-
 def agregarSaldoCliente(cliente):
     
         try:
@@ -130,17 +121,16 @@ def agregarSaldoCliente(cliente):
             print('Por favor ingrese un valor numerico')
 
         input("Presione cualquier tecla para continuar")
-    
+
+
+
 # Imprimir cantidad de clientes
-
-
 def printNumeroClientes():
     print(' Actualmente hay registrados', len(clientes), 'Clientes.')
     input('Presione Enter para continuar.')
 
+
 # Armar Pedidos
-
-
 def compras(cliente):
     carrito=copy.copy(cliente.carrito.productos)
     while True:
@@ -152,7 +142,6 @@ def compras(cliente):
                 break
         except:
             print('Debe Ingresar un numero entero.')
-
     while True:
         try:
             stock_pedido = int(input('Indique cantidad de unidades: '))
@@ -276,3 +265,9 @@ def cargar_pedidos():
             return ordenes
     except:
         return []
+
+
+
+#Funciones Basicas 
+global Pedidos
+pedidos = cargar_pedidos()
