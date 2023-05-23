@@ -1,5 +1,6 @@
 import pickle
 import os
+from control_proveedores import menu_proveedores
 class proveedor():
     rut = str  # Básicamente es número de rut sin puntos, solo con guiones
     nombreLegal = str
@@ -25,8 +26,6 @@ class ProveedorConLogin(proveedor):
         self.nombre_usuario = nombre_usuario
         self.password = password
 
-
-
     def login(self):
         file_path = 'Modulo 4/AE 5/clases/proveedores.pickle'
         
@@ -39,7 +38,21 @@ class ProveedorConLogin(proveedor):
         for proveedor in proveedores_existentes:
             if proveedor.nombre_usuario == self.nombre_usuario and proveedor.password == self.password:
                 print("Login exitoso.")
+                menu_proveedores()  # Llama a la función menu_proveedores
                 return
+
+        # Si no se encuentra el usuario, crear uno nuevo
+        nuevo_proveedor = ProveedorConLogin(self.nombre_usuario, self.password)
+        proveedores_existentes.append(nuevo_proveedor)
+        
+        # Guardar la lista actualizada de proveedores en el archivo
+        with open(file_path, 'wb') as file:
+            pickle.dump(proveedores_existentes, file)
+        
+        print("Usuario creado y login exitoso.")
+        menu_proveedores()  # Llama a la función menu_proveedores
+
+
             
     def ver_proveedores(self):
         file_path = 'Modulo 4/AE 5/clases/proveedores.pickle'
