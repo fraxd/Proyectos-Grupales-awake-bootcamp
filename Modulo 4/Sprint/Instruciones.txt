@@ -1,0 +1,11 @@
+Seleccione cuatro de las clases de su diagrama. Privilegie las clases que tienen algún tipo de
+herencia, Debe desarrollarlo en un script, plasmando la dinámica entre clases y respectivas
+herencias.
+● Identifique y diseñe claramente sus respectivos métodos y atributos. Las clases deben heredar
+atributos-métodos utilizando la función super().
+● Asegúrese de manejar al menos 2 posibles errores, según los contenidos revisados.
+● Privilegie la clase usuario (o equivalente). En este sentido debe almacenar la información de los
+usuarios en un archivo JSON o CSV según estimen conveniente.
+
+Se va a utilizar Clases Vendedor - Clases Usuario - Clases Productos - Clase Carrito
+
