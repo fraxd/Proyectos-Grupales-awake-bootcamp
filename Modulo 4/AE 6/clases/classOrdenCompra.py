@@ -10,12 +10,17 @@ class OrdenCompra:
         self.status = 'Pendiente'
         self.id_ordencompra = id_ordencompra
         self.productos = producto
-        self.subtotal = subtotal
+        self.subtotal = int(subtotal)
         if self.subtotal >= 50000:  #Despacho gratis sobre 50k
             self.despacho = False
             self.total = self.subtotal
         else:
             self.despacho = True
-            self.total = self.subtotal + 5000
+            self.total = int(self.subtotal + 5000)
 
+    def confirmar(self):
+        self.status = 'Confirmada'
+    
+    def cancelar(self):
+        self.status = 'cancelada'
 

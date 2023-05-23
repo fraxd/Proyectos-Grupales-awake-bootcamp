@@ -13,7 +13,10 @@ class Productos():
         self.sku = sku
         self.nombre = nombre
         self.categoria = categoria
-        self.proveedor = proveedor
+        if proveedor == '':
+            self.proveedor = object
+        else:
+            self.proveedor = proveedor
         self.stock = stock
         self.valor_neto = valor_neto
         self.descuento = 0

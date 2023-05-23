@@ -1,0 +1,27 @@
+[
+    {
+        "status": "Confirmada",
+        "id_ordencompra": 1,
+        "productos": [
+            {
+                "sku": 1,
+                "nombre": "Nike Revolution 6",
+                "categoria": "zapatillas",
+                "proveedor": {
+                    "rut": "77777777-k",
+                    "nombreLegal": "Dimarsa S.A.",
+                    "razonSocial": "Dimarsa S.A",
+                    "pais": "",
+                    "personaJuridica": "Chile",
+                    "direccion": true
+                },
+                "stock": 1,
+                "valor_neto": 64990,
+                "descuento": 0
+            }
+        ],
+        "subtotal": 77338,
+        "despacho": false,
+        "total": 77338
+    }
+]

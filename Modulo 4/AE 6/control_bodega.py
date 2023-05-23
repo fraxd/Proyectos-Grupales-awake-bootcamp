@@ -125,6 +125,8 @@ def getProductoLista():
 def mostrarProducto(produ):
     print("ID :",produ.sku,"Nombre :",produ.nombre,"Categoría :",produ.categoria,"Proveedor :",produ.proveedor,"Stock :",produ.stock,"Precio :",produ.valor_neto)
 
+def guardar_datos():
+    Sucursal_actual.guardar_productos()
 ## Limpiar pantalla
 def borrarPantalla(): #Definimos la función estableciendo el nombre que queramos
     if os.name == "posix":

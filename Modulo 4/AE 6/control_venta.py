@@ -3,10 +3,12 @@ import os
 import random
 from clases.classCarrito import Carrito
 from clases.classException import notFoundExcept
+from clases.classproductos import Productos
 import control_bodega
 import clases.classclientes
 import clases.classvendedores
 import clases.classOrdenCompra as classOrdenCompra
+import json
 # CLIENTES
 juanperez = clases.classclientes.Clientes(
     1, 'Juan', 'Pérez', 'juanitoxBellakito@gmail.com', '02/02/2020')
@@ -34,16 +36,19 @@ vendedor5 = clases.classvendedores.Vendedor(
     "55555555-5", "Lucía", "González", "Chaqueta")
 
 list_vendedores = [vendedor1, vendedor2, vendedor3, vendedor4, vendedor5]
+global Pedidos
+pedidos = []
+
 
 def login(nombre_sucursal):
-   ran=random.randint(1,len(list_vendedores)-1)
-   control_bodega.borrarPantalla()
-   print('----- Te lo vendo SA. -----')
-   print('- Iniciar Sesion 1.8v -')
-   print(f'----- Sucursal: {nombre_sucursal} -----\n')
-   print("Usted será atendido por :", list_vendedores[ran].nombre, list_vendedores[ran].apellido,"Run :", list_vendedores[ran].run )
-   
-   while True:
+    ran=random.randint(1,len(list_vendedores)-1)
+    control_bodega.borrarPantalla()
+    print('----- Te lo vendo SA. -----')
+    print('- Iniciar Sesion 1.8v -')
+    print(f'----- Sucursal: {nombre_sucursal} -----\n')
+    print("Usted será atendido por :", list_vendedores[ran].nombre, list_vendedores[ran].apellido,"Run :", list_vendedores[ran].run )
+    
+    while True:
         try:
             id = int(input("Ingrese su ID de usuario :"))
             cliente = getCliente(id)
@@ -53,7 +58,7 @@ def login(nombre_sucursal):
                 break
         except:
             print('Debes ingresar un usuario valido')
-   menu_venta(nombre_sucursal,list_vendedores[ran],cliente)
+    menu_venta(nombre_sucursal,list_vendedores[ran],cliente)
 
 def menu_venta(nombre_sucursal,vendedor,cliente):
     while True:
@@ -198,29 +203,25 @@ def efectuarCompra(vendedor, cliente):
     valorneto=0
     for produ in cliente.carrito.productos:
         producto = control_bodega.getProducto(produ.sku)
-        subtotal+=produ.getValor_total()
-        valorneto+=produ.valor_neto
+        subtotal+=produ.getValor_total() * produ.stock
+        valorneto+=produ.valor_neto * produ.stock
         if control_bodega.validaStock(produ.stock, producto) is False:
             print('Compra Cancelada.')
+            cliente.carrito.productos = []
             return print(f'Stock de {produ} Insuficiente.')
     
     pedido = classOrdenCompra.OrdenCompra(len(cliente.pedidos)+1, cliente.carrito.productos, subtotal)
+    print('Procesando Pedido...')
     if vendedor.vender(cliente, pedido,valorneto):
         cliente.pedidos.append(pedido)
+        control_bodega.guardar_datos()
+        pedido.confirmar()
     else:
         print("El carrito está vacio.") 
         input('Presione enter para continuar.')
-        return False
-    for produ in cliente.carrito.productos:
-        producto = control_bodega.getProducto(produ.sku)
-        if control_bodega.validaStock(produ.stock, producto):
-            pedido = classOrdenCompra.OrdenCompra(len(cliente.pedidos)+1, producto, produ.stock)
-            if vendedor.vender(cliente, pedido):
-                cliente.pedidos.append(pedido)
-        else:
-            print('Compra Cancelada.')
-            print('Stock Insuficiente.')
-    print('Procesando Pedido...')
+        pedido.cancelar()
+    pedidos.append(pedido)
+    guardar_pedidos()
     cliente.carrito.productos = []
     print("El carrito de compras ha sido vaciado.")
     input('Presione enter para continuar.')
@@ -239,3 +240,15 @@ def promediarCompras(cliente):
     except:
         print(cliente.nombre,"aún no ha hecho ninguna compra.")
         input('Presione enter para continuar.')
+
+def guardar_pedidos():
+    def serializar_objeto(obj):
+        if isinstance(obj, classOrdenCompra.OrdenCompra):
+            producto_serializado = serializar_objeto(obj.productos)
+            return {'id_compra': obj.id_ordencompra, 'productos': producto_serializado, 'despacho': obj.despacho, 'subtotal': obj.subtotal, 'total': obj.total, 'status': obj.status}
+        elif isinstance(obj, Productos):
+            return {'sku': obj.sku, 'nombre': obj.nombre, 'categoria': obj.categoria, 'proveedor': '', 'stock': obj.stock, 'valor_neto': obj.valor_neto, 'descuento': obj.descuento }
+        raise TypeError(f'No se puede serializar el objeto: {obj}')
+
+    with open('pedidos.json', 'w') as file:
+        json.dump(pedidos, file, default=lambda o: o.__dict__, indent=4)

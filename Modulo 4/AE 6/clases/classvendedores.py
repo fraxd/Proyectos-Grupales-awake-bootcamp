@@ -21,26 +21,27 @@ class Vendedor():
 
     def vender(self, cliente, pedido,valor_neto):
         if cliente.generarCobro(valor_neto):
-            self.comisiones = int(valor_neto*0.005) ## 0.5%
+            self.comisiones = int(valor_neto*0.01) ## 0.5%
             listaprodu=control_bodega.getProductoLista()
+            print('Compra Aprobada')
             for prod in pedido.productos:
                 for produ in listaprodu:
                     if produ.sku == prod.sku:
                         produ.generarVenta(prod.stock)
-            print('Compra Aprobada')
-            self.print_pedido(pedido,valor_neto)
+            self.print_pedido(pedido)
             return True
         else:
             print('Saldo Insuficiente \nCompra Cancelada')
             return False
     
 
-    def print_pedido(self, pedido,total_neto):
+    def print_pedido(self, pedido):
         for product in pedido.productos:
             print(f'Pedido N°: {pedido.id_ordencompra}')
             print(f'Producto: {product.nombre}')
-            print(f'Cantidad:{len(pedido.productos)}')
-            print(f'Valor neto: ${total_neto}')
+            print(f'Cantidad:{product.stock}')
+            precio = int(product.getValor_total()*product.stock)
+            print(f'Valor neto: ${precio}')
             if pedido.despacho is False:
                 print('Despacho: Gratis')
             else:

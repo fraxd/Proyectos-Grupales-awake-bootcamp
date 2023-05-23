@@ -40,6 +40,7 @@ class Sucursal(tienda):
         self.productos.append(newProdu)
         self.mostrarProducto(newProdu)
         print('Producto Agregado Correctamente.')
+        self.guardar_productos()
         return True
 
     def stockGlobal(self):
@@ -84,6 +85,7 @@ class Sucursal(tienda):
         for i in range(len(self.productos)):
             if self.productos[i].nombre == nombre_producto:
                 self.productos[i].stock = stock
+                self.guardar_productos()
                 return True
         return False
 
@@ -92,6 +94,7 @@ class Sucursal(tienda):
             print("Solicitando y reponiendo productos...")
             if self.descontarStock(300):
                 self.Stock += 300
+                self.guardar_productos()
                 print("Productos repuestos en la sucursal.")
             else:
                 print("No hay suficiente stock en la bodega para reponer.")
