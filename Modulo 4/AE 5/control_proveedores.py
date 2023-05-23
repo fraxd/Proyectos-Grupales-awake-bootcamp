@@ -15,3 +15,6 @@ def menu_proveedores():
         print("4. Regresar al Menú principal")
 
         opcion = input("\nIngresa el número de opción: ")
+        
+        if opcion == "1":
+            
