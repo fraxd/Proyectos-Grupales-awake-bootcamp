@@ -7,5 +7,4 @@ Trabajos grupales de equipo 2 del bootcamp fullstack python de AwakeLabs.
  - Rafael Jara
  - Pablo Poblete
  - Franco Fuentes 
- - Francisco Olivares
 

@@ -8,6 +8,7 @@ import control_bodega
 import clases.classclientes
 import clases.classvendedores
 import clases.classOrdenCompra as classOrdenCompra
+from clases.classProveedor import proveedor as proveedorClass
 import json
 # CLIENTES
 juanperez = clases.classclientes.Clientes(
@@ -39,7 +40,6 @@ list_vendedores = [vendedor1, vendedor2, vendedor3, vendedor4, vendedor5]
 global Pedidos
 pedidos = []
 
-
 def login(nombre_sucursal):
     ran=random.randint(1,len(list_vendedores)-1)
     control_bodega.borrarPantalla()
@@ -61,6 +61,7 @@ def login(nombre_sucursal):
     menu_venta(nombre_sucursal,list_vendedores[ran],cliente)
 
 def menu_venta(nombre_sucursal,vendedor,cliente):
+    pedidos = cargar_pedidos()
     while True:
         control_bodega.borrarPantalla()
         print('----- Te lo vendo SA. -----')
@@ -252,3 +253,26 @@ def guardar_pedidos():
 
     with open('pedidos.json', 'w') as file:
         json.dump(pedidos, file, default=lambda o: o.__dict__, indent=4)
+
+def cargar_pedidos():
+    try:
+        with open('pedidos.json', 'r') as file:
+            data = json.load(file)
+            ordenes = []
+            for item in data:
+                id_ordencompra = item['id_ordencompra']
+                productos = []
+                subtotal = item['subtotal']
+                status = item['status']
+                productos_data = item['productos']
+                for product in productos_data:
+                    if 'proveedor' in product:
+                        proveedor_data = product['proveedor']
+                        proveedor = proveedorClass(proveedor_data['rut'], proveedor_data['nombreLegal'], proveedor_data['razonSocial'], proveedor_data['direccion'], proveedor_data['pais'], proveedor_data['personaJuridica'])
+                        producto = Productos(product['sku'], product['nombre'],product['categoria'], proveedor, product['stock'], product['valor_neto'])
+                        productos.append(producto)
+                order = classOrdenCompra.OrdenCompra(id_ordencompra, producto,subtotal, status)
+                ordenes.append(order)
+            return ordenes
+    except:
+        return []

@@ -7,9 +7,9 @@
             "rut": "77777777-k",
             "nombreLegal": "Dimarsa S.A.",
             "razonSocial": "Dimarsa S.A",
-            "direccion": true,
-            "pais": "",
-            "personaJuridica": "Chile"
+            "direccion": "",
+            "pais": "Chile",
+            "personaJuridica": true
         },
         "stock": 48,
         "valor_neto": 64990,
@@ -24,11 +24,11 @@
             "rut": "888888888-k",
             "nombreLegal": "Chino Originals S.A.",
             "razonSocial": "Chino Originals S.A",
-            "direccion": true,
-            "pais": "",
-            "personaJuridica": "Chile"
+            "direccion": "",
+            "pais": "Chile",
+            "personaJuridica": true
         },
-        "stock": 49,
+        "stock": 47,
         "valor_neto": 24990,
         "__impuesto": 1.19,
         "descuento": 0
@@ -41,9 +41,9 @@
             "rut": "77777777-k",
             "nombreLegal": "Dimarsa S.A.",
             "razonSocial": "Dimarsa S.A",
-            "direccion": true,
-            "pais": "",
-            "personaJuridica": "Chile"
+            "direccion": "",
+            "pais": "Chile",
+            "personaJuridica": true
         },
         "stock": 56,
         "valor_neto": 19990,
@@ -58,9 +58,9 @@
             "rut": "77777777-k",
             "nombreLegal": "Dimarsa S.A.",
             "razonSocial": "Dimarsa S.A",
-            "direccion": true,
-            "pais": "",
-            "personaJuridica": "Chile"
+            "direccion": "",
+            "pais": "Chile",
+            "personaJuridica": true
         },
         "stock": 50,
         "valor_neto": 79990,
@@ -75,11 +75,11 @@
             "rut": "77777777-k",
             "nombreLegal": "Dimarsa S.A.",
             "razonSocial": "Dimarsa S.A",
-            "direccion": true,
-            "pais": "",
-            "personaJuridica": "Chile"
+            "direccion": "",
+            "pais": "Chile",
+            "personaJuridica": true
         },
-        "stock": 50,
+        "stock": 49,
         "valor_neto": 29990,
         "__impuesto": 1.19,
         "descuento": 0
@@ -92,9 +92,9 @@
             "rut": "77777777-k",
             "nombreLegal": "Dimarsa S.A.",
             "razonSocial": "Dimarsa S.A",
-            "direccion": true,
-            "pais": "",
-            "personaJuridica": "Chile"
+            "direccion": "",
+            "pais": "Chile",
+            "personaJuridica": true
         },
         "stock": 50,
         "valor_neto": 39990,
@@ -109,9 +109,9 @@
             "rut": "77777777-k",
             "nombreLegal": "Dimarsa S.A.",
             "razonSocial": "Dimarsa S.A",
-            "direccion": true,
-            "pais": "",
-            "personaJuridica": "Chile"
+            "direccion": "",
+            "pais": "Chile",
+            "personaJuridica": true
         },
         "stock": 50,
         "valor_neto": 9990,

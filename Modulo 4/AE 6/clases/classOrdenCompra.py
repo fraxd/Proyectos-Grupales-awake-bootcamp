@@ -6,8 +6,8 @@ class OrdenCompra:
     total = int
     status = str
 
-    def __init__(self, id_ordencompra, producto,subtotal):
-        self.status = 'Pendiente'
+    def __init__(self, id_ordencompra, producto,subtotal, status = 'Pendiente'):
+        self.status = status
         self.id_ordencompra = id_ordencompra
         self.productos = producto
         self.subtotal = int(subtotal)
