@@ -1,5 +1,6 @@
 import os
 from clases.classSucursal import Sucursal
+from clases.classProveedor import ProveedorConLogin
 
 
 global Sucursal_actual
@@ -16,7 +17,8 @@ def menu_bodega(nombre_sucursal):
         print('4.- Ver stock actual especifico')
         print('5.- Ver todos los productos')
         print('6.- Revisar productos con sobrestock')
-        print('7.- Ver todos los provedores')
+        print('7.  Login de proveedores')
+        print('8.- Ver todos los provedores')
         print('9.- Regresar Menu principal')
 
         opcion = int(input('\n Indique su opcion: '))
@@ -74,11 +76,25 @@ def menu_bodega(nombre_sucursal):
                     except:
                         print('Error, Debe ingresar un numero entero. \n')
                 Sucursal_actual.sobreStock(sobre_stock)
-            
-            case 7: 
+                
+            # Opcion 7: Login de proveedores
+            case 7:
+                borrarPantalla()
+                nombre_usuario = input("Ingrese su nombre de usuario: ")
+                password = input("Ingrese su contraseña: ")
+                while True:
+                    break
+                proveedor = ProveedorConLogin(nombre_usuario, password)
+                proveedor.login()
+                input('Presione Enter para continuar.')
+                
+            # Opcion 8: Ver todos los provedores
+            case 8: 
                 borrarPantalla()
                 print('Listado de Proveedores')
-                Sucursal_actual.print_provedores()
+                proveedor = ProveedorConLogin()
+                proveedor.ver_proveedores()
+
             
             # Opcion 9: Salir
             case 9:
