@@ -1,7 +1,8 @@
 import control_bodega
 import control_venta
+import control_proveedores
 
-
+global list_proveedores
 def menu_principal(sucursal):
     while True:
         control_bodega.borrarPantalla()
@@ -10,6 +11,7 @@ def menu_principal(sucursal):
         print('\nMenu Principal: ')
         print('1.- Control de Bodega')
         print('2.- Control de Ventas')
+        print('3.- Control Proveedor')
         print('9.- Salir del Programa')
         while True:
             try:
@@ -21,11 +23,23 @@ def menu_principal(sucursal):
             control_bodega.menu_bodega(sucursal)
         elif opcion == 2:
             control_venta.login(sucursal)
+        elif opcion == 3:
+            login_proveedor()
         elif opcion == 9:
             print('\n \n \n Muchas gracias por usarnos \n \n PencaLabs ©')
             break
         else:
             print('Opcion Selecionada NO Valida. ')
+
+def login_proveedor():
+    while True:
+        username = input('Ingresar Nombre de usuario Proveedor: ')
+        password = input('Ingresar contraseña: ')
+        if control_proveedores.validar_login(username, password):
+            control_proveedores.menu_proveedores()
+            break
+        else:
+            print('Usuario o contraseña erroneos')
 
 
 def menu_sucursales():
