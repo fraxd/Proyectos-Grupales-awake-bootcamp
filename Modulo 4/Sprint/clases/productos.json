@@ -1,0 +1,79 @@
+[
+    {
+        "sku": 57824,
+        "nombre": "Wine - Chateau Aqueria Tavel",
+        "categoria": "Snacks y dulces",
+        "stock": 15,
+        "valor_neto": 2381
+    },
+    {
+        "sku": 85134,
+        "nombre": "Kiwi Gold Zespri",
+        "categoria": "Carnes y pescados",
+        "stock": 51,
+        "valor_neto": 2595
+    },
+    {
+        "sku": 69097,
+        "nombre": "Zucchini - Yellow",
+        "categoria": "Cuidado personal",
+        "stock": 32,
+        "valor_neto": 2691
+    },
+    {
+        "sku": 67125,
+        "nombre": "Contreau",
+        "categoria": "Frutas y verduras",
+        "stock": 41,
+        "valor_neto": 2863
+    },
+    {
+        "sku": 58251,
+        "nombre": "Nantucket - 518ml",
+        "categoria": "Cuidado personal",
+        "stock": 68,
+        "valor_neto": 2512
+    },
+    {
+        "sku": 97679,
+        "nombre": "Lettuce - Treviso",
+        "categoria": "Limpieza del hogar",
+        "stock": 82,
+        "valor_neto": 3579
+    },
+    {
+        "sku": 59883,
+        "nombre": "Chocolate - Compound Coating",
+        "categoria": "L\u00c3\u00a1cteos y huevos",
+        "stock": 94,
+        "valor_neto": 4399
+    },
+    {
+        "sku": 55450,
+        "nombre": "Flour Dark Rye",
+        "categoria": "Limpieza del hogar",
+        "stock": 46,
+        "valor_neto": 3925
+    },
+    {
+        "sku": 71198,
+        "nombre": "Apples - Spartan",
+        "categoria": "Snacks y dulces",
+        "stock": 80,
+        "valor_neto": 3015
+    },
+    {
+        "sku": 50410,
+        "nombre": "Table Cloth 120 Round White",
+        "categoria": "Panader\u00c3\u00ada y pasteler\u00c3\u00ada",
+        "stock": 75,
+        "valor_neto": 1244
+    },
+    {
+        "sku": "999",
+        "nombre": "Ritalin",
+        "categoria": "Drogas",
+        "stock": 7,
+        "valor_neto": 30000
+    }
+]

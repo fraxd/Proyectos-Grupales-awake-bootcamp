@@ -1,0 +1,38 @@
+[
+    {
+        "rut": "11111111-1",
+        "nombre": "Temporal",
+        "apellido": "Temporal",
+        "email": "a@a.a",
+        "password": "123456789",
+        "sueldo_base": 0,
+        "comisiones": 10710
+    },
+    {
+        "rut": "12345678-9",
+        "nombre": "Juan",
+        "apellido": "Perez",
+        "email": "juan@example.com",
+        "password": "password1",
+        "sueldo_base": 5000,
+        "comisiones": 1000
+    },
+    {
+        "rut": "98765432-1",
+        "nombre": "Maria",
+        "apellido": "Gonzalez",
+        "email": "maria@example.com",
+        "password": "password2",
+        "sueldo_base": 6000,
+        "comisiones": 1500
+    },
+    {
+        "rut": "54321678-0",
+        "nombre": "Pedro",
+        "apellido": "Sanchez",
+        "email": "pedro@example.com",
+        "password": "password3",
+        "sueldo_base": 4500,
+        "comisiones": 800
+    }
+]
